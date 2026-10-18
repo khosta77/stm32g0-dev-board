@@ -1297,7 +1297,7 @@
 				)
 			)
 		)
-		(property "Value" "630"
+		(property "Value" "680"
 			(at 92.71 140.97 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1307,7 +1307,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 87.63 144.018 90)
 			(hide yes)
 			(show_name no)
@@ -1331,6 +1331,17 @@
 		)
 		(property "Description" ""
 			(at 87.63 142.24 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C17798"
+			(at 87.63 142.24 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1467,7 +1478,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 155.2448 66.04 0)
 			(hide yes)
 			(show_name no)
@@ -1491,6 +1502,17 @@
 		)
 		(property "Description" ""
 			(at 156.21 69.85 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C49678"
+			(at 156.21 69.85 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1545,7 +1567,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 103.632 53.34 90)
 			(hide yes)
 			(show_name no)
@@ -1569,6 +1591,17 @@
 		)
 		(property "Description" ""
 			(at 105.41 53.34 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C149504"
+			(at 105.41 53.34 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1623,7 +1656,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 172.212 54.61 90)
 			(hide yes)
 			(show_name no)
@@ -1647,6 +1680,17 @@
 		)
 		(property "Description" ""
 			(at 173.99 54.61 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C149504"
+			(at 173.99 54.61 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1783,7 +1827,7 @@
 				(justify right)
 			)
 		)
-		(property "Footprint" "Capacitor_SMD:C_1206_3216Metric_Pad1.33x1.80mm_HandSolder"
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
 			(at 86.6648 64.77 0)
 			(hide yes)
 			(show_name no)
@@ -1807,6 +1851,17 @@
 		)
 		(property "Description" ""
 			(at 87.63 68.58 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C49678"
+			(at 87.63 68.58 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -1939,7 +1994,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_1206_3216Metric_Pad1.42x1.75mm_HandSolder"
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
 			(at 107.95 142.24 0)
 			(hide yes)
 			(show_name no)
@@ -1963,6 +2018,17 @@
 		)
 		(property "Description" ""
 			(at 107.95 142.24 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C2297"
+			(at 107.95 142.24 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2007,7 +2073,7 @@
 				)
 			)
 		)
-		(property "Value" "ORANGE"
+		(property "Value" "RED"
 			(at 116.84 147.32 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2017,7 +2083,7 @@
 				)
 			)
 		)
-		(property "Footprint" "LED_SMD:LED_1206_3216Metric_Pad1.42x1.75mm_HandSolder"
+		(property "Footprint" "LED_SMD:LED_0805_2012Metric"
 			(at 107.95 148.59 0)
 			(hide yes)
 			(show_name no)
@@ -2041,6 +2107,17 @@
 		)
 		(property "Description" ""
 			(at 107.95 148.59 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C84256"
+			(at 107.95 148.59 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2207,6 +2284,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C221880"
+			(at 105.41 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "d9df16e9-66f0-4aee-a2d6-0fe34b24062a")
 		)
@@ -2287,6 +2375,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C221880"
+			(at 173.99 69.85 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "fa3bcdb4-914b-4894-8ca8-e2a79af0926a")
 		)
@@ -2323,7 +2422,7 @@
 				)
 			)
 		)
-		(property "Value" "630"
+		(property "Value" "680"
 			(at 92.71 147.32 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2333,7 +2432,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Resistor_SMD:R_1206_3216Metric_Pad1.30x1.75mm_HandSolder"
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
 			(at 87.63 150.368 90)
 			(hide yes)
 			(show_name no)
@@ -2357,6 +2456,17 @@
 		)
 		(property "Description" ""
 			(at 87.63 148.59 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C17798"
+			(at 87.63 148.59 0)
+			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects

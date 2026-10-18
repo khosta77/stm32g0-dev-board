@@ -2945,8 +2945,9 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "PCM_Transistor_BJT_AKL:SS9013"
+		(symbol "Transistor_BJT:MMBT3904"
 			(pin_names
+				(offset 0)
 				(hide yes)
 			)
 			(exclude_from_sim no)
@@ -2955,7 +2956,7 @@
 			(in_pos_files yes)
 			(duplicate_pin_numbers_are_jumpers no)
 			(property "Reference" "Q"
-				(at 5.08 1.27 0)
+				(at 5.08 1.905 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -2965,8 +2966,8 @@
 					(justify left)
 				)
 			)
-			(property "Value" "SS9013"
-				(at 5.08 -1.27 0)
+			(property "Value" "MMBT3904"
+				(at 5.08 0 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(effects
@@ -2976,8 +2977,21 @@
 					(justify left)
 				)
 			)
-			(property "Footprint" "PCM_Package_TO_SOT_THT_AKL:TO-92_Inline_Wide_EBC"
-				(at 5.08 2.54 0)
+			(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
+				(at 5.08 -1.905 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+						(italic yes)
+					)
+					(justify left)
+				)
+			)
+			(property "Datasheet" "https://www.onsemi.com/pdf/datasheet/pzt3904-d.pdf"
+				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
 				(hide yes)
@@ -2985,9 +2999,10 @@
 					(font
 						(size 1.27 1.27)
 					)
+					(justify left)
 				)
 			)
-			(property "Datasheet" "http://web.nuu.edu.tw/~marilyn/meilingweb/electronique%20TP/C9013.pdf"
+			(property "Description" "0.2A Ic, 40V Vce, Small Signal NPN Transistor, SOT-23"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -2998,7 +3013,7 @@
 					)
 				)
 			)
-			(property "Description" "NPN TO-92 transistor, 20V, 500mA, 625mW, Complementary to SS9012, Alternate KiCAD Library"
+			(property "ki_keywords" "NPN Transistor"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -3009,7 +3024,7 @@
 					)
 				)
 			)
-			(property "ki_keywords" "transistor NPN SS9013"
+			(property "ki_fp_filters" "SOT?23*"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -3020,37 +3035,47 @@
 					)
 				)
 			)
-			(symbol "SS9013_0_1"
+			(property "Sim.Device" "NPN"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Sim.Pins" "1=B 2=E 3=C"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "MMBT3904_0_1"
 				(polyline
 					(pts
-						(xy 0.635 1.905) (xy 0.635 -1.905) (xy 0.635 -1.905)
+						(xy -2.54 0) (xy 0.635 0)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 0.635 1.905) (xy 0.635 -1.905)
 					)
 					(stroke
 						(width 0.508)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.635 0.635) (xy 2.54 2.54)
-					)
-					(stroke
-						(width 0)
-						(type default)
-					)
-					(fill
-						(type none)
-					)
-				)
-				(polyline
-					(pts
-						(xy 0.635 -0.635) (xy 2.54 -2.54) (xy 2.54 -2.54)
-					)
-					(stroke
-						(width 0)
 						(type default)
 					)
 					(fill
@@ -3065,12 +3090,38 @@
 						(type default)
 					)
 					(fill
-						(type background)
+						(type none)
+					)
+				)
+			)
+			(symbol "MMBT3904_1_1"
+				(polyline
+					(pts
+						(xy 0.635 0.635) (xy 2.54 2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
 					)
 				)
 				(polyline
 					(pts
-						(xy 1.27 -1.778) (xy 1.778 -1.27) (xy 2.286 -2.286) (xy 1.27 -1.778) (xy 1.27 -1.778)
+						(xy 0.635 -0.635) (xy 2.54 -2.54)
+					)
+					(stroke
+						(width 0)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(polyline
+					(pts
+						(xy 1.27 -1.778) (xy 1.778 -1.27) (xy 2.286 -2.286) (xy 1.27 -1.778)
 					)
 					(stroke
 						(width 0)
@@ -3080,12 +3131,10 @@
 						(type outline)
 					)
 				)
-			)
-			(symbol "SS9013_1_1"
-				(pin passive line
-					(at 2.54 -5.08 90)
+				(pin input line
+					(at -5.08 0 0)
 					(length 2.54)
-					(name "E"
+					(name "B"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -3101,9 +3150,9 @@
 					)
 				)
 				(pin passive line
-					(at -5.08 0 0)
-					(length 5.715)
-					(name "B"
+					(at 2.54 -5.08 90)
+					(length 2.54)
+					(name "E"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -4290,7 +4339,7 @@
 		)
 		(uuid "40539d86-83cb-4a41-8f53-38949fb8dd2c")
 	)
-	(text "Y201 8 МГц HC49. F103DS табл. 22: CL1 = CL2 5..25 пФ, Cstray (выводы + плата) ~10 пФ.\nДля кварца с CL = 18 пФ: C = 2 x (CL - Cstray) = 16 пФ при Cstray 10 пФ, 26 пФ при 5 пФ.\nВыбрано 22 пФ C0G: внутри диапазона F103DS (27 пФ выходит за 25 пФ),\nэффективная CL = 11 + (5..10) = 16..21 пФ вокруг 18 пФ.\nУточнить по CL выбранного кварца. USB FS: допуск 0.25 %, расстройка от CL - десятки ppm."
+	(text "Y201 8 МГц HC49: YXC X49SD8MSD2SC, CL = 20 пФ, ESR <= 60 Ом [DS YXC HC-49US].\nF103DS табл. 22: CL1 = CL2 5..25 пФ, Cstray (выводы + плата) ~5..10 пФ.\nПод CL = 20 пФ надо C = 2 x (20 - Cstray) = 20..30 пФ, но 33 пФ вне 5..25 пФ F103DS - не ставим.\nОставлено 22 пФ C0G: эффективная CL = 11 + (5..10) = 16..21 пФ при номинале кварца 20 пФ.\nСдвиг частоты от недогрузки - десятки ppm; для USB FS (допуск 0.25 % = ±2500 ppm) несущественно."
 		(exclude_from_sim no)
 		(at 80.01 185.42 0)
 		(effects
@@ -4367,7 +4416,7 @@
 		)
 		(uuid "c3ec6171-0e8b-46e2-a846-82bcb0e93e38")
 	)
-	(text "USB J201 (ST-LINK):\n- D+ (J201.3) -> R213 0R -> PA12 (USB_DP); D- (J201.2) -> R214 0R -> PA11 (USB_DM)\n  [F103DS табл. 5: PA11 = USBDM, PA12 = USBDP]. В прежней версии D+/D- были перепутаны.\n- U201 USBLC6-2SC6 первым у разъёма: 1,6 = I/O1 (D+), 3,4 = I/O2 (D-), 5 = VBUS, 2 = GND\n  [USBLC6-2 DS стр. 1], так же как U301 у J301 (лист ft232rl). 1-6 и 3-4 - одна цепь (метки DP_J1/DM_J1).\n- Renumeration как в [MB1136 лист 4]: Q1 9013, R5 36k / R6 10k, R7 100R, R1 1k5.\n  R212 на D+ со стороны разъёма (до R213). R216 от VBUS_STL (до F201/D204), как от U5V у ST:\n  без кабеля в J201 база Q201 не подтянута даже при питании платы от J301.\n  BMP по высокому уровню на PA15 (10k к VBUS) определяет ревизию V2.1 [BMP stlink_common.c].\n- VBUS: J201 -> VBUS_STL -> F201 MF-MSMF075 (Ihold 0.75 A, R1max 0.45 Ом; MSMF050 с R1max 1.0 Ом\n  давал VCC FT232 < 4.0 В в худшем случае [Bourns MF-MSMF]) -> D204 B120 -> +5V; рядом C210 10u + C212 100n.\n  OR-ing двух USB на диодах, как STPS1L30A в [MB1184 лист 2]; с J301 тот же путь VBUS_FT -> FB301 -> D301.\n  Обратная подача в VBUS хоста недопустима [FTDI AN_146 §2.4.1].\n  Падение до +5V: F201 R1max 1.0 Ом [MF-MSMF DS] + Vf B120 -> при 0.4 А +5V может быть ~4.1..4.4 В.\n  Не проверено: этого хватает для LDO (dropout 0.14 В), но FT232 требует VCC >= 4.0 В [DS_FT232R §6.2]."
+	(text "USB J201 (ST-LINK):\n- D+ (J201.3) -> R213 0R -> PA12 (USB_DP); D- (J201.2) -> R214 0R -> PA11 (USB_DM)\n  [F103DS табл. 5: PA11 = USBDM, PA12 = USBDP]. В прежней версии D+/D- были перепутаны.\n- U201 USBLC6-2SC6 первым у разъёма: 1,6 = I/O1 (D+), 3,4 = I/O2 (D-), 5 = VBUS, 2 = GND\n  [USBLC6-2 DS стр. 1], так же как U301 у J301 (лист ft232rl). 1-6 и 3-4 - одна цепь (метки DP_J1/DM_J1).\n- Renumeration как в [MB1136 лист 4]: Q1 9013, R5 36k / R6 10k, R7 100R, R1 1k5.\n  Q201 = MMBT3904 вместо 9013: функционально подходит любой малосигнальный NPN (ST ставит 9013),\n  MMBT3904 - стандартный SOT-23 с однозначной распиновкой 1=B 2=E 3=C, Basic в JLCPCB (C20526).\n  R212 на D+ со стороны разъёма (до R213). R216 от VBUS_STL (до F201/D204), как от U5V у ST:\n  без кабеля в J201 база Q201 не подтянута даже при питании платы от J301.\n  BMP по высокому уровню на PA15 (10k к VBUS) определяет ревизию V2.1 [BMP stlink_common.c].\n- VBUS: J201 -> VBUS_STL -> F201 MF-MSMF075 (Ihold 0.75 A, R1max 0.45 Ом; MSMF050 с R1max 1.0 Ом\n  давал VCC FT232 < 4.0 В в худшем случае [Bourns MF-MSMF]) -> D204 B120 -> +5V; рядом C210 10u + C212 100n.\n  OR-ing двух USB на диодах, как STPS1L30A в [MB1184 лист 2]; с J301 тот же путь VBUS_FT -> FB301 -> D301.\n  Обратная подача в VBUS хоста недопустима [FTDI AN_146 §2.4.1].\n  Падение до +5V: F201 R1max 1.0 Ом [MF-MSMF DS] + Vf B120 -> при 0.4 А +5V может быть ~4.1..4.4 В.\n  Не проверено: этого хватает для LDO (dropout 0.14 В), но FT232 требует VCC >= 4.0 В [DS_FT232R §6.2]."
 		(exclude_from_sim no)
 		(at 134.62 16.51 0)
 		(effects
@@ -6755,6 +6804,17 @@
 				)
 			)
 		)
+		(property "LCSC" ""
+			(at 30.48 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "2f44b062-3657-4018-aa1c-427f68ad27e1")
 		)
@@ -6846,6 +6906,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C17477"
+			(at 86.36 63.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "83ce38be-995d-4736-8d10-9e94bd39bc38")
 		)
@@ -6915,6 +6986,17 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 35.56 218.44 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C17414"
 			(at 35.56 218.44 0)
 			(hide yes)
 			(show_name no)
@@ -7081,6 +7163,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C42431835"
+			(at 139.7 147.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "47d17570-dfb0-4133-95cf-29fd50030421")
 		)
@@ -7159,6 +7252,17 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 35.56 198.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C149504"
 			(at 35.56 198.12 0)
 			(hide yes)
 			(show_name no)
@@ -7259,6 +7363,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C500795"
+			(at 55.88 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "aa08b66b-fd6c-43e2-b747-f4f8f58e1908")
 		)
@@ -7333,6 +7448,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 45.72 120.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C49678"
 			(at 45.72 120.65 0)
 			(hide yes)
 			(show_name no)
@@ -7576,6 +7702,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C17477"
+			(at 59.69 154.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "054fa912-8669-49e1-9ca2-10a5e4cf3881")
 		)
@@ -7722,6 +7859,17 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 267.97 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C17561"
 			(at 267.97 88.9 0)
 			(hide yes)
 			(show_name no)
@@ -7965,6 +8113,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C17408"
+			(at 267.97 99.06 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "7ef820be-b5b9-4e0b-bb05-029ca2038753")
 		)
@@ -8198,6 +8357,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C17561"
+			(at 267.97 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "7474a50a-8b68-4b9a-8241-00949255eb78")
 		)
@@ -8365,6 +8535,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C2297"
+			(at 48.26 167.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "047d809a-b9cd-488e-9107-3a6a742e8f97")
 		)
@@ -8444,6 +8625,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C17561"
+			(at 267.97 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "1575c157-e80c-4952-acfc-563f87293553")
 		)
@@ -8460,7 +8652,7 @@
 		)
 	)
 	(symbol
-		(lib_id "PCM_Transistor_BJT_AKL:SS9013")
+		(lib_id "Transistor_BJT:MMBT3904")
 		(at 78.74 39.37 0)
 		(mirror y)
 		(unit 1)
@@ -8481,7 +8673,7 @@
 				)
 			)
 		)
-		(property "Value" "SS9013"
+		(property "Value" "MMBT3904"
 			(at 69.85 40.64 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8491,7 +8683,7 @@
 				)
 			)
 		)
-		(property "Footprint" "Package_TO_SOT_SMD:SOT-23-3"
+		(property "Footprint" "Package_TO_SOT_SMD:SOT-23"
 			(at 78.74 39.37 0)
 			(hide yes)
 			(show_name no)
@@ -8502,7 +8694,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "http://web.nuu.edu.tw/~marilyn/meilingweb/electronique%20TP/C9013.pdf"
+		(property "Datasheet" "https://www.onsemi.com/pdf/datasheet/pzt3904-d.pdf"
 			(at 78.74 39.37 0)
 			(hide yes)
 			(show_name no)
@@ -8513,7 +8705,18 @@
 				)
 			)
 		)
-		(property "Description" "NPN TO-92 transistor, 20V, 500mA, 625mW, Complementary to SS9012, Alternate KiCAD Library"
+		(property "Description" "0.2A Ic, 40V Vce, Small Signal NPN Transistor, SOT-23"
+			(at 78.74 39.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C20526"
 			(at 78.74 39.37 0)
 			(hide yes)
 			(show_name no)
@@ -8683,6 +8886,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C17477"
+			(at 86.36 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "78446058-6170-420f-ad4e-e51ca2a44043")
 		)
@@ -8752,6 +8966,17 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 35.56 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C17673"
 			(at 35.56 180.34 0)
 			(hide yes)
 			(show_name no)
@@ -8908,6 +9133,17 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 35.56 142.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C17630"
 			(at 35.56 142.24 0)
 			(hide yes)
 			(show_name no)
@@ -9076,6 +9312,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C17414"
+			(at 91.44 33.02 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "8cbbeb0f-85ab-4c45-81b7-b6095443b60f")
 		)
@@ -9155,6 +9402,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C17408"
+			(at 104.14 39.37 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "054590b7-56a4-489d-aa20-25757232e68a")
 		)
@@ -9224,6 +9482,17 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 87.63 142.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C149504"
 			(at 87.63 142.24 0)
 			(hide yes)
 			(show_name no)
@@ -9316,6 +9585,17 @@
 			)
 		)
 		(property "MPN" "STM32F103CBT6"
+			(at 203.2 101.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C8304"
 			(at 203.2 101.6 0)
 			(hide yes)
 			(show_name no)
@@ -9622,6 +9902,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C49678"
+			(at 35.56 120.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "a8e41a7c-a1e9-40fb-8421-ffdd92ebf335")
 		)
@@ -9691,6 +9982,17 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 267.97 109.22 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C17477"
 			(at 267.97 109.22 0)
 			(hide yes)
 			(show_name no)
@@ -10022,6 +10324,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C84140"
+			(at 60.96 20.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "8a6c1ae5-cd4f-4e0f-8d67-7569fda33ca1")
 		)
@@ -10103,6 +10416,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C1779"
+			(at 66.04 120.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "9f454e27-39cc-45f5-8ad9-41a73ef131fb")
 		)
@@ -10172,6 +10496,17 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 35.56 228.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C149504"
 			(at 35.56 228.6 0)
 			(hide yes)
 			(show_name no)
@@ -10349,6 +10684,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C134421"
+			(at 76.2 20.32 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "4e4a1ce4-8561-4126-88ed-73d25d1053bf")
 		)
@@ -10431,6 +10777,17 @@
 			)
 		)
 		(property "MPN" "USBLC6-2SC6"
+			(at 55.88 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C7519"
 			(at 55.88 55.88 0)
 			(hide yes)
 			(show_name no)
@@ -10611,6 +10968,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C49678"
+			(at 55.88 120.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "1789deb3-959a-45fb-99f1-7a6812ca78f2")
 		)
@@ -10692,6 +11060,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C4360"
+			(at 91.44 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "8807dfa0-d20c-4ad0-92eb-30af4b720556")
 		)
@@ -10763,6 +11142,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 73.66 100.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C15850"
 			(at 73.66 100.33 0)
 			(hide yes)
 			(show_name no)
@@ -10931,6 +11321,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C1804"
+			(at 110.49 171.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "5c66fea4-01c0-43e9-8f92-6ae38ef56949")
 		)
@@ -11089,6 +11490,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C1804"
+			(at 92.71 171.45 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "a790ef72-a93b-4872-8291-190884fe1a3a")
 		)
@@ -11169,6 +11581,17 @@
 			)
 		)
 		(property "Sim.Pins" "1=K 2=A"
+			(at 48.26 142.24 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C84256"
 			(at 48.26 142.24 0)
 			(hide yes)
 			(show_name no)
@@ -11337,6 +11760,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C15850"
+			(at 111.76 24.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "0f2c6ab2-156f-4455-aefa-ee83ac3703fe")
 		)
@@ -11418,6 +11852,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C49678"
+			(at 96.52 146.05 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "38ecaccb-8cbb-48be-9f4a-13c2e60e0862")
 		)
@@ -11489,6 +11934,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 25.4 120.65 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C49678"
 			(at 25.4 120.65 0)
 			(hide yes)
 			(show_name no)
@@ -11888,6 +12344,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C4310"
+			(at 76.2 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "28e34a45-4a7c-4611-b924-2b17e2ab5134")
 		)
@@ -12198,6 +12665,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C17513"
+			(at 35.56 167.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "d45aaae2-0aaa-42da-9198-9b8628385c45")
 		)
@@ -12269,6 +12747,17 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 40.64 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C149504"
 			(at 40.64 66.04 0)
 			(hide yes)
 			(show_name no)
@@ -12360,6 +12849,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C42431798"
+			(at 152.4 228.6 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "e2fdda18-e3ec-4d0d-874c-954bb1f7ce61")
 		)
@@ -12440,6 +12940,17 @@
 			)
 		)
 		(property "Sim.Pins" "1=K 2=A"
+			(at 48.26 154.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C2297"
 			(at 48.26 154.94 0)
 			(hide yes)
 			(show_name no)
@@ -12608,6 +13119,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C49678"
+			(at 124.46 24.13 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "132eef9b-f6d2-418a-a7c6-cefa5d80fb49")
 		)
@@ -12677,6 +13199,17 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 35.56 208.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C149504"
 			(at 35.56 208.28 0)
 			(hide yes)
 			(show_name no)
@@ -12768,6 +13301,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C1779"
+			(at 38.1 100.33 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "167ae7e6-2b47-422c-9736-7511a7fc94fa")
 		)
@@ -12837,6 +13381,17 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 49.53 180.34 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C17673"
 			(at 49.53 180.34 0)
 			(hide yes)
 			(show_name no)
@@ -13069,7 +13624,29 @@
 				)
 			)
 		)
-		(property "Description" "Two pin crystal"
+		(property "Description" "Кварц 8 МГц HC-49S, CL 20 пФ, ESR <= 60 Ом, C0 <= 7 пФ (YXC X49SD8MSD2SC)"
+			(at 101.6 167.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "X49SD8MSD2SC"
+			(at 101.6 167.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C21263"
 			(at 101.6 167.64 0)
 			(hide yes)
 			(show_name no)
@@ -13149,6 +13726,17 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 35.56 154.94 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C17630"
 			(at 35.56 154.94 0)
 			(hide yes)
 			(show_name no)

@@ -1228,6 +1228,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C17673"
+			(at 134.62 74.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "037cdd74-b04b-43e1-90ef-fd1afc036864")
 		)
@@ -1465,6 +1476,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C49678"
+			(at 190.5 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "963545e0-c3bb-4122-861c-26343897decf")
 		)
@@ -1613,6 +1635,17 @@
 			)
 		)
 		(property "Description" "Temperature Sensor with I2C/SMBus Interface, SOT-23-6"
+			(at 180.34 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C31810"
 			(at 180.34 90.17 0)
 			(hide yes)
 			(show_name no)
@@ -1794,6 +1827,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C31810"
+			(at 101.6 90.17 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "6"
 			(uuid "f877c8de-9485-409e-acce-02b1537c86d0")
 		)
@@ -1877,6 +1921,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 111.76 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C49678"
 			(at 111.76 78.74 0)
 			(hide yes)
 			(show_name no)
@@ -2268,6 +2323,17 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 144.78 74.93 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C17673"
 			(at 144.78 74.93 0)
 			(hide yes)
 			(show_name no)

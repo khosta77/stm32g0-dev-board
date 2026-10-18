@@ -2732,7 +2732,7 @@
 		)
 		(uuid "bbd06ff8-5b1a-4f9b-baf2-ac9c1bb87f6c")
 	)
-	(text "Экран J301 не соединять с GND напрямую: R301 0 Ом (DC)\nи/или C301 (ВЧ), подбор при EMC-испытаниях [AN146 §2.2.2]."
+	(text "Экран J301 не соединять с GND напрямую: R301 0 Ом (DC)\nи/или C301 (ВЧ), подбор при EMC-испытаниях [AN146 §2.2.2].\nC301 4.7n 50 В X7R (DNP) - оценка: AN146 §2.2.2 номинал не задаёт."
 		(exclude_from_sim no)
 		(at 17.78 113.03 0)
 		(effects
@@ -25516,6 +25516,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C134421"
+			(at 99.06 30.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "02e8525f-140a-4076-b0cc-1c33a6285973")
 		)
@@ -25662,6 +25673,17 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 209.55 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C17798"
 			(at 209.55 81.28 0)
 			(hide yes)
 			(show_name no)
@@ -25828,6 +25850,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C17798"
+			(at 209.55 73.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "c8520f87-32c7-4807-99ae-f8f63e1b73af")
 		)
@@ -25899,6 +25932,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 167.64 36.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C49678"
 			(at 167.64 36.83 0)
 			(hide yes)
 			(show_name no)
@@ -26067,6 +26111,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C1710"
+			(at 63.5 34.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "9d003f51-4a2d-43d2-89d5-e2b00f298179")
 		)
@@ -26223,6 +26278,17 @@
 				)
 			)
 		)
+		(property "LCSC" ""
+			(at 30.48 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "031272eb-8fe4-4b89-9ec9-f08e702d0b4b")
 		)
@@ -26304,6 +26370,17 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
+			(at 198.12 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C2297"
 			(at 198.12 81.28 0)
 			(hide yes)
 			(show_name no)
@@ -26472,6 +26549,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C1779"
+			(at 177.8 36.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "f3a42219-63a6-43bd-9392-499abd0f9734")
 		)
@@ -26541,6 +26629,17 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 190.5 48.26 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C17513"
 			(at 190.5 48.26 0)
 			(hide yes)
 			(show_name no)
@@ -26622,6 +26721,17 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 76.2 34.29 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C17513"
 			(at 76.2 34.29 0)
 			(hide yes)
 			(show_name no)
@@ -26791,6 +26901,17 @@
 			)
 		)
 		(property "MPN" "USBLC6-2SC6"
+			(at 55.88 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C7519"
 			(at 55.88 50.8 0)
 			(hide yes)
 			(show_name no)
@@ -27048,6 +27169,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C17520"
+			(at 76.2 46.99 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "655abd67-04ff-46df-92c6-df4cbbbcfbc9")
 		)
@@ -27117,6 +27249,17 @@
 			)
 		)
 		(property "Description" "Light emitting diode"
+			(at 198.12 73.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C2297"
 			(at 198.12 73.66 0)
 			(hide yes)
 			(show_name no)
@@ -27317,7 +27460,7 @@
 				)
 			)
 		)
-		(property "Value" "600R@100MHz 1A"
+		(property "Value" "220R@100MHz 2A"
 			(at 87.63 25.4 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -27349,7 +27492,29 @@
 				)
 			)
 		)
-		(property "Description" "Ferrite bead 0805, >=1 A, 220..600 Ohm @100 MHz"
+		(property "Description" "Ферритовая бусина 220 Ом @100 МГц, 2 А, Rdc 45 мОм, 0805 (Murata BLM21PG221SN1D)"
+			(at 87.63 30.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "MPN" "BLM21PG221SN1D"
+			(at 87.63 30.48 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C85840"
 			(at 87.63 30.48 0)
 			(hide yes)
 			(show_name no)
@@ -27431,6 +27596,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 116.84 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C49678"
 			(at 116.84 57.15 0)
 			(hide yes)
 			(show_name no)
@@ -27676,6 +27852,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C49678"
+			(at 147.32 36.83 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "2e45d74a-d314-46f4-8b64-4cf0c21963f0")
 		)
@@ -27713,7 +27900,7 @@
 				(justify left)
 			)
 		)
-		(property "Value" "DNP"
+		(property "Value" "4.7n"
 			(at 36.068 73.66 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -27747,6 +27934,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 33.02 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C1744"
 			(at 33.02 72.39 0)
 			(hide yes)
 			(show_name no)
@@ -27838,6 +28036,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C17477"
+			(at 22.86 72.39 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "cd18835a-e1e6-453a-a4fe-0c20dce95245")
 		)
@@ -27907,6 +28116,17 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 190.5 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C17513"
 			(at 190.5 55.88 0)
 			(hide yes)
 			(show_name no)
@@ -27999,6 +28219,17 @@
 			)
 		)
 		(property "FT_PROG" "CBUS0=TXLED#, CBUS1=RXLED#, Power: Bus Powered + Max Bus Power = board current (<=500mA) or Self Powered + 0 mA"
+			(at 157.48 71.12 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C8690"
 			(at 157.48 71.12 0)
 			(hide yes)
 			(show_name no)

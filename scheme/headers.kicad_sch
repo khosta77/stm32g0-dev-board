@@ -6974,6 +6974,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C42431840"
+			(at 101.6 106.68 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "ba4d5449-d3b9-4820-82f8-837bd34e32e4")
 		)
@@ -7140,6 +7151,17 @@
 			)
 		)
 		(property "Description" "Arduino Uno R3 IOL: D7..D0"
+			(at 101.6 76.2 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C42431840"
 			(at 101.6 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -7318,6 +7340,17 @@
 			)
 		)
 		(property "Description" "Arduino Uno R3 IOH: SCL, SDA, AREF, GND, D13..D8"
+			(at 101.6 40.64 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C2905418"
 			(at 101.6 40.64 0)
 			(hide yes)
 			(show_name no)
@@ -7510,6 +7543,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C225519"
+			(at 213.36 177.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "6509752c-a67a-4b1a-b555-31345c6611d0")
 		)
@@ -7599,6 +7643,17 @@
 			)
 		)
 		(property "Description" "Гребёнка логического анализатора, правый край платы (сторона цифрового ряда Uno)"
+			(at 254 73.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" ""
 			(at 254 73.66 0)
 			(hide yes)
 			(show_name no)
@@ -7755,6 +7810,17 @@
 			)
 		)
 		(property "Description" "Гребёнка логического анализатора, левый край платы (сторона POWER/ANALOG Uno)"
+			(at 182.88 73.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" ""
 			(at 182.88 73.66 0)
 			(hide yes)
 			(show_name no)
@@ -8000,6 +8066,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C40877"
+			(at 101.6 134.62 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "1267bb0f-564f-4b7b-a13d-e68b3961c069")
 		)
@@ -8170,6 +8247,17 @@
 			)
 		)
 		(property "MPN" "BAT54WS"
+			(at 157.48 177.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C124205"
 			(at 157.48 177.8 0)
 			(hide yes)
 			(show_name no)
@@ -8495,6 +8583,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C17477"
+			(at 157.48 200.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "354b1f4f-aece-430a-bab0-c235a8aa3df0")
 		)
@@ -8575,6 +8674,17 @@
 			)
 		)
 		(property "MPN" "B120-13-F"
+			(at 157.48 165.1 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C134421"
 			(at 157.48 165.1 0)
 			(hide yes)
 			(show_name no)
@@ -8899,6 +9009,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C17477"
+			(at 157.48 190.5 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "82cec157-28a3-48d5-8b75-69ff0a4595de")
 		)
@@ -9205,6 +9326,17 @@
 			)
 		)
 		(property "Description" "0R DNP: A5 <-> SCL (совместимость со старыми шилдами Uno)"
+			(at 157.48 210.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C17477"
 			(at 157.48 210.82 0)
 			(hide yes)
 			(show_name no)

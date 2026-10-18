@@ -2198,6 +2198,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C17415"
+			(at 60.96 60.96 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "997be77b-007f-4862-8a58-c0ff0bc45a90")
 		)
@@ -2333,7 +2344,7 @@
 				)
 			)
 		)
-		(property "Datasheet" "https://www.hirose.com/product/en/download_file/key_name/DM3/category/Catalog/doc_file_id/49662/?file_category_id=4&item_id=195&is_series=1"
+		(property "Datasheet" "https://www.hirose.com/en/product/p/CL0609-0031-0-00"
 			(at 203.2 96.52 0)
 			(hide yes)
 			(show_name no)
@@ -2356,6 +2367,17 @@
 			)
 		)
 		(property "MPN" "DM3AT-SF-PEJM5"
+			(at 203.2 96.52 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C114218"
 			(at 203.2 96.52 0)
 			(hide yes)
 			(show_name no)
@@ -2552,6 +2574,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C17415"
+			(at 149.86 83.82 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "827487d4-3e27-432d-b491-47b9f1a9b273")
 		)
@@ -2633,6 +2666,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C17713"
+			(at 185.42 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "b4e2fc91-e870-4031-874d-f7aa6a9d469c")
 		)
@@ -2704,6 +2748,17 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 175.26 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C17713"
 			(at 175.26 128.27 0)
 			(hide yes)
 			(show_name no)
@@ -2873,6 +2928,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C17415"
+			(at 60.96 50.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "24c29db0-0f14-4cd2-b2c0-ffc3580dee01")
 		)
@@ -2954,6 +3020,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C17414"
+			(at 69.85 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "809d0182-0bf7-4751-8864-b2a0dbf87e39")
 		)
@@ -3025,6 +3102,17 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 69.85 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C17414"
 			(at 69.85 88.9 0)
 			(hide yes)
 			(show_name no)
@@ -3146,6 +3234,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 205.74 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C49678"
 			(at 205.74 128.27 0)
 			(hide yes)
 			(show_name no)
@@ -3304,6 +3403,17 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 154.94 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C17414"
 			(at 154.94 128.27 0)
 			(hide yes)
 			(show_name no)
@@ -3549,6 +3659,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C49678"
+			(at 97.79 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "55748133-f9bd-4ad1-8de6-c2e65ac56107")
 		)
@@ -3784,6 +3905,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C17713"
+			(at 195.58 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "400e4e40-cfc1-4ca6-bcd3-68d8ca0fb960")
 		)
@@ -3865,6 +3997,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C15850"
+			(at 116.84 57.15 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "2"
 			(uuid "3f5f1c3d-dcfe-408f-bbe3-a42decea53af")
 		)
@@ -3936,6 +4079,17 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 60.96 55.88 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C17415"
 			(at 60.96 55.88 0)
 			(hide yes)
 			(show_name no)
@@ -4094,6 +4248,17 @@
 			)
 		)
 		(property "Description" "Unpolarized capacitor"
+			(at 215.9 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C15850"
 			(at 215.9 128.27 0)
 			(hide yes)
 			(show_name no)
@@ -4263,6 +4428,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C17415"
+			(at 149.86 73.66 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "b0ef8660-3bb7-4415-8193-1be342860052")
 		)
@@ -4334,6 +4510,17 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 144.78 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C17713"
 			(at 144.78 128.27 0)
 			(hide yes)
 			(show_name no)
@@ -4502,6 +4689,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C17415"
+			(at 60.96 66.04 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "1c6f43bf-92b5-4165-8315-c1a0930bfcea")
 		)
@@ -4573,6 +4771,17 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 165.1 128.27 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C17713"
 			(at 165.1 128.27 0)
 			(hide yes)
 			(show_name no)
@@ -4664,6 +4873,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C17414"
+			(at 74.93 43.18 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "518d20c8-4569-4cb1-a5ed-134fe6baeb95")
 		)
@@ -4745,6 +4965,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C17415"
+			(at 149.86 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "1"
 			(uuid "005087eb-977b-4c43-9ba4-911e11dfd46f")
 		)
@@ -4816,6 +5047,17 @@
 			)
 		)
 		(property "Description" "Resistor"
+			(at 149.86 68.58 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C17415"
 			(at 149.86 68.58 0)
 			(hide yes)
 			(show_name no)
@@ -5153,6 +5395,17 @@
 				)
 			)
 		)
+		(property "LCSC" "C179173"
+			(at 90.17 78.74 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
 		(pin "6"
 			(uuid "042efe1b-c6e3-49b3-8d14-82517ea000bc")
 		)
@@ -5185,5 +5438,201 @@
 				)
 			)
 		)
+	)
+	(symbol
+		(lib_id "Device:C")
+		(at 170.18 114.3 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "8f7c18f8-6590-41f4-b3e3-69acda6345e4")
+		(property "Reference" "C505"
+			(at 173.228 113.03 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "100n"
+			(at 173.228 115.57 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" "Capacitor_SMD:C_0805_2012Metric"
+			(at 170.18 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 170.18 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Unpolarized capacitor"
+			(at 170.18 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" "C49678"
+			(at 170.18 114.3 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "2"
+			(uuid "f85c19cb-b276-4a8d-875f-ed9441a4650a")
+		)
+		(pin "1"
+			(uuid "dae9dc31-508d-46e3-aeec-31dcc99d5996")
+		)
+		(instances
+			(project "g0_dev_board"
+				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/ed829014-e938-4777-adbe-da6a5ed2b55d"
+					(reference "C505")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "power:GND")
+		(at 170.18 118.11 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "c7e9627f-b869-432b-a5fd-1e72c7d084bb")
+		(property "Reference" "#PWR0150"
+			(at 170.18 124.46 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "GND"
+			(at 170.18 121.92 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" ""
+			(at 170.18 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 170.18 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \\\"GND\\\" , ground"
+			(at 170.18 118.11 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "34e69a02-e7af-448e-a63a-7c4656e2da4f")
+		)
+		(instances
+			(project "g0_dev_board"
+				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/ed829014-e938-4777-adbe-da6a5ed2b55d"
+					(reference "#PWR0150")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 170.18 106.68) (xy 170.18 110.49)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "27521617-3e31-49aa-a6ec-c9fe852e6999")
+	)
+	(junction
+		(at 170.18 106.68)
+		(diameter 0)
+		(color 0 0 0 0)
+		(uuid "7e0738a8-3363-41ad-81f9-5c373c76c9b6")
+	)
+	(text "C505 100n (у J501, /CARD_DET -> GND): антидребезг детекта карты, RC = 47k (R506) · 100n ≈ 4.7 мс.\nНеобязателен при программной фильтрации /CARD_DET (инженерная оценка, не из DS)."
+		(exclude_from_sim no)
+		(at 144.78 148.59 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "f7c96402-0ae2-41a9-b91a-03668b95bc84")
 	)
 )
