@@ -3735,6 +3735,17 @@
 		)
 		(uuid "3595c791-f543-460c-8b1a-58bf9af997e9")
 	)
+	(text "LED D401–D404: KT-0805G (C2297, InGaN), Vf 2.6–3.1 В;\nR424–R427 330R: I = (3.3 − Vf)/330 = 0.6–2.1 мА (без Vol).\nACTLED/LINKLED: D403/D404 ≤ 2.1 + J401 ≈ 4 < 8 мА (IOL).\nИмена цепей MDI для дифпар KiCad (суффикс P/N): TXP/TXN,\nRXP/RXN; со стороны W5500 RXIP/RXIN — цепи RXI_P/RXI_N."
+		(exclude_from_sim no)
+		(at 15.24 104.14 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left top)
+		)
+		(uuid "5f88237b-b590-47a4-bbc7-76f21f289ee0")
+	)
 	(text "MDI: W5500-Ref (R1/R2/R6/R7 49R9 1%, R3 10R 1%, C9/C10 6n8,\nC8 22n, C15 10n), DG стр.3. 49R9 (E96): 2×49.9 = 100 Ом.\nTXP→TD+ (J401.1), RXP→RD+ (J401.3): как в W5500-Ref (линии\nу R21/R22 перекрещены) и HR911105A (P1 TD+, P3 RD+). DG\nстр.3 — обобщённый рисунок. Auto-MDIX нет (DS 5.5.6)."
 		(exclude_from_sim no)
 		(at 176.53 83.82 0)
@@ -3768,7 +3779,7 @@
 		)
 		(uuid "8b3e9581-2122-4b73-aaed-f920c0280366")
 	)
-	(text "R429/R430 330R — как\nW5500-Ref R8/R9.\nI ≈ (3.3 − Vf)/330 ≈ 4 мА\n(Vf ≈ 2 В — оценка, в\nдаташ. HR911105A нет).\nIOL W5500 8 мА @0.4 В\n(DS стр.59); с D403/D404\nсуммарно < 6 мА."
+	(text "R429/R430 330R — как\nW5500-Ref R8/R9.\nI ≈ (3.3 − Vf)/330 ≈ 4 мА\n(Vf ≈ 2 В — оценка, в\nдаташ. HR911105A нет).\nIOL W5500 8 мА @0.4 В\n(DS стр.59); с D403/D404\nсуммарно < 6.1 мА."
 		(exclude_from_sim no)
 		(at 259.08 41.91 0)
 		(effects
@@ -7990,7 +8001,7 @@
 		)
 		(uuid "37bb2b78-a05e-49c1-9c6c-707dbf5c1669")
 	)
-	(label "RXNNET"
+	(label "RXI_N"
 		(at 222.25 55.88 0)
 		(effects
 			(font
@@ -8040,7 +8051,7 @@
 		)
 		(uuid "40ed8eb8-4f82-47b8-b9c6-977c79222c1e")
 	)
-	(label "RXPNET"
+	(label "RXI_P"
 		(at 151.13 69.85 180)
 		(effects
 			(font
@@ -8180,7 +8191,7 @@
 		)
 		(uuid "87dd82ea-dd39-4fd6-a30d-a7765b7ffbd1")
 	)
-	(label "RXPNET"
+	(label "RXI_P"
 		(at 222.25 66.04 0)
 		(effects
 			(font
@@ -8230,7 +8241,7 @@
 		)
 		(uuid "99e5dbb6-16fe-488d-833e-8a4178f9334c")
 	)
-	(label "RXPNET"
+	(label "RXI_P"
 		(at 172.72 36.83 0)
 		(effects
 			(font
@@ -8290,7 +8301,7 @@
 		)
 		(uuid "c21f240f-fc70-4ad4-8e8f-fe558a71753e")
 	)
-	(label "RXNNET"
+	(label "RXI_N"
 		(at 172.72 24.13 0)
 		(effects
 			(font
@@ -8420,7 +8431,7 @@
 		)
 		(uuid "fe0dc63d-b2c8-49c7-baa6-17891e5d652d")
 	)
-	(label "RXNNET"
+	(label "RXI_N"
 		(at 151.13 67.31 180)
 		(effects
 			(font
@@ -11092,7 +11103,7 @@
 				)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "330"
 			(at 259.08 89.3195 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11135,7 +11146,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C17513"
+		(property "LCSC" "C17630"
 			(at 259.08 92.71 0)
 			(hide yes)
 			(show_name no)
@@ -12411,7 +12422,7 @@
 				)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "330"
 			(at 259.08 123.6095 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12454,7 +12465,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C17513"
+		(property "LCSC" "C17630"
 			(at 259.08 127 0)
 			(hide yes)
 			(show_name no)
@@ -13206,7 +13217,7 @@
 				)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "330"
 			(at 259.08 99.4795 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13249,7 +13260,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C17513"
+		(property "LCSC" "C17630"
 			(at 259.08 102.87 0)
 			(hide yes)
 			(show_name no)
@@ -14761,7 +14772,7 @@
 				)
 			)
 		)
-		(property "Value" "1k"
+		(property "Value" "330"
 			(at 259.08 112.1795 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -14804,7 +14815,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C17513"
+		(property "LCSC" "C17630"
 			(at 259.08 115.57 0)
 			(hide yes)
 			(show_name no)

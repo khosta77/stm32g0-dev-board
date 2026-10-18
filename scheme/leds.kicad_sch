@@ -1297,7 +1297,7 @@
 				)
 			)
 		)
-		(property "Value" "680"
+		(property "Value" "330"
 			(at 92.71 140.97 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -1339,7 +1339,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C17798"
+		(property "LCSC" "C17630"
 			(at 87.63 142.24 0)
 			(hide yes)
 			(show_name no)

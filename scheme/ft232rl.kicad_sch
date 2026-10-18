@@ -2710,7 +2710,7 @@
 		)
 		(uuid "81f3fa18-f12b-4607-b98b-a0512631d16b")
 	)
-	(text "J301, питание VBUS_FT (вариант A, плата self-powered от +5V):\n- U301 USBLC6-2SC6 первым у разъёма: 1,6 = I/O1 (D+), 3,4 = I/O2 (D-),\n  5 = VBUS, 2 = GND [ULC стр.1; AN146 §2.2.1]. Выводы 1 и 6 (3 и 4)\n  на плате соединить: обе пары в одной цепи.\n- C302 10н и FB301 у разъёма [AN146 §2.4.4 Fig 2.5; DS Fig 6.1].\n- D301 Шоттки VBUS_FT -> +5V: нет обратной подачи с +5V (J201) в VBUS\n  хоста [AN146 §2.4.1]. Такой же диод стоит у J201 (лист st_link).\n- D+/D- напрямую на FT232: внутр. последовательные R и 1.5к на USBDP\n  [DS табл. 3.1]; ферриты на D+/D- запрещены [AN146 §2.4.4]."
+	(text "J301, питание VBUS_FT (вариант A, плата self-powered от +5V):\n- U301 USBLC6-2SC6 первым у разъёма: 1,6 = I/O1 (D+), 3,4 = I/O2 (D-),\n  5 = VBUS, 2 = GND [ULC стр.1; AN146 §2.2.1]. Выводы 1 и 6 (3 и 4)\n  на плате соединить: обе пары в одной цепи.\n- C302 10н и FB301 у разъёма [AN146 §2.4.4 Fig 2.5; DS Fig 6.1].\n- D301 Шоттки VBUS_FT -> +5V: нет обратной подачи с +5V (J201) в VBUS\n  хоста [AN146 §2.4.1]. Такой же диод стоит у J201 (лист st_link).\n- D+/D- (цепи FT_D+/FT_D-; суффиксы +/- - дифпара для KiCad)\n  напрямую на FT232: внутр. последовательные R и 1.5к на USBDP\n  [DS табл. 3.1]; ферриты на D+/D- запрещены [AN146 §2.4.4]."
 		(exclude_from_sim no)
 		(at 17.78 84.455 0)
 		(effects
@@ -2721,7 +2721,7 @@
 		)
 		(uuid "9d41e00f-0062-440b-9822-c6618601656b")
 	)
-	(text "CBUS0 = TXLED#, CBUS1 = RXLED# - заводские значения EEPROM\n[DS табл. 3.4, §7.5 Fig 7.5]. Аноды через 680 Ом к VCCIO (+3.3V):\nI ~ (3.3 - Vf 2.0 - Vol 0.4)/680 ~ 1.3 мА; Vol <= 0.5 В при 2 мА\n[DS табл. 5.4]. Vf зависит от цвета LED - уточнить."
+	(text "CBUS0 = TXLED#, CBUS1 = RXLED# - заводские значения EEPROM\n[DS табл. 3.4, §7.5 Fig 7.5]. Аноды через 330 Ом (R306/R307) к VCCIO (+3.3V).\nD302/D303 KT-0805G (C2297, InGaN), Vf 2.6..3.1 В:\nI = (3.3 - Vf - Vol)/330; без учёта Vol 0.6..2.1 мА; Vol <= 0.5 В при 2 мА\n[DS табл. 5.4] - при Vf у верхней границы ток мал, яркость проверить на образце."
 		(exclude_from_sim no)
 		(at 190.5 92.71 0)
 		(effects
@@ -25212,7 +25212,7 @@
 			"AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=="
 		)
 	)
-	(label "USB_DM"
+	(label "FT_D-"
 		(at 39.37 53.34 0)
 		(effects
 			(font
@@ -25222,7 +25222,7 @@
 		)
 		(uuid "0bd5aca2-688d-433c-b159-f1bcca0c9b0a")
 	)
-	(label "USB_DP"
+	(label "FT_D+"
 		(at 66.04 50.8 0)
 		(effects
 			(font
@@ -25232,7 +25232,7 @@
 		)
 		(uuid "14b676d7-b06b-4f28-8829-b000d9423caa")
 	)
-	(label "USB_DM"
+	(label "FT_D-"
 		(at 66.04 53.34 0)
 		(effects
 			(font
@@ -25242,7 +25242,7 @@
 		)
 		(uuid "19cd604b-d649-4f7c-b689-e2db3562a6b3")
 	)
-	(label "USB_DP"
+	(label "FT_D+"
 		(at 39.37 50.8 0)
 		(effects
 			(font
@@ -25252,7 +25252,7 @@
 		)
 		(uuid "3e40aea5-5872-4c1d-a1b8-56641ba391b4")
 	)
-	(label "USB_DM"
+	(label "FT_D-"
 		(at 132.08 63.5 180)
 		(effects
 			(font
@@ -25322,7 +25322,7 @@
 		)
 		(uuid "c14de5f2-aac9-412c-81c4-074ed8881fb5")
 	)
-	(label "USB_DP"
+	(label "FT_D+"
 		(at 132.08 60.96 180)
 		(effects
 			(font
@@ -25640,7 +25640,7 @@
 				)
 			)
 		)
-		(property "Value" "680"
+		(property "Value" "330"
 			(at 209.55 87.21 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25683,7 +25683,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C17798"
+		(property "LCSC" "C17630"
 			(at 209.55 81.28 0)
 			(hide yes)
 			(show_name no)
@@ -25807,7 +25807,7 @@
 				)
 			)
 		)
-		(property "Value" "680"
+		(property "Value" "330"
 			(at 209.55 70.27 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -25850,7 +25850,7 @@
 				)
 			)
 		)
-		(property "LCSC" "C17798"
+		(property "LCSC" "C17630"
 			(at 209.55 73.66 0)
 			(hide yes)
 			(show_name no)

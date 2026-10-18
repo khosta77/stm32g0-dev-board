@@ -562,6 +562,25 @@
       {
         "bus_width": 12,
         "clearance": 0.2,
+        "diff_pair_gap": 0.18,
+        "diff_pair_via_gap": 0.18,
+        "diff_pair_width": 0.24,
+        "line_style": 0,
+        "microvia_diameter": 0.3,
+        "microvia_drill": 0.1,
+        "name": "MDI100",
+        "pcb_color": "rgba(0, 0, 0, 0.000)",
+        "priority": 2,
+        "schematic_color": "rgba(0, 0, 0, 0.000)",
+        "track_width": 0.24,
+        "tuning_profile": "",
+        "via_diameter": 0.6,
+        "via_drill": 0.3,
+        "wire_width": 6
+      },
+      {
+        "bus_width": 12,
+        "clearance": 0.2,
         "diff_pair_gap": 0.25,
         "diff_pair_via_gap": 0.25,
         "diff_pair_width": 0.5,
@@ -592,25 +611,6 @@
         "priority": 1,
         "schematic_color": "rgba(0, 0, 0, 0.000)",
         "track_width": 0.28,
-        "tuning_profile": "",
-        "via_diameter": 0.6,
-        "via_drill": 0.3,
-        "wire_width": 6
-      },
-      {
-        "bus_width": 12,
-        "clearance": 0.2,
-        "diff_pair_gap": 0.18,
-        "diff_pair_via_gap": 0.18,
-        "diff_pair_width": 0.24,
-        "line_style": 0,
-        "microvia_diameter": 0.3,
-        "microvia_drill": 0.1,
-        "name": "MDI100",
-        "pcb_color": "rgba(0, 0, 0, 0.000)",
-        "priority": 2,
-        "schematic_color": "rgba(0, 0, 0, 0.000)",
-        "track_width": 0.24,
         "tuning_profile": "",
         "via_diameter": 0.6,
         "via_drill": 0.3,
@@ -669,27 +669,27 @@
       },
       {
         "netclass": "USB90",
-        "pattern": "/st_link/DP_J1"
+        "pattern": "/st_link/J201_D+"
       },
       {
         "netclass": "USB90",
-        "pattern": "/st_link/DM_J1"
+        "pattern": "/st_link/J201_D-"
       },
       {
         "netclass": "USB90",
-        "pattern": "/st_link/USB_DP"
+        "pattern": "/st_link/STL_D+"
       },
       {
         "netclass": "USB90",
-        "pattern": "/st_link/USB_DM"
+        "pattern": "/st_link/STL_D-"
       },
       {
         "netclass": "USB90",
-        "pattern": "/ft232rl/USB_DP"
+        "pattern": "/ft232rl/FT_D+"
       },
       {
         "netclass": "USB90",
-        "pattern": "/ft232rl/USB_DM"
+        "pattern": "/ft232rl/FT_D-"
       },
       {
         "netclass": "MDI100",
@@ -709,11 +709,11 @@
       },
       {
         "netclass": "MDI100",
-        "pattern": "/w5500/RXPNET"
+        "pattern": "/w5500/RXI_P"
       },
       {
         "netclass": "MDI100",
-        "pattern": "/w5500/RXNNET"
+        "pattern": "/w5500/RXI_N"
       }
     ]
   },
