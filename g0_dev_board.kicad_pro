@@ -380,14 +380,32 @@
           "label": "Datasheet",
           "name": "Datasheet",
           "show": true
+        },
+        {
+          "group_by": false,
+          "label": "Sim.Pins",
+          "name": "Sim.Pins",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "Описание",
+          "name": "Description",
+          "show": false
+        },
+        {
+          "group_by": false,
+          "label": "#",
+          "name": "${ITEM_NUMBER}",
+          "show": false
         }
       ],
       "filter_string": "",
       "group_symbols": true,
       "include_excluded_from_bom": true,
-      "name": "Default Editing",
+      "name": "",
       "sort_asc": true,
-      "sort_field": "Обозначение"
+      "sort_field": "Reference"
     },
     "bus_aliases": {},
     "connection_grid_size": 50.0,
@@ -461,6 +479,10 @@
     [
       "b7ce6892-2768-4c84-a381-b1532283fbfb",
       "w5500"
+    ],
+    [
+      "5c8f8cfd-1030-4022-9071-e1993a429931",
+      "headers"
     ],
     [
       "ed829014-e938-4777-adbe-da6a5ed2b55d",
