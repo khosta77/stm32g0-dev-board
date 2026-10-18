@@ -3035,7 +3035,7 @@
 			(embedded_fonts no)
 		)
 	)
-	(text "Гребёнки логического анализатора, 1x27 каждая (одинаковые, по левому и правому краю платы,\nподпись каждого вывода - на шелкографии):\nJ806 J_LA_R (цифровой ряд Uno): SCL, SDA, AREF, GND, D13..D8, D7..D0 (порядок IOH+IOL),\n  GND, SPI2 SCK/MISO/MOSI, W_CS, W_INT, U1_TX, U1_RX, GND.\nJ805 J_LA_L (POWER/ANALOG): GND, 3V3, NRST, 5V, GND, VIN, A0..A5, GND, FL_CS, SD_CS, CARD_DET,\n  W_RST, LED0, LED1, BTN, POT, PF0, PF1, SWCLK(МК), SWDIO(МК), GND, GND.\nШина SPI2 общая для W5500, W25Q32 и microSD: SCK/MISO/MOSI выведены один раз (на J_LA_R),\nCS флэш/SD и детект - на J_LA_L. Свободных GPIO у МК в LQFP-48 только два (PF0, PF1);\nоставшиеся места - GND и SWD со стороны МК.\nU1_TX = PA9 (МК -> RXD FT232), U1_RX = PA10 (TXD FT232 -> МК)."
+	(text "Гребёнки логического анализатора, 1x27 каждая (одинаковые, по левому и правому краю платы,\nподпись каждого вывода - на шелкографии):\nJ806 J_LA_R (цифровой ряд Uno): SCL, SDA, 3V3, GND, D13..D8, D7..D0 (порядок IOH+IOL),\n  GND, SPI2 SCK/MISO/MOSI, W_CS, W_INT, U1_TX, U1_RX, 5V.\nНа обеих гребёнках есть GND, 3V3 и 5V; AREF на гребёнку не выведен (только на J801).\nJ805 J_LA_L (POWER/ANALOG): GND, 3V3, NRST, 5V, GND, VIN, A0..A5, GND, FL_CS, SD_CS, CARD_DET,\n  W_RST, LED0, LED1, BTN, POT, PF0, PF1, SWCLK(МК), SWDIO(МК), GND, GND.\nШина SPI2 общая для W5500, W25Q32 и microSD: SCK/MISO/MOSI выведены один раз (на J_LA_R),\nCS флэш/SD и детект - на J_LA_L. Свободных GPIO у МК в LQFP-48 только два (PF0, PF1);\nоставшиеся места - GND и SWD со стороны МК.\nU1_TX = PA9 (МК -> RXD FT232), U1_RX = PA10 (TXD FT232 -> МК)."
 		(exclude_from_sim no)
 		(at 279.4 119.38 0)
 		(effects
@@ -5532,15 +5532,83 @@
 		)
 		(uuid "ac38d4c1-07db-4c4d-8bcc-472c50719e82")
 	)
-	(label "AREF"
-		(at 238.76 45.72 180)
-		(effects
-			(font
-				(size 1.27 1.27)
+	(symbol
+		(lib_id "power:+3.3V")
+		(at 238.76 45.72 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "21778e09-8989-4562-a883-06643e4a09d7")
+		(property "Reference" "#PWR0152"
+			(at 171.45 43.18 90)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
 			)
-			(justify right bottom)
 		)
-		(uuid "ac938537-49e7-4089-893d-8ea85a044626")
+		(property "Value" "+3.3V"
+			(at 162.56 43.18 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Footprint" ""
+			(at 238.76 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 238.76 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Power symbol creates a global label with name \"+3.3V\""
+			(at 238.76 45.72 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "ea44290d-bcd9-4995-a071-6b48d1538e5e")
+		)
+		(instances
+			(project "g0_dev_board"
+				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/5c8f8cfd-1030-4022-9071-e1993a429931"
+					(reference "#PWR0152")
+					(unit 1)
+				)
+			)
+		)
 	)
 	(label "D8"
 		(at 238.76 63.5 180)
@@ -7206,8 +7274,8 @@
 		)
 	)
 	(symbol
-		(lib_id "power:GND")
-		(at 238.76 106.68 270)
+		(lib_id "power:+5V")
+		(at 238.76 106.68 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -7215,9 +7283,9 @@
 		(on_board yes)
 		(in_pos_files yes)
 		(dnp no)
-		(uuid "6bd3a3d3-9df3-4e0b-a2f7-a6eea3bf8d7f")
-		(property "Reference" "#PWR0149"
-			(at 232.41 106.68 90)
+		(uuid "bdfa7066-142c-4deb-b138-6eb6e4fc6a26")
+		(property "Reference" "#PWR0151"
+			(at 171.45 48.26 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7227,9 +7295,8 @@
 				)
 			)
 		)
-		(property "Value" "GND"
-			(at 233.68 106.68 90)
-			(hide yes)
+		(property "Value" "+5V"
+			(at 162.56 48.26 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -7261,7 +7328,7 @@
 				)
 			)
 		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
+		(property "Description" "Power symbol creates a global label with name \"+5V\""
 			(at 238.76 106.68 0)
 			(hide yes)
 			(show_name no)
@@ -7273,12 +7340,12 @@
 			)
 		)
 		(pin "1"
-			(uuid "5aa336a4-b84e-49b3-b1d2-2f88455352f2")
+			(uuid "5218f4b1-b710-4b96-a177-7d04f0cfba02")
 		)
 		(instances
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/5c8f8cfd-1030-4022-9071-e1993a429931"
-					(reference "#PWR0149")
+					(reference "#PWR0151")
 					(unit 1)
 				)
 			)
