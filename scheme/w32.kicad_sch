@@ -1211,7 +1211,7 @@
 		)
 		(uuid "793ccdbb-d379-4ed8-b142-aaa300ce0462")
 	)
-	(text "U501 W25Q32JVSSIQ (было W25Q128JVS): 4 МиБ, JEDEC ID EF4016 — как в драйвере SDK\nw25q32.cppm; Renode GenericSpiFlash без правок. На то же место: W25Q64JVSSIQ, W25Q128JVSIQ.\nТолько суффикс IQ/JQ: QE=1 заводской (DS W25Q32JV Rev G §7.1, бит QE) — /WP и /HOLD\nотключены, выв. 3 и 7 на +3.3V. IM/JM (QE=0 по умолчанию) не брать: в BOM один вариант\nс известным QE (при /WP=/HOLD=+3.3V IM тоже работал бы в Standard SPI)."
+	(text "U501 W25Q32JVSSIQ (было W25Q128JVS): 4 МиБ, JEDEC ID EF4016 — как в драйвере SDK\nw25q32.cppm; Renode GenericSpiFlash без правок. На то же место: W25Q64JVSSIQ, W25Q128JVSIQ.\nТолько суффикс IQ/JQ: QE=1 заводской (DS W25Q32JV Rev G §7.1, бит QE) — /WP и /HOLD\nотключены. Выв. 3 и 7 — через R516, R517 10k на +3.3V: это I/O (IO2/IO3, DS §3.3, §4.2–4.4),\nнапрямую на шину питания не сажать; номинал 10k в DS не задан (практика). IM/JM (QE=0 по умолч.)\nне брать: в BOM один вариант с известным QE (при /WP=/HOLD=1 IM работал бы в Standard SPI)."
 		(exclude_from_sim no)
 		(at 38.1 99.06 0)
 		(effects
@@ -1255,7 +1255,7 @@
 		)
 		(uuid "bbf2f998-68c3-4019-a656-0c0f0d2fc39f")
 	)
-	(text "Прошивка (флэш и SD на одной шине SPI):\n1) SD отпускает MISO только по тактам SCK: после подъёма CS_card послать 1 dummy-байт\n   (ELM-ChaN, «How to Use MMC/SDC», раздел Multi-slave).\n2) SD инициализировать до первых обращений к U501: CS_card=1, MOSI=1, ≥74 тактов SCK\n   на 100–400 кГц, затем CMD0 при CS_card=0 (SD PLSS 3.01 §6.4.1; ELM-ChaN).\n3) U501: Quad-команды (6Bh, EBh и т.п.) не использовать — IO2/IO3 на +3.3V."
+	(text "Прошивка (флэш и SD на одной шине SPI):\n1) SD отпускает MISO только по тактам SCK: после подъёма CS_card послать 1 dummy-байт\n   (ELM-ChaN, «How to Use MMC/SDC», раздел Multi-slave).\n2) SD инициализировать до первых обращений к U501: CS_card=1, MOSI=1, ≥74 тактов SCK\n   на 100–400 кГц, затем CMD0 при CS_card=0 (SD PLSS 3.01 §6.4.1; ELM-ChaN).\n3) U501: Quad-команды (6Bh, EBh и т.п.) не использовать — IO2/IO3 подтянуты к +3.3V (R516, R517)."
 		(exclude_from_sim no)
 		(at 38.1 127 0)
 		(effects
@@ -1475,16 +1475,6 @@
 			(type default)
 		)
 		(uuid "4470031d-d508-4b37-843a-3992bdef9e4f")
-	)
-	(wire
-		(pts
-			(xy 76.2 83.82) (xy 80.01 83.82)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5052635e-4781-4849-8450-8f0eea82fa00")
 	)
 	(wire
 		(pts
@@ -1725,16 +1715,6 @@
 			(type default)
 		)
 		(uuid "a9f40e72-0074-402c-8810-cd3257cc33c4")
-	)
-	(wire
-		(pts
-			(xy 76.2 81.28) (xy 80.01 81.28)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "adb4bb75-a740-4df2-bcda-22be8b396ae8")
 	)
 	(wire
 		(pts
@@ -2430,7 +2410,7 @@
 	)
 	(symbol
 		(lib_id "power:+3.3V")
-		(at 76.2 81.28 90)
+		(at 66.04 81.28 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -2440,7 +2420,7 @@
 		(dnp no)
 		(uuid "1128ff19-59d8-4543-a34f-2ff200c19619")
 		(property "Reference" "#PWR0099"
-			(at 80.01 81.28 90)
+			(at 69.85 81.28 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2451,7 +2431,7 @@
 			)
 		)
 		(property "Value" "+3.3V"
-			(at 72.39 81.28 90)
+			(at 62.23 81.28 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -2462,7 +2442,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 76.2 81.28 0)
+			(at 66.04 81.28 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2473,7 +2453,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 76.2 81.28 0)
+			(at 66.04 81.28 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2484,7 +2464,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \\\"+3.3V\\\""
-			(at 76.2 81.28 0)
+			(at 66.04 81.28 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -2907,6 +2887,208 @@
 				)
 			)
 		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 69.85 81.28 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "59b7b3aa-9a43-458b-9f63-de4da7622347")
+		(property "Reference" "R516"
+			(at 68.58 83.82 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 71.12 83.82 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 69.85 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 69.85 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 69.85 81.28 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "809d0182-0bf7-4751-8864-b2a0dbf87e39")
+		)
+		(pin "2"
+			(uuid "e426d16d-fc9a-49cf-8d19-918583846cb6")
+		)
+		(instances
+			(project "g0_dev_board"
+				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/ed829014-e938-4777-adbe-da6a5ed2b55d"
+					(reference "R516")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Device:R")
+		(at 69.85 88.9 90)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "d4565d53-01db-4d60-be99-4ac72616243c")
+		(property "Reference" "R517"
+			(at 68.58 91.44 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify left)
+			)
+		)
+		(property "Value" "10k"
+			(at 71.12 91.44 90)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(justify right)
+			)
+		)
+		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
+			(at 69.85 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 69.85 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Resistor"
+			(at 69.85 88.9 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(pin "1"
+			(uuid "928e8536-f434-4ad2-99e5-88b07867a748")
+		)
+		(pin "2"
+			(uuid "db140e9d-a73a-4bf3-8522-2c364a0674c0")
+		)
+		(instances
+			(project "g0_dev_board"
+				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/ed829014-e938-4777-adbe-da6a5ed2b55d"
+					(reference "R517")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(wire
+		(pts
+			(xy 73.66 81.28) (xy 80.01 81.28)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "fa1c3612-5614-4df8-a9db-1294f0eab419")
+	)
+	(wire
+		(pts
+			(xy 80.01 83.82) (xy 76.2 83.82)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "0f7b02d2-cf9c-49fd-9b7c-107b899049b2")
+	)
+	(wire
+		(pts
+			(xy 76.2 83.82) (xy 76.2 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "e5642e6e-f153-431a-8ce8-9e413199efe3")
+	)
+	(wire
+		(pts
+			(xy 76.2 88.9) (xy 73.66 88.9)
+		)
+		(stroke
+			(width 0)
+			(type default)
+		)
+		(uuid "cef2f8d3-dbe1-483a-8614-caee09641971")
 	)
 	(symbol
 		(lib_id "Device:C")
@@ -3939,7 +4121,7 @@
 	)
 	(symbol
 		(lib_id "power:+3.3V")
-		(at 76.2 83.82 90)
+		(at 66.04 88.9 90)
 		(unit 1)
 		(body_style 1)
 		(exclude_from_sim no)
@@ -3949,7 +4131,7 @@
 		(dnp no)
 		(uuid "a446ee79-eaa7-4730-af60-ad946eff780b")
 		(property "Reference" "#PWR0100"
-			(at 80.01 83.82 90)
+			(at 69.85 88.9 90)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3960,7 +4142,7 @@
 			)
 		)
 		(property "Value" "+3.3V"
-			(at 72.39 83.82 90)
+			(at 62.23 88.9 90)
 			(show_name no)
 			(do_not_autoplace no)
 			(effects
@@ -3971,7 +4153,7 @@
 			)
 		)
 		(property "Footprint" ""
-			(at 76.2 83.82 0)
+			(at 66.04 88.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3982,7 +4164,7 @@
 			)
 		)
 		(property "Datasheet" ""
-			(at 76.2 83.82 0)
+			(at 66.04 88.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)
@@ -3993,7 +4175,7 @@
 			)
 		)
 		(property "Description" "Power symbol creates a global label with name \\\"+3.3V\\\""
-			(at 76.2 83.82 0)
+			(at 66.04 88.9 0)
 			(hide yes)
 			(show_name no)
 			(do_not_autoplace no)

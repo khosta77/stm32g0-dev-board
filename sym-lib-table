@@ -1,0 +1,4 @@
+(sym_lib_table
+	(version 7)
+	(lib (name "g0_dev_board") (type "KiCad") (uri "${KIPRJMOD}/g0_dev_board.kicad_sym") (options "") (descr "Project-modified symbols"))
+)

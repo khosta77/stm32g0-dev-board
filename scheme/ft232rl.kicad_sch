@@ -9,7 +9,7 @@
 		(date "2026-07-04")
 	)
 	(lib_symbols
-		(symbol "Connector:USB_B_Mini"
+		(symbol "g0_dev_board:USB_B_Mini"
 			(pin_names
 				(offset 1.016)
 			)
@@ -62,7 +62,7 @@
 					)
 				)
 			)
-			(property "Description" "USB Mini Type B connector"
+			(property "Description" "USB Mini Type B connector; project copy: VBUS/GND pins passive (no power_out conflict), shield pin SH as in footprint"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -84,7 +84,7 @@
 					)
 				)
 			)
-			(property "ki_fp_filters" "USB*"
+			(property "ki_fp_filters" "USB*Mini*B*"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -370,7 +370,7 @@
 							)
 						)
 					)
-					(number "6"
+					(number "SH"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -923,6 +923,17 @@
 				)
 			)
 			(property "Description" "Light emitting diode"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Sim.Pins" "1=K 2=A"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -26149,7 +26160,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:USB_B_Mini")
+		(lib_id "g0_dev_board:USB_B_Mini")
 		(at 30.48 50.8 0)
 		(unit 1)
 		(body_style 1)
@@ -26227,7 +26238,7 @@
 		(pin "5"
 			(uuid "6d4d8f52-4ba0-43f7-9ea4-d9690c99fe05")
 		)
-		(pin "6"
+		(pin "SH"
 			(uuid "b52bcc1f-2f56-4d4a-bc07-7063617a0ecd")
 		)
 		(instances

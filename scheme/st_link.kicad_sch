@@ -313,7 +313,7 @@
 			)
 			(embedded_fonts no)
 		)
-		(symbol "Connector:USB_B_Mini"
+		(symbol "g0_dev_board:USB_B_Mini"
 			(pin_names
 				(offset 1.016)
 			)
@@ -366,7 +366,7 @@
 					)
 				)
 			)
-			(property "Description" "USB Mini Type B connector"
+			(property "Description" "USB Mini Type B connector; project copy: VBUS/GND pins passive (no power_out conflict), shield pin SH as in footprint"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -388,7 +388,7 @@
 					)
 				)
 			)
-			(property "ki_fp_filters" "USB*"
+			(property "ki_fp_filters" "USB*Mini*B*"
 				(at 0 0 0)
 				(show_name no)
 				(do_not_autoplace no)
@@ -674,7 +674,7 @@
 							)
 						)
 					)
-					(number "6"
+					(number "SH"
 						(effects
 							(font
 								(size 1.27 1.27)
@@ -6692,7 +6692,7 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector:USB_B_Mini")
+		(lib_id "g0_dev_board:USB_B_Mini")
 		(at 30.48 55.88 0)
 		(unit 1)
 		(body_style 1)
@@ -6770,7 +6770,7 @@
 		(pin "5"
 			(uuid "e0c219eb-1d11-4364-8dcb-c2a68827b0bb")
 		)
-		(pin "6"
+		(pin "SH"
 			(uuid "1bd7de37-5cec-49b1-9f88-95533fa3867e")
 		)
 		(instances
