@@ -4367,7 +4367,7 @@
 		)
 		(uuid "c3ec6171-0e8b-46e2-a846-82bcb0e93e38")
 	)
-	(text "USB J201 (ST-LINK):\n- D+ (J201.3) -> R213 0R -> PA12 (USB_DP); D- (J201.2) -> R214 0R -> PA11 (USB_DM)\n  [F103DS табл. 5: PA11 = USBDM, PA12 = USBDP]. В прежней версии D+/D- были перепутаны.\n- U201 USBLC6-2SC6 первым у разъёма: 1,6 = I/O1 (D+), 3,4 = I/O2 (D-), 5 = VBUS, 2 = GND\n  [USBLC6-2 DS стр. 1], так же как U301 у J301 (лист ft232rl). 1-6 и 3-4 - одна цепь (метки DP_J1/DM_J1).\n- Renumeration как в [MB1136 лист 4]: Q1 9013, R5 36k / R6 10k, R7 100R, R1 1k5.\n  R212 на D+ со стороны разъёма (до R213). R216 от VBUS_STL (до F201/D204), как от U5V у ST:\n  без кабеля в J201 база Q201 не подтянута даже при питании платы от J301.\n  BMP по высокому уровню на PA15 (10k к VBUS) определяет ревизию V2.1 [BMP stlink_common.c].\n- VBUS: J201 -> VBUS_STL -> F201 MF-MSMF050 (Ihold 0.5 A) -> D204 B120 -> +5V; рядом C210 10u + C212 100n.\n  OR-ing двух USB на диодах, как STPS1L30A в [MB1184 лист 2]; с J301 тот же путь VBUS_FT -> FB301 -> D301.\n  Обратная подача в VBUS хоста недопустима [FTDI AN_146 §2.4.1].\n  Падение до +5V: F201 R1max 1.0 Ом [MF-MSMF DS] + Vf B120 -> при 0.4 А +5V может быть ~4.1..4.4 В.\n  Не проверено: этого хватает для LDO (dropout 0.14 В), но FT232 требует VCC >= 4.0 В [DS_FT232R §6.2]."
+	(text "USB J201 (ST-LINK):\n- D+ (J201.3) -> R213 0R -> PA12 (USB_DP); D- (J201.2) -> R214 0R -> PA11 (USB_DM)\n  [F103DS табл. 5: PA11 = USBDM, PA12 = USBDP]. В прежней версии D+/D- были перепутаны.\n- U201 USBLC6-2SC6 первым у разъёма: 1,6 = I/O1 (D+), 3,4 = I/O2 (D-), 5 = VBUS, 2 = GND\n  [USBLC6-2 DS стр. 1], так же как U301 у J301 (лист ft232rl). 1-6 и 3-4 - одна цепь (метки DP_J1/DM_J1).\n- Renumeration как в [MB1136 лист 4]: Q1 9013, R5 36k / R6 10k, R7 100R, R1 1k5.\n  R212 на D+ со стороны разъёма (до R213). R216 от VBUS_STL (до F201/D204), как от U5V у ST:\n  без кабеля в J201 база Q201 не подтянута даже при питании платы от J301.\n  BMP по высокому уровню на PA15 (10k к VBUS) определяет ревизию V2.1 [BMP stlink_common.c].\n- VBUS: J201 -> VBUS_STL -> F201 MF-MSMF075 (Ihold 0.75 A, R1max 0.45 Ом; MSMF050 с R1max 1.0 Ом\n  давал VCC FT232 < 4.0 В в худшем случае [Bourns MF-MSMF]) -> D204 B120 -> +5V; рядом C210 10u + C212 100n.\n  OR-ing двух USB на диодах, как STPS1L30A в [MB1184 лист 2]; с J301 тот же путь VBUS_FT -> FB301 -> D301.\n  Обратная подача в VBUS хоста недопустима [FTDI AN_146 §2.4.1].\n  Падение до +5V: F201 R1max 1.0 Ом [MF-MSMF DS] + Vf B120 -> при 0.4 А +5V может быть ~4.1..4.4 В.\n  Не проверено: этого хватает для LDO (dropout 0.14 В), но FT232 требует VCC >= 4.0 В [DS_FT232R §6.2]."
 		(exclude_from_sim no)
 		(at 134.62 16.51 0)
 		(effects
@@ -9968,7 +9968,7 @@
 				)
 			)
 		)
-		(property "Value" "MF-MSMF050"
+		(property "Value" "MF-MSMF075-2"
 			(at 60.96 24.13 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10011,7 +10011,7 @@
 				)
 			)
 		)
-		(property "MPN" "MF-MSMF050-2"
+		(property "MPN" "MF-MSMF075-2"
 			(at 60.96 20.32 0)
 			(hide yes)
 			(show_name no)

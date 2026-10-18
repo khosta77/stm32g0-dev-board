@@ -1523,7 +1523,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(uuid "2fb9c1b6-7c66-49f3-a792-d1877be8b66e")
 		(property "Reference" "R703"
 			(at 110.49 52.07 0)
@@ -1758,7 +1758,7 @@
 		(in_bom yes)
 		(on_board yes)
 		(in_pos_files yes)
-		(dnp no)
+		(dnp yes)
 		(fields_autoplaced yes)
 		(uuid "5faf93aa-7698-4aaf-a68a-e0f8758ccdcd")
 		(property "Reference" "C701"
@@ -2244,7 +2244,7 @@
 				(justify right)
 			)
 		)
-		(property "Value" "RESET"
+		(property "Value" "USER"
 			(at 176.53 71.12 90)
 			(show_name no)
 			(do_not_autoplace no)
