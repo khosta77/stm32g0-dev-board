@@ -4268,7 +4268,7 @@
 			(embedded_fonts no)
 		)
 	)
-	(text "F103: C6..C9 100n - по одному на VDD 24/36/48 и VDDA 9,\nC112 4.7u общий на VDD [F103DS рис. 14 Power supply scheme].\nVBAT (1) на +3V3_STL (через JP202): батареи нет [MB1136 лист 4; F103DS §2.3.9]."
+	(text "F103: C201..C205 100n - по одному на VDD 24/36/48 и VDDA 9,\nC206 4.7u общий на VDD [F103DS рис. 14 Power supply scheme].\nVBAT (1) на +3V3_STL (через JP201): батареи нет [MB1136 лист 4; F103DS §2.3.9]."
 		(exclude_from_sim no)
 		(at 76.2 114.3 0)
 		(effects
@@ -4279,7 +4279,7 @@
 		)
 		(uuid "277b4d69-fdf0-4111-9e9c-c104eb475814")
 	)
-	(text "Линии к цели (STM32G0B1, только SWD; SWO у Cortex-M0+ нет):\n- PB13 SWCLK -> R21 22R -> SWCLK; PB14 SWDIO -> R20 22R -> SWDIO;\n  PB0 NRST -> R23 22R -> RESET [MB1136 лист 4: R5, R8, R13 = 22R].\n  Выводы - [DAPLINK IO_Config.h, docs/hic/stm32f103xb.md].\n- PB12 (вход SWDIO) -> R19 100R -> узел PB14 до 22R\n  [MB1136 R24 100R; MB1184 R80]. DAPLink читает SWDIO только\n  через PB12 (SWDIO_IN_PIN) - без R19 чтение SWD не работает.\n- PA5 -> R110 0R -> узел PB13: Black Magic Probe (platform stlink)\n  выдаёт SWCLK с PA5, SWDIO - PB14, вход SWDIO - PB12, NRST - PB0\n  [BMP platform.h, platform.c]. DAPLink PA5 не настраивает (вход),\n  BMP не настраивает PB13 (вход) - конфликта нет.\n  Под DAPLink R110 можно не ставить; под BMP R110 обязателен.\n- SWO удалён (у G0 нет): нет R22 и иерархической метки SWO.\n  PA10 -> R111 100k -> GND, чтобы вход не висел. PA10 во всех\n  прошивках - вход: DAPLink stm32f103xb: SWO_UART = 0, PA10 не\n  конфигурируется [DAPLINK DAP_config.h]; BMP: вход USART1 RX,\n  подтяжка вверх только при включённом SWO [BMP swo_uart.c] -\n  против 100k ~2 В, ток ~20 мкА; выходов на линии нет.\n- Иерархические метки: прежний тип (output), интерфейс не менялся."
+	(text "Линии к цели (STM32G0B1, только SWD; SWO у Cortex-M0+ нет):\n- PB13 SWCLK -> R220 22R -> SWCLK; PB14 SWDIO -> R219 22R -> SWDIO;\n  PB0 NRST -> R221 22R -> RESET [MB1136 лист 4: R5, R8, R13 = 22R].\n  Выводы - [DAPLINK IO_Config.h, docs/hic/stm32f103xb.md].\n- PB12 (вход SWDIO) -> R222 100R -> узел PB14 до 22R\n  [MB1136 R24 100R; MB1184 R80]. DAPLink читает SWDIO только\n  через PB12 (SWDIO_IN_PIN) - без R222 чтение SWD не работает.\n- PA5 -> R223 0R -> узел PB13: Black Magic Probe (platform stlink)\n  выдаёт SWCLK с PA5, SWDIO - PB14, вход SWDIO - PB12, NRST - PB0\n  [BMP platform.h, platform.c]. DAPLink PA5 не настраивает (вход),\n  BMP не настраивает PB13 (вход) - конфликта нет.\n  Под DAPLink R223 можно не ставить; под BMP R223 обязателен.\n- SWO удалён (у G0 нет): нет R22 и иерархической метки SWO.\n  PA10 -> R208 100k -> GND, чтобы вход не висел. PA10 во всех\n  прошивках - вход: DAPLink stm32f103xb: SWO_UART = 0, PA10 не\n  конфигурируется [DAPLINK DAP_config.h]; BMP: вход USART1 RX,\n  подтяжка вверх только при включённом SWO [BMP swo_uart.c] -\n  против 100k ~2 В, ток ~20 мкА; выходов на линии нет.\n- Иерархические метки: прежний тип (output), интерфейс не менялся."
 		(exclude_from_sim no)
 		(at 297.18 60.96 0)
 		(effects
@@ -4290,7 +4290,7 @@
 		)
 		(uuid "40539d86-83cb-4a41-8f53-38949fb8dd2c")
 	)
-	(text "Y1 8 МГц HC49. F103DS табл. 22: CL1 = CL2 5..25 пФ, Cstray (выводы + плата) ~10 пФ.\nДля кварца с CL = 18 пФ: C = 2 x (CL - Cstray) = 16 пФ при Cstray 10 пФ, 26 пФ при 5 пФ.\nВыбрано 22 пФ C0G: внутри диапазона F103DS (27 пФ выходит за 25 пФ),\nэффективная CL = 11 + (5..10) = 16..21 пФ вокруг 18 пФ.\nУточнить по CL выбранного кварца. USB FS: допуск 0.25 %, расстройка от CL - десятки ppm."
+	(text "Y201 8 МГц HC49. F103DS табл. 22: CL1 = CL2 5..25 пФ, Cstray (выводы + плата) ~10 пФ.\nДля кварца с CL = 18 пФ: C = 2 x (CL - Cstray) = 16 пФ при Cstray 10 пФ, 26 пФ при 5 пФ.\nВыбрано 22 пФ C0G: внутри диапазона F103DS (27 пФ выходит за 25 пФ),\nэффективная CL = 11 + (5..10) = 16..21 пФ вокруг 18 пФ.\nУточнить по CL выбранного кварца. USB FS: допуск 0.25 %, расстройка от CL - десятки ppm."
 		(exclude_from_sim no)
 		(at 80.01 185.42 0)
 		(effects
@@ -4301,7 +4301,7 @@
 		)
 		(uuid "5de7bf06-d10e-41da-b055-851e042ce4a8")
 	)
-	(text "U5: расчёт замены LDO -\nв правой колонке листа."
+	(text "U202: расчёт замены LDO -\nв правой колонке листа."
 		(exclude_from_sim no)
 		(at 88.9 96.52 0)
 		(effects
@@ -4312,7 +4312,7 @@
 		)
 		(uuid "76266e4a-7c2d-4a3b-9665-8ff2620ea596")
 	)
-	(text "JP202 = JP_STL_PWR: +3.3V (выход U5) -> +3V3_STL - всё питание домена F103: VDD 24/36/48, VDDA 9,\nVBAT 1, C6..C9, C112, подтяжка NRST R16, LED_STLINK (D2 через PA9), коллектор Q1 (подтяжка D+ 1k5),\nделитель T_VCC R12/R13, J2 (SWD самого F103).\nСнять JP202 = выключить программатор: F103 без питания, USB J1 не энумерируется (нет 1k5 на D+).\nF103 не держит линии SWD; вместе со снятыми JP_SWD (лист headers) - полная изоляция МК.\nДелитель T_VCC и D2 переведены на +3V3_STL, чтобы при снятом JP202 не подпитывать F103 через PA0/PA9.\nD3 (индикатор питания) оставлен на +3.3V - показывает питание платы. U5 и всё остальное - без изменений."
+	(text "JP201 = JP_STL_PWR: +3.3V (выход U202) -> +3V3_STL - всё питание домена F103: VDD 24/36/48, VDDA 9,\nVBAT 1, C201..C205, C206, подтяжка NRST R215, LED_STLINK (D201 через PA9), коллектор Q201 (подтяжка D+ 1k5),\nделитель T_VCC R204/R210, J202 (SWD самого F103).\nСнять JP201 = выключить программатор: F103 без питания, USB J201 не энумерируется (нет 1k5 на D+).\nF103 не держит линии SWD; вместе со снятыми JP_SWD (лист headers) - полная изоляция МК.\nДелитель T_VCC и D201 переведены на +3V3_STL, чтобы при снятом JP201 не подпитывать F103 через PA0/PA9.\nD203 (индикатор питания) оставлен на +3.3V - показывает питание платы. U202 и всё остальное - без изменений."
 		(exclude_from_sim no)
 		(at 167.64 220.98 0)
 		(effects
@@ -4323,7 +4323,7 @@
 		)
 		(uuid "7a0b95a0-fa3f-42a5-a256-beebdd993061")
 	)
-	(text "U5: AP7361C-33E (SOT-223, 1 А) вместо AP2112K-3.3 (SOT-23-5, 600 мА).\nБюджет +3.3V: W5500 132 мА + F103 <= 50 + G0B1 + флэш + SD до 100\n+ LED = 230..340 мА. Vin = +5V - Vf(D110) ~ 4.6 В ->\nP = (4.6 - 3.3) x I = 0.30..0.44 Вт.\nAP2112K: θJA 184 °C/W [AP2112 DS] -> ΔT 55..81 °C, Tj до ~106 °C (Ta 25).\nAP7361C SOT-223: θJA 110 °C/W на мин. площадке [AP7361C DS, Thermal]\n-> ΔT 33..49 °C; полигон под табом снижает. Tj max 150 °C [Abs. Max].\nDropout (3.3 В): 90 тип. / 140 макс. мВ при 300 мА [AP7361C DS].\nSOT223 (суффикс E): 1 = IN, 2 = GND (таб), 3 = OUT [AP7361C DS,\nPin Descriptions] = символ Regulator_Linear:AP7361C-33E.\nC1 4.7u вход (>= 1 мкФ), C4 10u выход (>= 2.2 мкФ керамика)\n[AP7361C DS, Pin Descriptions]; X5R/X7R 0805, с учётом DC-bias\nёмкость остаётся выше минимума."
+	(text "U202: AP7361C-33E (SOT-223, 1 А) вместо AP2112K-3.3 (SOT-23-5, 600 мА).\nБюджет +3.3V: W5500 132 мА + F103 <= 50 + G0B1 + флэш + SD до 100\n+ LED = 230..340 мА. Vin = +5V - Vf(D204) ~ 4.6 В ->\nP = (4.6 - 3.3) x I = 0.30..0.44 Вт.\nAP2112K: θJA 184 °C/W [AP2112 DS] -> ΔT 55..81 °C, Tj до ~106 °C (Ta 25).\nAP7361C SOT-223: θJA 110 °C/W на мин. площадке [AP7361C DS, Thermal]\n-> ΔT 33..49 °C; полигон под табом снижает. Tj max 150 °C [Abs. Max].\nDropout (3.3 В): 90 тип. / 140 макс. мВ при 300 мА [AP7361C DS].\nSOT223 (суффикс E): 1 = IN, 2 = GND (таб), 3 = OUT [AP7361C DS,\nPin Descriptions] = символ Regulator_Linear:AP7361C-33E.\nC203 4.7u вход (>= 1 мкФ), C207 10u выход (>= 2.2 мкФ керамика)\n[AP7361C DS, Pin Descriptions]; X5R/X7R 0805, с учётом DC-bias\nёмкость остаётся выше минимума."
 		(exclude_from_sim no)
 		(at 297.18 137.16 0)
 		(effects
@@ -4334,7 +4334,7 @@
 		)
 		(uuid "80c5b9a3-8fb3-4760-a4a3-9d5926acc475")
 	)
-	(text "NRST F103: R16 100k + C10 100n [MB1136].\nBOOT0 (44) и PB2/BOOT1 (20) - 100k на GND: старт из флэш;\nдля загрузчика ROM - BOOT0 к 3.3 В вручную (BOOT1 = 0 достаточно).\nPC13 - 10k на GND [MB1136]: BMP читает PC13 как признак ревизии\n(0 -> не V1) [BMP stlink_common.c]. PC14 - NC: у ST резистор на PC14\nне устанавливается [MB1136]; R18 удалён."
+	(text "NRST F103: R215 100k + C209 100n [MB1136].\nBOOT0 (44) и PB2/BOOT1 (20) - 100k на GND: старт из флэш;\nдля загрузчика ROM - BOOT0 к 3.3 В вручную (BOOT1 = 0 достаточно).\nPC13 - 10k на GND [MB1136]: BMP читает PC13 как признак ревизии\n(0 -> не V1) [BMP stlink_common.c]. PC14 - NC: у ST резистор на PC14\nне устанавливается [MB1136]; R18 удалён."
 		(exclude_from_sim no)
 		(at 297.18 172.72 0)
 		(effects
@@ -4345,7 +4345,7 @@
 		)
 		(uuid "919b6abd-7b93-4c19-b4da-f44377595c38")
 	)
-	(text "Прошивка: DAPLink (HIC stm32f103xb, Apache-2.0) или Black Magic Probe.\nШтатная прошивка ST на чистый F103 не ставится (нужен загрузчик ST).\nНеиспользуемые выводы F103 - NC (флаги). У DAPLink PA1 (RTS), PA2 (TX),\nPB6, PB15 - выходы, PA3 - вход с подтяжкой [DAPLINK uart.c, gpio.c];\nу BMP PA6, PA7, PA8 [BMP platform.h, stlink_common.c].\nPA2/PA3 (VCP DAPLink, USART2) не выведены: VCP на плате делает FT232.\nPA0 = T_VCC: делитель R12/R13 4k7/4k7 [MB1136]; BMP меряет напряжение\nцели АЦП на PA0 [BMP platform.c adc_init]; DAPLink: PA0 - вход CTS\nс подтяжкой [DAPLINK uart.c] - безвредно."
+	(text "Прошивка: DAPLink (HIC stm32f103xb, Apache-2.0) или Black Magic Probe.\nШтатная прошивка ST на чистый F103 не ставится (нужен загрузчик ST).\nНеиспользуемые выводы F103 - NC (флаги). У DAPLink PA1 (RTS), PA2 (TX),\nPB6, PB15 - выходы, PA3 - вход с подтяжкой [DAPLINK uart.c, gpio.c];\nу BMP PA6, PA7, PA8 [BMP platform.h, stlink_common.c].\nPA2/PA3 (VCP DAPLink, USART2) не выведены: VCP на плате делает FT232.\nPA0 = T_VCC: делитель R204/R210 4k7/4k7 [MB1136]; BMP меряет напряжение\nцели АЦП на PA0 [BMP platform.c adc_init]; DAPLink: PA0 - вход CTS\nс подтяжкой [DAPLINK uart.c] - безвредно."
 		(exclude_from_sim no)
 		(at 297.18 111.76 0)
 		(effects
@@ -4356,7 +4356,7 @@
 		)
 		(uuid "9a7346a5-692d-4bcf-9129-414e1ebc934d")
 	)
-	(text "J2 - SWD самого F103 (заливка DAPLink/BMP):\n1 = 3V3, 2 = SWDIO (PA13), 3 = SWCLK (PA14),\n4 = NRST F103 (connect under reset), 5 = GND."
+	(text "J202 - SWD самого F103 (заливка DAPLink/BMP):\n1 = 3V3, 2 = SWDIO (PA13), 3 = SWCLK (PA14),\n4 = NRST F103 (connect under reset), 5 = GND."
 		(exclude_from_sim no)
 		(at 134.62 160.02 0)
 		(effects
@@ -4367,7 +4367,7 @@
 		)
 		(uuid "c3ec6171-0e8b-46e2-a846-82bcb0e93e38")
 	)
-	(text "USB J1 (ST-LINK):\n- D+ (J1.3) -> R2 0R -> PA12 (USB_DP); D- (J1.2) -> R3 0R -> PA11 (USB_DM)\n  [F103DS табл. 5: PA11 = USBDM, PA12 = USBDP]. В прежней версии D+/D- были перепутаны.\n- U110 USBLC6-2SC6 первым у разъёма: 1,6 = I/O1 (D+), 3,4 = I/O2 (D-), 5 = VBUS, 2 = GND\n  [USBLC6-2 DS стр. 1], так же как U30 у J3 (лист ft232rl). 1-6 и 3-4 - одна цепь (метки DP_J1/DM_J1).\n- Renumeration как в [MB1136 лист 4]: Q1 9013, R5 36k / R6 10k, R7 100R, R1 1k5.\n  R1 на D+ со стороны разъёма (до R2). R6 от VBUS_STL (до F110/D110), как от U5V у ST:\n  без кабеля в J1 база Q1 не подтянута даже при питании платы от J3.\n  BMP по высокому уровню на PA15 (10k к VBUS) определяет ревизию V2.1 [BMP stlink_common.c].\n- VBUS: J1 -> VBUS_STL -> F110 MF-MSMF050 (Ihold 0.5 A) -> D110 B120 -> +5V; рядом C110 10u + C111 100n.\n  OR-ing двух USB на диодах, как STPS1L30A в [MB1184 лист 2]; с J3 тот же путь VBUS_FT -> FB1 -> D30.\n  Обратная подача в VBUS хоста недопустима [FTDI AN_146 §2.4.1].\n  Падение до +5V: F110 R1max 1.0 Ом [MF-MSMF DS] + Vf B120 -> при 0.4 А +5V может быть ~4.1..4.4 В.\n  Не проверено: этого хватает для LDO (dropout 0.14 В), но FT232 требует VCC >= 4.0 В [DS_FT232R §6.2]."
+	(text "USB J201 (ST-LINK):\n- D+ (J201.3) -> R213 0R -> PA12 (USB_DP); D- (J201.2) -> R214 0R -> PA11 (USB_DM)\n  [F103DS табл. 5: PA11 = USBDM, PA12 = USBDP]. В прежней версии D+/D- были перепутаны.\n- U201 USBLC6-2SC6 первым у разъёма: 1,6 = I/O1 (D+), 3,4 = I/O2 (D-), 5 = VBUS, 2 = GND\n  [USBLC6-2 DS стр. 1], так же как U301 у J301 (лист ft232rl). 1-6 и 3-4 - одна цепь (метки DP_J1/DM_J1).\n- Renumeration как в [MB1136 лист 4]: Q1 9013, R5 36k / R6 10k, R7 100R, R1 1k5.\n  R212 на D+ со стороны разъёма (до R213). R216 от VBUS_STL (до F201/D204), как от U5V у ST:\n  без кабеля в J201 база Q201 не подтянута даже при питании платы от J301.\n  BMP по высокому уровню на PA15 (10k к VBUS) определяет ревизию V2.1 [BMP stlink_common.c].\n- VBUS: J201 -> VBUS_STL -> F201 MF-MSMF050 (Ihold 0.5 A) -> D204 B120 -> +5V; рядом C210 10u + C212 100n.\n  OR-ing двух USB на диодах, как STPS1L30A в [MB1184 лист 2]; с J301 тот же путь VBUS_FT -> FB301 -> D301.\n  Обратная подача в VBUS хоста недопустима [FTDI AN_146 §2.4.1].\n  Падение до +5V: F201 R1max 1.0 Ом [MF-MSMF DS] + Vf B120 -> при 0.4 А +5V может быть ~4.1..4.4 В.\n  Не проверено: этого хватает для LDO (dropout 0.14 В), но FT232 требует VCC >= 4.0 В [DS_FT232R §6.2]."
 		(exclude_from_sim no)
 		(at 134.62 16.51 0)
 		(effects
@@ -4378,7 +4378,7 @@
 		)
 		(uuid "c7f2fa3c-98db-4071-8526-1266356b64f6")
 	)
-	(text "LED_STLINK (PA9), двухцветная схема как LD1 в [MB1184]: R9/R10 330R [MB1184 лист 2].\nPA9 = 1 -> горит D1, PA9 = 0 -> горит D2. PA9 в Z: цепь +3.3V-D2-R9-R10-D1-GND,\nсумма Vf красный ~1.8 + зелёный ~2.0 = 3.8 В > 3.3 В -> оба гаснут.\nНе использовать пару с суммой Vf < 3.3 В (два красных/ИК). Vf уточнить по выбранным LED.\nR8 0R в катоде D1 - как в [MB1184]."
+	(text "LED_STLINK (PA9), двухцветная схема как LD1 в [MB1184]: R201/R202 330R [MB1184 лист 2].\nPA9 = 1 -> горит D202, PA9 = 0 -> горит D201. PA9 в Z: цепь +3.3V-D201-R201-R202-D202-GND,\nсумма Vf красный ~1.8 + зелёный ~2.0 = 3.8 В > 3.3 В -> оба гаснут.\nНе использовать пару с суммой Vf < 3.3 В (два красных/ИК). Vf уточнить по выбранным LED.\nR211 0R в катоде D202 - как в [MB1184]."
 		(exclude_from_sim no)
 		(at 80.01 203.2 0)
 		(effects
@@ -6317,7 +6317,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "031f6b01-caaa-4e09-969b-4b097db75f9f")
-		(property "Reference" "#PWR1115"
+		(property "Reference" "#PWR0051"
 			(at 203.2 62.23 0)
 			(hide yes)
 			(show_name no)
@@ -6377,7 +6377,7 @@
 		(instances
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/7832abec-59f9-400b-8c36-928585d457a9"
-					(reference "#PWR1115")
+					(reference "#PWR0051")
 					(unit 1)
 				)
 			)
@@ -6394,7 +6394,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "03ba8bcb-3a55-422a-8dee-c5806d378d25")
-		(property "Reference" "#PWR1129"
+		(property "Reference" "#PWR0041"
 			(at 92.71 181.61 0)
 			(hide yes)
 			(show_name no)
@@ -6454,7 +6454,7 @@
 		(instances
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/7832abec-59f9-400b-8c36-928585d457a9"
-					(reference "#PWR1129")
+					(reference "#PWR0041")
 					(unit 1)
 				)
 			)
@@ -6471,7 +6471,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "069f18a4-a711-4731-92b5-30628a2e3087")
-		(property "Reference" "#PWR1122"
+		(property "Reference" "#PWR0034"
 			(at 57.15 186.69 0)
 			(hide yes)
 			(show_name no)
@@ -6531,7 +6531,7 @@
 		(instances
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/7832abec-59f9-400b-8c36-928585d457a9"
-					(reference "#PWR1122")
+					(reference "#PWR0034")
 					(unit 1)
 				)
 			)
@@ -6548,7 +6548,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "0757b8cf-76ca-4290-a8c0-185a8d528dc2")
-		(property "Reference" "#PWR1130"
+		(property "Reference" "#PWR0045"
 			(at 110.49 181.61 0)
 			(hide yes)
 			(show_name no)
@@ -6608,7 +6608,7 @@
 		(instances
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/7832abec-59f9-400b-8c36-928585d457a9"
-					(reference "#PWR1130")
+					(reference "#PWR0045")
 					(unit 1)
 				)
 			)
@@ -6625,7 +6625,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "0ea35f9b-6843-47f7-88fe-ab3acd192f00")
-		(property "Reference" "#PWR1121"
+		(property "Reference" "#PWR0021"
 			(at 27.94 184.15 0)
 			(hide yes)
 			(show_name no)
@@ -6685,7 +6685,7 @@
 		(instances
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/7832abec-59f9-400b-8c36-928585d457a9"
-					(reference "#PWR1121")
+					(reference "#PWR0021")
 					(unit 1)
 				)
 			)
@@ -6702,7 +6702,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "15809342-fd1d-43b7-8ff9-d0def4beaad2")
-		(property "Reference" "J1"
+		(property "Reference" "J201"
 			(at 30.48 43.18 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6776,7 +6776,7 @@
 		(instances
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/7832abec-59f9-400b-8c36-928585d457a9"
-					(reference "J1")
+					(reference "J201")
 					(unit 1)
 				)
 			)
@@ -6793,7 +6793,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "16fa3483-b60e-43d6-9798-66d93e67dcb7")
-		(property "Reference" "R3"
+		(property "Reference" "R214"
 			(at 86.36 60.96 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6855,7 +6855,7 @@
 		(instances
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/7832abec-59f9-400b-8c36-928585d457a9"
-					(reference "R3")
+					(reference "R214")
 					(unit 1)
 				)
 			)
@@ -6872,7 +6872,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "1c6fbfa2-fb03-4580-b139-4bd08aa143f7")
-		(property "Reference" "R17"
+		(property "Reference" "R207"
 			(at 35.56 215.9 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -6934,7 +6934,7 @@
 		(instances
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/7832abec-59f9-400b-8c36-928585d457a9"
-					(reference "R17")
+					(reference "R207")
 					(unit 1)
 				)
 			)
@@ -6951,7 +6951,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "1d5013c3-ad2e-4b55-8c9c-c248f668e58a")
-		(property "Reference" "#PWR1118"
+		(property "Reference" "#PWR0035"
 			(at 67.31 161.29 0)
 			(hide yes)
 			(show_name no)
@@ -7011,7 +7011,7 @@
 		(instances
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/7832abec-59f9-400b-8c36-928585d457a9"
-					(reference "#PWR1118")
+					(reference "#PWR0035")
 					(unit 1)
 				)
 			)
@@ -7028,7 +7028,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "2582a528-0678-4985-8bb8-87f1d76843ae")
-		(property "Reference" "J2"
+		(property "Reference" "J202"
 			(at 139.7 137.16 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7099,7 +7099,7 @@
 		(instances
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/7832abec-59f9-400b-8c36-928585d457a9"
-					(reference "J2")
+					(reference "J202")
 					(unit 1)
 				)
 			)
@@ -7116,7 +7116,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "2667d1e8-4862-4904-a019-f3775c6754ee")
-		(property "Reference" "R14"
+		(property "Reference" "R205"
 			(at 35.56 195.58 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7178,7 +7178,7 @@
 		(instances
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/7832abec-59f9-400b-8c36-928585d457a9"
-					(reference "R14")
+					(reference "R205")
 					(unit 1)
 				)
 			)
@@ -7195,7 +7195,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "2ef2b756-1cd0-4259-a26b-beceb1fee33b")
-		(property "Reference" "U5"
+		(property "Reference" "U202"
 			(at 55.88 88.9 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7271,7 +7271,7 @@
 		(instances
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/7832abec-59f9-400b-8c36-928585d457a9"
-					(reference "U5")
+					(reference "U202")
 					(unit 1)
 				)
 			)
@@ -7288,7 +7288,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "304ffc5f-24f6-43aa-b6be-3c9704c2338e")
-		(property "Reference" "C8"
+		(property "Reference" "C204"
 			(at 48.26 119.38 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7352,7 +7352,7 @@
 		(instances
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/7832abec-59f9-400b-8c36-928585d457a9"
-					(reference "C8")
+					(reference "C204")
 					(unit 1)
 				)
 			)
@@ -7369,7 +7369,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "3471c334-986c-4f6b-be9d-dc4b9888ea54")
-		(property "Reference" "#PWR1102"
+		(property "Reference" "#PWR0043"
 			(at 111.76 24.13 0)
 			(hide yes)
 			(show_name no)
@@ -7429,7 +7429,7 @@
 		(instances
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/7832abec-59f9-400b-8c36-928585d457a9"
-					(reference "#PWR1102")
+					(reference "#PWR0043")
 					(unit 1)
 				)
 			)
@@ -7446,7 +7446,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "35e4ba97-e020-492f-925d-183ea0ceb368")
-		(property "Reference" "#PWR1123"
+		(property "Reference" "#PWR0026"
 			(at 43.18 204.47 0)
 			(hide yes)
 			(show_name no)
@@ -7506,7 +7506,7 @@
 		(instances
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/7832abec-59f9-400b-8c36-928585d457a9"
-					(reference "#PWR1123")
+					(reference "#PWR0026")
 					(unit 1)
 				)
 			)
@@ -7523,7 +7523,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "3a1278eb-36bc-4a82-913f-5a9a76880ee5")
-		(property "Reference" "R8"
+		(property "Reference" "R211"
 			(at 59.69 152.4 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7585,7 +7585,7 @@
 		(instances
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/7832abec-59f9-400b-8c36-928585d457a9"
-					(reference "R8")
+					(reference "R211")
 					(unit 1)
 				)
 			)
@@ -7602,7 +7602,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "3abd29ad-82bd-4f32-84f9-b9cecd5b195a")
-		(property "Reference" "#PWR1114"
+		(property "Reference" "#PWR0019"
 			(at 25.4 130.81 0)
 			(hide yes)
 			(show_name no)
@@ -7662,7 +7662,7 @@
 		(instances
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/7832abec-59f9-400b-8c36-928585d457a9"
-					(reference "#PWR1114")
+					(reference "#PWR0019")
 					(unit 1)
 				)
 			)
@@ -7679,7 +7679,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "3f2473d5-fadf-46b0-8517-2cfe6dfe548c")
-		(property "Reference" "R23"
+		(property "Reference" "R221"
 			(at 267.97 86.36 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7741,7 +7741,7 @@
 		(instances
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/7832abec-59f9-400b-8c36-928585d457a9"
-					(reference "R23")
+					(reference "R221")
 					(unit 1)
 				)
 			)
@@ -7758,7 +7758,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "3faebbf4-21ea-4ac0-951e-ff3125d79c51")
-		(property "Reference" "#PWR1128"
+		(property "Reference" "#PWR0042"
 			(at 96.52 156.21 0)
 			(hide yes)
 			(show_name no)
@@ -7818,7 +7818,7 @@
 		(instances
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/7832abec-59f9-400b-8c36-928585d457a9"
-					(reference "#PWR1128")
+					(reference "#PWR0042")
 					(unit 1)
 				)
 			)
@@ -7835,7 +7835,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "3fc77c8a-89a8-4cba-8895-3c3ac04e38ac")
-		(property "Reference" "#PWR1125"
+		(property "Reference" "#PWR0028"
 			(at 43.18 224.79 0)
 			(hide yes)
 			(show_name no)
@@ -7895,7 +7895,7 @@
 		(instances
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/7832abec-59f9-400b-8c36-928585d457a9"
-					(reference "#PWR1125")
+					(reference "#PWR0028")
 					(unit 1)
 				)
 			)
@@ -7912,7 +7912,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "4060b2fb-71df-4965-9c85-65dbf2d0e2e0")
-		(property "Reference" "R19"
+		(property "Reference" "R222"
 			(at 267.97 96.52 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -7974,7 +7974,7 @@
 		(instances
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/7832abec-59f9-400b-8c36-928585d457a9"
-					(reference "R19")
+					(reference "R222")
 					(unit 1)
 				)
 			)
@@ -7991,7 +7991,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "45fc241a-fd3b-4a05-a53f-7bb0d8ae4a30")
-		(property "Reference" "#PWR1117"
+		(property "Reference" "#PWR0032"
 			(at 57.15 146.05 0)
 			(hide yes)
 			(show_name no)
@@ -8051,7 +8051,7 @@
 		(instances
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/7832abec-59f9-400b-8c36-928585d457a9"
-					(reference "#PWR1117")
+					(reference "#PWR0032")
 					(unit 1)
 				)
 			)
@@ -8068,7 +8068,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "4acc42e4-28ed-42fa-9b6a-cd0edeae8958")
-		(property "Reference" "#FLG2200"
+		(property "Reference" "#FLG0017"
 			(at 132.08 222.25 0)
 			(hide yes)
 			(show_name no)
@@ -8128,7 +8128,7 @@
 		(instances
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/7832abec-59f9-400b-8c36-928585d457a9"
-					(reference "#FLG2200")
+					(reference "#FLG0017")
 					(unit 1)
 				)
 			)
@@ -8145,7 +8145,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "4ca53702-243e-4990-9148-be55537e5286")
-		(property "Reference" "R21"
+		(property "Reference" "R220"
 			(at 267.97 76.2 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8207,7 +8207,7 @@
 		(instances
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/7832abec-59f9-400b-8c36-928585d457a9"
-					(reference "R21")
+					(reference "R220")
 					(unit 1)
 				)
 			)
@@ -8224,7 +8224,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "4dbd563f-01b8-4935-9122-a9cccf7b5789")
-		(property "Reference" "#PWR1119"
+		(property "Reference" "#PWR0020"
 			(at 27.94 171.45 0)
 			(hide yes)
 			(show_name no)
@@ -8284,7 +8284,7 @@
 		(instances
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/7832abec-59f9-400b-8c36-928585d457a9"
-					(reference "#PWR1119")
+					(reference "#PWR0020")
 					(unit 1)
 				)
 			)
@@ -8301,7 +8301,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "50591786-44ed-409b-8958-2bb137bc19d7")
-		(property "Reference" "D3"
+		(property "Reference" "D203"
 			(at 48.26 163.195 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8374,7 +8374,7 @@
 		(instances
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/7832abec-59f9-400b-8c36-928585d457a9"
-					(reference "D3")
+					(reference "D203")
 					(unit 1)
 				)
 			)
@@ -8391,7 +8391,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "52800816-b45d-481a-b5ad-3e34082daaeb")
-		(property "Reference" "R20"
+		(property "Reference" "R219"
 			(at 267.97 66.04 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8453,7 +8453,7 @@
 		(instances
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/7832abec-59f9-400b-8c36-928585d457a9"
-					(reference "R20")
+					(reference "R219")
 					(unit 1)
 				)
 			)
@@ -8471,7 +8471,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "54e5dcba-d7ec-4b65-a8df-97fa4ed2c1f2")
-		(property "Reference" "Q1"
+		(property "Reference" "Q201"
 			(at 69.85 38.1 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8536,7 +8536,7 @@
 		(instances
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/7832abec-59f9-400b-8c36-928585d457a9"
-					(reference "Q1")
+					(reference "Q201")
 					(unit 1)
 				)
 			)
@@ -8553,7 +8553,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "55d8acba-5b86-4bb8-9a51-cc6b02c024a3")
-		(property "Reference" "#PWR1132"
+		(property "Reference" "#PWR0050"
 			(at 152.4 158.75 0)
 			(hide yes)
 			(show_name no)
@@ -8613,7 +8613,7 @@
 		(instances
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/7832abec-59f9-400b-8c36-928585d457a9"
-					(reference "#PWR1132")
+					(reference "#PWR0050")
 					(unit 1)
 				)
 			)
@@ -8630,7 +8630,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "5c917dcf-6759-40c2-be70-3e9519dba316")
-		(property "Reference" "R2"
+		(property "Reference" "R213"
 			(at 86.36 53.34 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8692,7 +8692,7 @@
 		(instances
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/7832abec-59f9-400b-8c36-928585d457a9"
-					(reference "R2")
+					(reference "R213")
 					(unit 1)
 				)
 			)
@@ -8709,7 +8709,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "5eef3bf8-e248-4173-ac67-8db858aedcc5")
-		(property "Reference" "R12"
+		(property "Reference" "R204"
 			(at 35.56 177.8 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8771,7 +8771,7 @@
 		(instances
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/7832abec-59f9-400b-8c36-928585d457a9"
-					(reference "R12")
+					(reference "R204")
 					(unit 1)
 				)
 			)
@@ -8788,7 +8788,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "619f4a77-5619-4b3f-9d71-1f3333bfe80a")
-		(property "Reference" "#PWR1110"
+		(property "Reference" "#PWR0031"
 			(at 55.88 110.49 0)
 			(hide yes)
 			(show_name no)
@@ -8848,7 +8848,7 @@
 		(instances
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/7832abec-59f9-400b-8c36-928585d457a9"
-					(reference "#PWR1110")
+					(reference "#PWR0031")
 					(unit 1)
 				)
 			)
@@ -8865,7 +8865,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "6a81842c-b4e8-4feb-a2fc-6e16111857cd")
-		(property "Reference" "R9"
+		(property "Reference" "R201"
 			(at 35.56 139.7 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -8927,7 +8927,7 @@
 		(instances
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/7832abec-59f9-400b-8c36-928585d457a9"
-					(reference "R9")
+					(reference "R201")
 					(unit 1)
 				)
 			)
@@ -8944,7 +8944,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "6ddeee5c-e260-4600-ab66-e76b2244058c")
-		(property "Reference" "#PWR1108"
+		(property "Reference" "#PWR0023"
 			(at 38.1 100.33 0)
 			(hide yes)
 			(show_name no)
@@ -9004,7 +9004,7 @@
 		(instances
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/7832abec-59f9-400b-8c36-928585d457a9"
-					(reference "#PWR1108")
+					(reference "#PWR0023")
 					(unit 1)
 				)
 			)
@@ -9021,7 +9021,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "7317f883-d2aa-4225-8dc7-6f3109dd1ac6")
-		(property "Reference" "R6"
+		(property "Reference" "R216"
 			(at 93.98 31.75 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9085,7 +9085,7 @@
 		(instances
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/7832abec-59f9-400b-8c36-928585d457a9"
-					(reference "R6")
+					(reference "R216")
 					(unit 1)
 				)
 			)
@@ -9102,7 +9102,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "74ed2a70-8243-4312-969c-6f8270e616c5")
-		(property "Reference" "R7"
+		(property "Reference" "R218"
 			(at 104.14 36.83 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9164,7 +9164,7 @@
 		(instances
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/7832abec-59f9-400b-8c36-928585d457a9"
-					(reference "R7")
+					(reference "R218")
 					(unit 1)
 				)
 			)
@@ -9181,7 +9181,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "7798b693-4dee-4506-b873-4f045618ca77")
-		(property "Reference" "R16"
+		(property "Reference" "R215"
 			(at 87.63 139.7 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9243,7 +9243,7 @@
 		(instances
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/7832abec-59f9-400b-8c36-928585d457a9"
-					(reference "R16")
+					(reference "R215")
 					(unit 1)
 				)
 			)
@@ -9260,7 +9260,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "7866f25f-d986-4e27-b604-2de8fc176227")
-		(property "Reference" "U1"
+		(property "Reference" "U203"
 			(at 210.82 146.05 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9473,7 +9473,7 @@
 		(instances
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/7832abec-59f9-400b-8c36-928585d457a9"
-					(reference "U1")
+					(reference "U203")
 					(unit 1)
 				)
 			)
@@ -9490,7 +9490,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "7e3f1dd0-c7a4-4766-b963-a0f4ad2d9e39")
-		(property "Reference" "#PWR2201"
+		(property "Reference" "#PWR0047"
 			(at 124.46 234.95 0)
 			(hide yes)
 			(show_name no)
@@ -9550,7 +9550,7 @@
 		(instances
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/7832abec-59f9-400b-8c36-928585d457a9"
-					(reference "#PWR2201")
+					(reference "#PWR0047")
 					(unit 1)
 				)
 			)
@@ -9567,7 +9567,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "7ffcd685-2316-4f22-bf8c-c63df4590157")
-		(property "Reference" "C7"
+		(property "Reference" "C202"
 			(at 38.1 119.38 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9631,7 +9631,7 @@
 		(instances
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/7832abec-59f9-400b-8c36-928585d457a9"
-					(reference "C7")
+					(reference "C202")
 					(unit 1)
 				)
 			)
@@ -9648,7 +9648,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "81feb901-ca26-41fe-a4ff-dd421400c151")
-		(property "Reference" "R110"
+		(property "Reference" "R223"
 			(at 267.97 106.68 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -9710,7 +9710,7 @@
 		(instances
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/7832abec-59f9-400b-8c36-928585d457a9"
-					(reference "R110")
+					(reference "R223")
 					(unit 1)
 				)
 			)
@@ -9727,7 +9727,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "85b7c85f-2842-4f37-8220-e12535096037")
-		(property "Reference" "#PWR2200"
+		(property "Reference" "#PWR0048"
 			(at 142.24 232.41 0)
 			(hide yes)
 			(show_name no)
@@ -9787,7 +9787,7 @@
 		(instances
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/7832abec-59f9-400b-8c36-928585d457a9"
-					(reference "#PWR2200")
+					(reference "#PWR0048")
 					(unit 1)
 				)
 			)
@@ -9804,7 +9804,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "89254f0a-b4aa-4c3e-b738-cafa6af34674")
-		(property "Reference" "#PWR1127"
+		(property "Reference" "#PWR0039"
 			(at 80.01 146.05 0)
 			(hide yes)
 			(show_name no)
@@ -9864,7 +9864,7 @@
 		(instances
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/7832abec-59f9-400b-8c36-928585d457a9"
-					(reference "#PWR1127")
+					(reference "#PWR0039")
 					(unit 1)
 				)
 			)
@@ -9881,7 +9881,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "8ccc1bd5-09e2-4439-bdd8-6cb2b56948f7")
-		(property "Reference" "#PWR1131"
+		(property "Reference" "#PWR0049"
 			(at 152.4 146.05 0)
 			(hide yes)
 			(show_name no)
@@ -9941,7 +9941,7 @@
 		(instances
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/7832abec-59f9-400b-8c36-928585d457a9"
-					(reference "#PWR1131")
+					(reference "#PWR0049")
 					(unit 1)
 				)
 			)
@@ -9958,7 +9958,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "8f4e00a1-66f5-4f20-b55d-1c9a9bc9057b")
-		(property "Reference" "F110"
+		(property "Reference" "F201"
 			(at 60.96 16.51 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10031,7 +10031,7 @@
 		(instances
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/7832abec-59f9-400b-8c36-928585d457a9"
-					(reference "F110")
+					(reference "F201")
 					(unit 1)
 				)
 			)
@@ -10048,7 +10048,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "8f5132c3-0fe5-42ef-aa55-036133c4f64c")
-		(property "Reference" "C112"
+		(property "Reference" "C206"
 			(at 68.58 119.38 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10112,7 +10112,7 @@
 		(instances
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/7832abec-59f9-400b-8c36-928585d457a9"
-					(reference "C112")
+					(reference "C206")
 					(unit 1)
 				)
 			)
@@ -10129,7 +10129,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "90e1b63d-2371-48ad-89ff-abcfca13f1be")
-		(property "Reference" "R111"
+		(property "Reference" "R208"
 			(at 35.56 226.06 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10191,7 +10191,7 @@
 		(instances
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/7832abec-59f9-400b-8c36-928585d457a9"
-					(reference "R111")
+					(reference "R208")
 					(unit 1)
 				)
 			)
@@ -10208,7 +10208,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "920fa208-0fb3-4642-8f4f-1024ce661848")
-		(property "Reference" "#PWR1116"
+		(property "Reference" "#PWR0052"
 			(at 203.2 151.13 0)
 			(hide yes)
 			(show_name no)
@@ -10268,7 +10268,7 @@
 		(instances
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/7832abec-59f9-400b-8c36-928585d457a9"
-					(reference "#PWR1116")
+					(reference "#PWR0052")
 					(unit 1)
 				)
 			)
@@ -10285,7 +10285,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "93189f8c-a186-44c9-8358-25ba3617753e")
-		(property "Reference" "D110"
+		(property "Reference" "D204"
 			(at 76.2 16.51 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10358,7 +10358,7 @@
 		(instances
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/7832abec-59f9-400b-8c36-928585d457a9"
-					(reference "D110")
+					(reference "D204")
 					(unit 1)
 				)
 			)
@@ -10375,7 +10375,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "9519c532-af42-40e0-a1d7-fdf2784291b3")
-		(property "Reference" "U110"
+		(property "Reference" "U201"
 			(at 60.96 68.58 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10462,7 +10462,7 @@
 		(instances
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/7832abec-59f9-400b-8c36-928585d457a9"
-					(reference "U110")
+					(reference "U201")
 					(unit 1)
 				)
 			)
@@ -10479,7 +10479,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "977694fb-7842-41a6-a6f6-015f3ce592a2")
-		(property "Reference" "#PWR1104"
+		(property "Reference" "#PWR0046"
 			(at 124.46 34.29 0)
 			(hide yes)
 			(show_name no)
@@ -10539,7 +10539,7 @@
 		(instances
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/7832abec-59f9-400b-8c36-928585d457a9"
-					(reference "#PWR1104")
+					(reference "#PWR0046")
 					(unit 1)
 				)
 			)
@@ -10556,7 +10556,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "9e0c5559-820b-49e7-b0da-22fb42cbefe8")
-		(property "Reference" "C9"
+		(property "Reference" "C205"
 			(at 58.42 119.38 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10620,7 +10620,7 @@
 		(instances
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/7832abec-59f9-400b-8c36-928585d457a9"
-					(reference "C9")
+					(reference "C205")
 					(unit 1)
 				)
 			)
@@ -10637,7 +10637,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "a0cdc03a-063d-45eb-88a7-89b7b27e5a72")
-		(property "Reference" "R5"
+		(property "Reference" "R217"
 			(at 93.98 44.45 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10701,7 +10701,7 @@
 		(instances
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/7832abec-59f9-400b-8c36-928585d457a9"
-					(reference "R5")
+					(reference "R217")
 					(unit 1)
 				)
 			)
@@ -10718,7 +10718,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "a48122d6-f825-47c1-86a3-f7848326367f")
-		(property "Reference" "C4"
+		(property "Reference" "C207"
 			(at 76.2 99.06 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10782,7 +10782,7 @@
 		(instances
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/7832abec-59f9-400b-8c36-928585d457a9"
-					(reference "C4")
+					(reference "C207")
 					(unit 1)
 				)
 			)
@@ -10799,7 +10799,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "a81564f9-ea72-4392-bf5d-782ce007ba47")
-		(property "Reference" "#PWR1103"
+		(property "Reference" "#PWR0044"
 			(at 111.76 34.29 0)
 			(hide yes)
 			(show_name no)
@@ -10859,7 +10859,7 @@
 		(instances
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/7832abec-59f9-400b-8c36-928585d457a9"
-					(reference "#PWR1103")
+					(reference "#PWR0044")
 					(unit 1)
 				)
 			)
@@ -10876,7 +10876,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "ae29ffe1-3c54-4199-bca0-135e3705e86b")
-		(property "Reference" "C13"
+		(property "Reference" "C211"
 			(at 113.03 170.18 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -10940,7 +10940,7 @@
 		(instances
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/7832abec-59f9-400b-8c36-928585d457a9"
-					(reference "C13")
+					(reference "C211")
 					(unit 1)
 				)
 			)
@@ -10957,7 +10957,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "af8250d1-503d-48f7-9903-a42bb82650c2")
-		(property "Reference" "#PWR1106"
+		(property "Reference" "#PWR0038"
 			(at 76.2 38.1 0)
 			(hide yes)
 			(show_name no)
@@ -11017,7 +11017,7 @@
 		(instances
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/7832abec-59f9-400b-8c36-928585d457a9"
-					(reference "#PWR1106")
+					(reference "#PWR0038")
 					(unit 1)
 				)
 			)
@@ -11034,7 +11034,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "ba1f514b-b957-4df4-b48a-9be01b2dc641")
-		(property "Reference" "C12"
+		(property "Reference" "C208"
 			(at 90.17 170.18 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11098,7 +11098,7 @@
 		(instances
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/7832abec-59f9-400b-8c36-928585d457a9"
-					(reference "C12")
+					(reference "C208")
 					(unit 1)
 				)
 			)
@@ -11115,7 +11115,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "bd1cdacf-ce05-40e2-b76e-62ce5b917508")
-		(property "Reference" "D2"
+		(property "Reference" "D201"
 			(at 48.26 137.795 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11188,7 +11188,7 @@
 		(instances
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/7832abec-59f9-400b-8c36-928585d457a9"
-					(reference "D2")
+					(reference "D201")
 					(unit 1)
 				)
 			)
@@ -11205,7 +11205,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "c6473f91-c624-4bdb-9757-fd55d6bfbffd")
-		(property "Reference" "#PWR1101"
+		(property "Reference" "#PWR0025"
 			(at 40.64 76.2 0)
 			(hide yes)
 			(show_name no)
@@ -11265,7 +11265,7 @@
 		(instances
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/7832abec-59f9-400b-8c36-928585d457a9"
-					(reference "#PWR1101")
+					(reference "#PWR0025")
 					(unit 1)
 				)
 			)
@@ -11282,7 +11282,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "c717a955-f48d-4c41-8f10-79e1af6bc2ae")
-		(property "Reference" "C110"
+		(property "Reference" "C210"
 			(at 114.3 22.86 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11346,7 +11346,7 @@
 		(instances
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/7832abec-59f9-400b-8c36-928585d457a9"
-					(reference "C110")
+					(reference "C210")
 					(unit 1)
 				)
 			)
@@ -11363,7 +11363,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "c869a362-a3e9-458a-9e27-2266e6004f7d")
-		(property "Reference" "C10"
+		(property "Reference" "C209"
 			(at 99.06 144.78 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11427,7 +11427,7 @@
 		(instances
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/7832abec-59f9-400b-8c36-928585d457a9"
-					(reference "C10")
+					(reference "C209")
 					(unit 1)
 				)
 			)
@@ -11444,7 +11444,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "c9fd87d7-71a8-47d3-baa5-f660a8c239a0")
-		(property "Reference" "C6"
+		(property "Reference" "C201"
 			(at 27.94 119.38 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11508,7 +11508,7 @@
 		(instances
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/7832abec-59f9-400b-8c36-928585d457a9"
-					(reference "C6")
+					(reference "C201")
 					(unit 1)
 				)
 			)
@@ -11525,7 +11525,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "cc42f27b-7e6c-44aa-8bd9-f1d62d0e7bf4")
-		(property "Reference" "#PWR1124"
+		(property "Reference" "#PWR0027"
 			(at 43.18 214.63 0)
 			(hide yes)
 			(show_name no)
@@ -11585,7 +11585,7 @@
 		(instances
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/7832abec-59f9-400b-8c36-928585d457a9"
-					(reference "#PWR1124")
+					(reference "#PWR0027")
 					(unit 1)
 				)
 			)
@@ -11602,7 +11602,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "cc65eb4e-42e0-44a0-8d6d-693b83279536")
-		(property "Reference" "#PWR1113"
+		(property "Reference" "#PWR0018"
 			(at 25.4 120.65 0)
 			(hide yes)
 			(show_name no)
@@ -11662,7 +11662,7 @@
 		(instances
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/7832abec-59f9-400b-8c36-928585d457a9"
-					(reference "#PWR1113")
+					(reference "#PWR0018")
 					(unit 1)
 				)
 			)
@@ -11679,7 +11679,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "ce2f737f-d6a0-4634-8408-cc502612005b")
-		(property "Reference" "#PWR1120"
+		(property "Reference" "#PWR0033"
 			(at 57.15 173.99 0)
 			(hide yes)
 			(show_name no)
@@ -11739,7 +11739,7 @@
 		(instances
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/7832abec-59f9-400b-8c36-928585d457a9"
-					(reference "#PWR1120")
+					(reference "#PWR0033")
 					(unit 1)
 				)
 			)
@@ -11756,7 +11756,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "d0d5a2a4-1b12-437c-b5a2-6bc5cddd45a8")
-		(property "Reference" "#PWR1109"
+		(property "Reference" "#PWR0024"
 			(at 38.1 110.49 0)
 			(hide yes)
 			(show_name no)
@@ -11816,7 +11816,7 @@
 		(instances
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/7832abec-59f9-400b-8c36-928585d457a9"
-					(reference "#PWR1109")
+					(reference "#PWR0024")
 					(unit 1)
 				)
 			)
@@ -11833,7 +11833,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "d0e474a5-7c36-4454-a15a-375167a14a4d")
-		(property "Reference" "R1"
+		(property "Reference" "R212"
 			(at 78.74 46.99 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -11897,7 +11897,7 @@
 		(instances
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/7832abec-59f9-400b-8c36-928585d457a9"
-					(reference "R1")
+					(reference "R212")
 					(unit 1)
 				)
 			)
@@ -11914,7 +11914,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "d5755942-4969-4812-af04-2b08cc1dd8a0")
-		(property "Reference" "#PWR1111"
+		(property "Reference" "#PWR0036"
 			(at 73.66 100.33 0)
 			(hide yes)
 			(show_name no)
@@ -11974,7 +11974,7 @@
 		(instances
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/7832abec-59f9-400b-8c36-928585d457a9"
-					(reference "#PWR1111")
+					(reference "#PWR0036")
 					(unit 1)
 				)
 			)
@@ -11991,7 +11991,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "d5ddd319-19d9-409f-9fb2-f969d4ccbd5f")
-		(property "Reference" "#PWR1100"
+		(property "Reference" "#PWR0022"
 			(at 30.48 74.93 0)
 			(hide yes)
 			(show_name no)
@@ -12051,7 +12051,7 @@
 		(instances
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/7832abec-59f9-400b-8c36-928585d457a9"
-					(reference "#PWR1100")
+					(reference "#PWR0022")
 					(unit 1)
 				)
 			)
@@ -12068,7 +12068,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "da23e168-7dbb-43fb-b647-b7064144431d")
-		(property "Reference" "#PWR1107"
+		(property "Reference" "#PWR0040"
 			(at 91.44 55.88 0)
 			(hide yes)
 			(show_name no)
@@ -12128,7 +12128,7 @@
 		(instances
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/7832abec-59f9-400b-8c36-928585d457a9"
-					(reference "#PWR1107")
+					(reference "#PWR0040")
 					(unit 1)
 				)
 			)
@@ -12145,7 +12145,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "db3f61af-bd86-45dd-9126-171c568b2c31")
-		(property "Reference" "R11"
+		(property "Reference" "R203"
 			(at 35.56 165.1 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12207,7 +12207,7 @@
 		(instances
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/7832abec-59f9-400b-8c36-928585d457a9"
-					(reference "R11")
+					(reference "R203")
 					(unit 1)
 				)
 			)
@@ -12224,7 +12224,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "dda04c59-b67a-48b2-ae30-d616ab7d244e")
-		(property "Reference" "R4"
+		(property "Reference" "R209"
 			(at 43.18 64.77 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12288,7 +12288,7 @@
 		(instances
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/7832abec-59f9-400b-8c36-928585d457a9"
-					(reference "R4")
+					(reference "R209")
 					(unit 1)
 				)
 			)
@@ -12305,7 +12305,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "de474060-64af-4b4d-9aaf-88a69674596a")
-		(property "Reference" "JP202"
+		(property "Reference" "JP201"
 			(at 146.05 224.79 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12369,7 +12369,7 @@
 		(instances
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/7832abec-59f9-400b-8c36-928585d457a9"
-					(reference "JP202")
+					(reference "JP201")
 					(unit 1)
 				)
 			)
@@ -12386,7 +12386,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "dedbbb74-d956-455f-95c6-b1334ade5152")
-		(property "Reference" "D1"
+		(property "Reference" "D202"
 			(at 48.26 150.495 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12459,7 +12459,7 @@
 		(instances
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/7832abec-59f9-400b-8c36-928585d457a9"
-					(reference "D1")
+					(reference "D202")
 					(unit 1)
 				)
 			)
@@ -12476,7 +12476,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "e5aa73e1-952c-4134-a8c7-44449716a20d")
-		(property "Reference" "#PWR1105"
+		(property "Reference" "#PWR0030"
 			(at 55.88 69.85 0)
 			(hide yes)
 			(show_name no)
@@ -12536,7 +12536,7 @@
 		(instances
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/7832abec-59f9-400b-8c36-928585d457a9"
-					(reference "#PWR1105")
+					(reference "#PWR0030")
 					(unit 1)
 				)
 			)
@@ -12553,7 +12553,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "e77998d8-4d04-411d-bf02-1089a8ac1cc6")
-		(property "Reference" "C111"
+		(property "Reference" "C212"
 			(at 127 22.86 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12617,7 +12617,7 @@
 		(instances
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/7832abec-59f9-400b-8c36-928585d457a9"
-					(reference "C111")
+					(reference "C212")
 					(unit 1)
 				)
 			)
@@ -12634,7 +12634,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "ecd01e0c-c8f3-4d2e-bd60-c70db0ec22fe")
-		(property "Reference" "R15"
+		(property "Reference" "R206"
 			(at 35.56 205.74 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12696,7 +12696,7 @@
 		(instances
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/7832abec-59f9-400b-8c36-928585d457a9"
-					(reference "R15")
+					(reference "R206")
 					(unit 1)
 				)
 			)
@@ -12713,7 +12713,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "ed7f8d3b-905a-46ca-b3ee-49e04e8ccb07")
-		(property "Reference" "C1"
+		(property "Reference" "C203"
 			(at 40.64 99.06 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12777,7 +12777,7 @@
 		(instances
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/7832abec-59f9-400b-8c36-928585d457a9"
-					(reference "C1")
+					(reference "C203")
 					(unit 1)
 				)
 			)
@@ -12794,7 +12794,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "edef6a17-1821-4bcf-9bf9-2246ad3ae968")
-		(property "Reference" "R13"
+		(property "Reference" "R210"
 			(at 49.53 177.8 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -12856,7 +12856,7 @@
 		(instances
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/7832abec-59f9-400b-8c36-928585d457a9"
-					(reference "R13")
+					(reference "R210")
 					(unit 1)
 				)
 			)
@@ -12873,7 +12873,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "ee9788b0-dc5b-4710-8c4a-421c0b6f2aa8")
-		(property "Reference" "#PWR1112"
+		(property "Reference" "#PWR0037"
 			(at 73.66 110.49 0)
 			(hide yes)
 			(show_name no)
@@ -12933,7 +12933,7 @@
 		(instances
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/7832abec-59f9-400b-8c36-928585d457a9"
-					(reference "#PWR1112")
+					(reference "#PWR0037")
 					(unit 1)
 				)
 			)
@@ -12950,7 +12950,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "f933f412-6d01-4dc4-9f45-37b974497110")
-		(property "Reference" "#PWR1126"
+		(property "Reference" "#PWR0029"
 			(at 43.18 234.95 0)
 			(hide yes)
 			(show_name no)
@@ -13010,7 +13010,7 @@
 		(instances
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/7832abec-59f9-400b-8c36-928585d457a9"
-					(reference "#PWR1126")
+					(reference "#PWR0029")
 					(unit 1)
 				)
 			)
@@ -13027,7 +13027,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "fd9be69e-8c8f-461e-b1ef-bb591e256a6e")
-		(property "Reference" "Y1"
+		(property "Reference" "Y201"
 			(at 101.6 163.83 0)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13089,7 +13089,7 @@
 		(instances
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/7832abec-59f9-400b-8c36-928585d457a9"
-					(reference "Y1")
+					(reference "Y201")
 					(unit 1)
 				)
 			)
@@ -13106,7 +13106,7 @@
 		(in_pos_files yes)
 		(dnp no)
 		(uuid "fdd4f391-5945-47e1-b5ea-a30bfe997275")
-		(property "Reference" "R10"
+		(property "Reference" "R202"
 			(at 35.56 152.4 90)
 			(show_name no)
 			(do_not_autoplace no)
@@ -13168,7 +13168,7 @@
 		(instances
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/7832abec-59f9-400b-8c36-928585d457a9"
-					(reference "R10")
+					(reference "R202")
 					(unit 1)
 				)
 			)
