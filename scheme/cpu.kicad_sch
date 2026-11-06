@@ -3958,7 +3958,7 @@
 				)
 				(uuid "ff4bb07c-8c07-4e04-9eae-7cb765f156aa")
 			)
-			(table_cell "W_RST"
+			(table_cell "LED0"
 				(exclude_from_sim no)
 				(at 293.3700 73.6600 0)
 				(size 13.9700 3.8100)
@@ -3973,7 +3973,7 @@
 				)
 				(uuid "285af822-111f-49c6-ad06-5468979a8916")
 			)
-			(table_cell "GPIO"
+			(table_cell "TIM2_CH1 AF2"
 				(exclude_from_sim no)
 				(at 307.3400 73.6600 0)
 				(size 38.1000 3.8100)
@@ -4003,7 +4003,7 @@
 				)
 				(uuid "09342fec-3119-4bb1-9f1d-9e7b333cf7ec")
 			)
-			(table_cell "W5500 RSTn (на плате, не на Uno)"
+			(table_cell "LD1 (лист leds)"
 				(exclude_from_sim no)
 				(at 355.6000 73.6600 0)
 				(size 105.4100 3.8100)
@@ -5218,7 +5218,7 @@
 				)
 				(uuid "13db858a-47fe-4cc3-b0d5-698d4cff0189")
 			)
-			(table_cell "LED0"
+			(table_cell "W_RST"
 				(exclude_from_sim no)
 				(at 293.3700 127.0000 0)
 				(size 13.9700 3.8100)
@@ -5233,7 +5233,7 @@
 				)
 				(uuid "a1f8b0a8-6bf8-4af5-be17-7e84b8879cb1")
 			)
-			(table_cell "TIM3_CH1 AF1"
+			(table_cell "GPIO"
 				(exclude_from_sim no)
 				(at 307.3400 127.0000 0)
 				(size 38.1000 3.8100)
@@ -5263,7 +5263,7 @@
 				)
 				(uuid "aaca9c54-3d11-4441-a1ca-3a375fbfc058")
 			)
-			(table_cell "LD1 (лист leds), только GP-корпус"
+			(table_cell "W5500 RSTn (на плате, не на Uno), только GP-корпус"
 				(exclude_from_sim no)
 				(at 355.6000 127.0000 0)
 				(size 105.4100 3.8100)
@@ -7261,7 +7261,7 @@
 		)
 	)
 
-	(text "Совместимость с STM32G071CBT6: использованы только USART1, LPUART1, SPI2, I2C1, ADC, TIM1/3/16/17,\nвсё есть у G071 с теми же AF и выводами (DS12232 табл. 13-17). Не используются: USB, FDCAN, SPI3,\nI2C3, USART5/6, LPUART2, TIM4. Версии ...N (VDDIO2) не ставить - теряются PC6/PC7 (LED0/LED1).\nTT-выводы (не 5 В): только PA4 (POT) и PA5 (W_RST) - оба бортовые; на разъёмах Uno только FT."
+	(text "Совместимость с STM32G071CBT6: использованы только USART1, LPUART1, SPI2, I2C1, ADC, TIM1/2/3/16/17,\nвсё есть у G071 с теми же AF и выводами (DS12232 табл. 13-17). Не используются: USB, FDCAN, SPI3,\nI2C3, USART5/6, LPUART2, TIM4. Версии ...N (VDDIO2) не ставить - теряются PC6/PC7 (W_RST/LED1).\nTT-выводы (не 5 В): только PA4 (POT) и PA5 (LED0) - оба бортовые; на разъёмах Uno только FT.\nW_RST (PC6) и LED0 (PA5) переставлены под трассировку: LED0 на PA5 - ШИМ TIM2_CH1 AF2 (DS13560 табл. 13, DS12232 табл. 13)."
 		(exclude_from_sim no)
 		(at 20.32 193.04 0)
 		(effects
@@ -8389,7 +8389,7 @@
 		)
 		(uuid "428e9d58-c52c-4ab4-ba52-473c95eb136d")
 	)
-	(hierarchical_label "LED0"
+	(hierarchical_label "W_RST"
 		(shape output)
 		(at 165.1 127 180)
 		(effects
@@ -8521,7 +8521,7 @@
 		)
 		(uuid "7e3fb75c-404e-458b-b918-582634916ed6")
 	)
-	(hierarchical_label "W_RST"
+	(hierarchical_label "LED0"
 		(shape output)
 		(at 241.3 111.76 0)
 		(effects
