@@ -47182,22 +47182,6 @@
 		(uuid "4f4fe7ec-92c0-4ff5-9c0d-bc68cca217cd")
 	)
 	(segment
-		(start 128.6 89.6)
-		(end 128 89)
-		(width 0.3)
-		(layer "F.Cu")
-		(net "+3V3_MCU")
-		(uuid "53f5cf19-bbb2-4393-9fa9-a956c677d19a")
-	)
-	(segment
-		(start 128.6 89.6)
-		(end 128 89.6)
-		(width 0.4)
-		(layer "F.Cu")
-		(net "+3V3_MCU")
-		(uuid "55a61b8e-1ac9-4909-b4cf-6765c17e0b0d")
-	)
-	(segment
 		(start 121.1 86.45)
 		(end 122.2 87.55)
 		(width 0.4)
@@ -47260,6 +47244,14 @@
 		(layer "F.Cu")
 		(net "+3V3_MCU")
 		(uuid "99d84137-ffa3-417d-adc0-86b6019cd966")
+	)
+	(segment
+		(start 128 89)
+		(end 128 89.6)
+		(width 0.3)
+		(layer "F.Cu")
+		(net "+3V3_MCU")
+		(uuid "a6dbf742-6a88-49e4-8316-41667f258cee")
 	)
 	(segment
 		(start 132.6 85.75)
