@@ -4228,7 +4228,7 @@
 				)
 				(uuid "2a94d815-d132-4fbc-954b-a4ac5722f540")
 			)
-			(table_cell "W_CS"
+			(table_cell "SD_CS"
 				(exclude_from_sim no)
 				(at 293.3700 85.0900 0)
 				(size 13.9700 3.8100)
@@ -4273,7 +4273,7 @@
 				)
 				(uuid "64974900-c18c-4d7d-85fb-aba8a52ef2c0")
 			)
-			(table_cell "W5500 SCSn"
+			(table_cell "CS microSD (w32 ~{CS}_card)"
 				(exclude_from_sim no)
 				(at 355.6000 85.0900 0)
 				(size 105.4100 3.8100)
@@ -5578,7 +5578,7 @@
 				)
 				(uuid "82befa97-6c60-4a9d-9ad6-719278649842")
 			)
-			(table_cell "SD_CS"
+			(table_cell "W_CS"
 				(exclude_from_sim no)
 				(at 293.3700 142.2400 0)
 				(size 13.9700 3.8100)
@@ -5623,7 +5623,7 @@
 				)
 				(uuid "b4503b00-244d-42bd-a1ae-d9103e962964")
 			)
-			(table_cell "CS microSD (w32 ~{CS}_card)"
+			(table_cell "W5500 SCSn"
 				(exclude_from_sim no)
 				(at 355.6000 142.2400 0)
 				(size 105.4100 3.8100)
@@ -8356,8 +8356,8 @@
 		)
 		(uuid "28ac9211-a828-456b-9c18-81828e824c98")
 	)
-	(hierarchical_label "W_CS"
-		(shape bidirectional)
+	(hierarchical_label "SD_CS"
+		(shape output)
 		(at 241.3 142.24 0)
 		(effects
 			(font
@@ -8433,8 +8433,8 @@
 		)
 		(uuid "669de211-4aec-4b7c-8380-c494f41ecc6a")
 	)
-	(hierarchical_label "SD_CS"
-		(shape output)
+	(hierarchical_label "W_CS"
+		(shape bidirectional)
 		(at 241.3 127 0)
 		(effects
 			(font
