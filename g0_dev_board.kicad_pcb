@@ -10732,7 +10732,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/FL_CS")
+			(net "/BTN")
 			(uuid "023126d1-4822-4197-b6d7-3704e30bbf08")
 		)
 		(pad "15" thru_hole circle
@@ -10741,7 +10741,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/SD_CS")
+			(net "/GPIO_PF0")
 			(uuid "e93ea0c3-c580-4364-959d-21c398928dc5")
 		)
 		(pad "16" thru_hole circle
@@ -10750,7 +10750,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/CARD_DET")
+			(net "/GPIO_PF1")
 			(uuid "6540401b-4dc6-4409-8b96-12dcda98ea8c")
 		)
 		(pad "17" thru_hole circle
@@ -10759,7 +10759,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/W_RST")
+			(net "/POT")
 			(uuid "cef0da00-2f14-4ebe-b6be-29c31ede1a8a")
 		)
 		(pad "18" thru_hole circle
@@ -10768,7 +10768,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED0")
+			(net "/W_RST")
 			(uuid "ae279e3f-c54f-4ac8-8f10-0c89e7d2d619")
 		)
 		(pad "19" thru_hole circle
@@ -10777,7 +10777,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/LED1")
+			(net "/FL_CS")
 			(uuid "627439b6-5086-45a3-b028-ede836b18ecb")
 		)
 		(pad "20" thru_hole circle
@@ -10786,7 +10786,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/BTN")
+			(net "/CARD_DET")
 			(uuid "6b9e2649-429b-4306-8638-008d115f2ef7")
 		)
 		(pad "21" thru_hole circle
@@ -10795,7 +10795,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/POT")
+			(net "/MCU_SWDIO")
 			(uuid "35c5b0a6-c509-4418-86c6-790d6492b181")
 		)
 		(pad "22" thru_hole circle
@@ -10804,7 +10804,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/GPIO_PF0")
+			(net "/MCU_SWCLK")
 			(uuid "d9953619-e9a1-4f65-b5b9-e356e1309721")
 		)
 		(pad "23" thru_hole circle
@@ -10813,7 +10813,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/GPIO_PF1")
+			(net "/SD_CS")
 			(uuid "1dca00a5-e189-4435-b85f-025cec526b9f")
 		)
 		(pad "24" thru_hole circle
@@ -10822,7 +10822,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/MCU_SWCLK")
+			(net "/LED1")
 			(uuid "4abbfb8d-f312-4eea-a30b-7e7265e51743")
 		)
 		(pad "25" thru_hole circle
@@ -10831,7 +10831,7 @@
 			(drill 1)
 			(layers "*.Cu" "*.Mask")
 			(remove_unused_layers no)
-			(net "/MCU_SWDIO")
+			(net "/LED0")
 			(uuid "bc489259-a4ea-4a7d-a3b8-147e884c37d4")
 		)
 		(pad "26" thru_hole circle
