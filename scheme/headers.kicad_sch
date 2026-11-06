@@ -3309,7 +3309,7 @@
 			(embedded_fonts no)
 		)
 	)
-	(text "Гребёнки логического анализатора, 1x27 каждая (одинаковые, по левому и правому краю платы,\nподпись каждого вывода - на шелкографии):\nJ806 J_LA_R (цифровой ряд Uno): SCL, SDA, 3V3, GND, D13..D8, D7..D0 (порядок IOH+IOL),\n  GND, SPI2 SCK/MISO/MOSI, W_CS, W_INT, U1_TX, U1_RX, 5V.\nНа обеих гребёнках есть GND, 3V3 и 5V; AREF на гребёнку не выведен (только на J801).\nJ805 J_LA_L (POWER/ANALOG): GND, 3V3, NRST, 5V, GND, VIN, A0..A5, GND, FL_CS, SD_CS, CARD_DET,\n  W_RST, LED0, LED1, BTN, POT, PF0, PF1, SWCLK(МК), SWDIO(МК), GND, GND.\nШина SPI2 общая для W5500, W25Q32 и microSD: SCK/MISO/MOSI выведены один раз (на J_LA_R),\nCS флэш/SD и детект - на J_LA_L. Свободных GPIO у МК в LQFP-48 только два (PF0, PF1);\nоставшиеся места - GND и SWD со стороны МК.\nU1_TX = PA9 (МК -> RXD FT232), U1_RX = PA10 (TXD FT232 -> МК)."
+	(text "Гребёнки логического анализатора, 1x27 каждая (одинаковые, по левому и правому краю платы,\nподпись каждого вывода - на шелкографии):\nJ806 J_LA_R (цифровой ряд Uno): SCL, SDA, 3V3, GND, D13..D8, D7..D0 (порядок IOH+IOL),\n  GND, SPI2 SCK/MISO/MOSI, W_CS, W_INT, U1_TX, U1_RX, 5V.\nНа обеих гребёнках есть GND, 3V3 и 5V; AREF на гребёнку не выведен (только на J801).\nJ805 J_LA_L (POWER/ANALOG): GND, 3V3, NRST, 5V, GND, VIN, A0..A5, GND, BTN, PF0, PF1, POT,\n  W_RST, FL_CS, CARD_DET, SWDIO(МК), SWCLK(МК), SD_CS, LED1, LED0, GND, GND.\n  Порядок J805.14-25 задан трассировкой: в нём линии выходят из-под МК к гребёнке без пересечений.\nШина SPI2 общая для W5500, W25Q32 и microSD: SCK/MISO/MOSI выведены один раз (на J_LA_R),\nCS флэш/SD и детект - на J_LA_L. Свободных GPIO у МК в LQFP-48 только два (PF0, PF1);\nоставшиеся места - GND и SWD со стороны МК.\nU1_TX = PA9 (МК -> RXD FT232), U1_RX = PA10 (TXD FT232 -> МК)."
 		(exclude_from_sim no)
 		(at 279.4 119.38 0)
 		(effects
@@ -4886,7 +4886,7 @@
 		)
 		(uuid "ff86335a-fc9e-4a1a-a151-e6f146da0216")
 	)
-	(label "POT"
+	(label "MCU_SWDIO"
 		(at 167.64 91.44 180)
 		(effects
 			(font
@@ -4926,7 +4926,7 @@
 		)
 		(uuid "0aa7c74d-b67e-4cc2-a45f-af9c8b355bc8")
 	)
-	(label "GPIO_PF1"
+	(label "SD_CS"
 		(at 167.64 96.52 180)
 		(effects
 			(font
@@ -5136,7 +5136,7 @@
 		)
 		(uuid "24cb0c66-5057-4f17-831f-74caa620298e")
 	)
-	(label "MCU_SWCLK"
+	(label "LED1"
 		(at 167.64 99.06 180)
 		(effects
 			(font
@@ -5256,7 +5256,7 @@
 		)
 		(uuid "4a6219d5-6830-42c5-a2f7-dd837baf627c")
 	)
-	(label "CARD_DET"
+	(label "GPIO_PF1"
 		(at 167.64 78.74 180)
 		(effects
 			(font
@@ -5336,7 +5336,7 @@
 		)
 		(uuid "5954894c-3477-4e4e-892d-04726a6477f8")
 	)
-	(label "LED1"
+	(label "FL_CS"
 		(at 167.64 86.36 180)
 		(effects
 			(font
@@ -5386,7 +5386,7 @@
 		)
 		(uuid "5de476be-118e-432c-8bd3-234c6901d087")
 	)
-	(label "BTN"
+	(label "CARD_DET"
 		(at 167.64 88.9 180)
 		(effects
 			(font
@@ -5476,7 +5476,7 @@
 		)
 		(uuid "706ccb44-4d01-48f1-b208-221217fb07c6")
 	)
-	(label "LED0"
+	(label "W_RST"
 		(at 167.64 83.82 180)
 		(effects
 			(font
@@ -5586,7 +5586,7 @@
 		)
 		(uuid "879bcfd0-f03e-4096-95fa-dbb9ffb2bd46")
 	)
-	(label "GPIO_PF0"
+	(label "MCU_SWCLK"
 		(at 167.64 93.98 180)
 		(effects
 			(font
@@ -5914,7 +5914,7 @@
 		)
 		(uuid "b518560c-fa7a-4d81-953a-9a6e43606e2e")
 	)
-	(label "FL_CS"
+	(label "BTN"
 		(at 167.64 73.66 180)
 		(effects
 			(font
@@ -6024,7 +6024,7 @@
 		)
 		(uuid "cd73749f-1b57-4a6d-9958-d54d242280fb")
 	)
-	(label "SD_CS"
+	(label "GPIO_PF0"
 		(at 167.64 76.2 180)
 		(effects
 			(font
@@ -6034,7 +6034,7 @@
 		)
 		(uuid "d45bc4c7-ecf9-428a-907c-d94575388f59")
 	)
-	(label "W_RST"
+	(label "POT"
 		(at 167.64 81.28 180)
 		(effects
 			(font
@@ -6224,7 +6224,7 @@
 		)
 		(uuid "f65fa228-ca49-4eb6-9216-222a07a91cae")
 	)
-	(label "MCU_SWDIO"
+	(label "LED0"
 		(at 167.64 101.6 180)
 		(effects
 			(font
