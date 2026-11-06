@@ -3034,6 +3034,280 @@
 			)
 			(embedded_fonts no)
 		)
+		(symbol "Connector_Generic:Conn_02x03_Odd_Even"
+			(pin_names
+				(offset 1.016)
+				(hide yes)
+			)
+			(exclude_from_sim no)
+			(in_bom yes)
+			(on_board yes)
+			(in_pos_files yes)
+			(duplicate_pin_numbers_are_jumpers no)
+			(property "Reference" "J"
+				(at 1.27 5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Value" "Conn_02x03_Odd_Even"
+				(at 1.27 -5.08 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Footprint" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Datasheet" ""
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "Description" "Generic connector, double row, 02x03, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_keywords" "connector"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(property "ki_fp_filters" "Connector*:*_2x??_*"
+				(at 0 0 0)
+				(show_name no)
+				(do_not_autoplace no)
+				(hide yes)
+				(effects
+					(font
+						(size 1.27 1.27)
+					)
+				)
+			)
+			(symbol "Conn_02x03_Odd_Even_1_1"
+				(rectangle
+					(start -1.27 3.81)
+					(end 3.81 -3.81)
+					(stroke
+						(width 0.254)
+						(type default)
+					)
+					(fill
+						(type background)
+					)
+				)
+				(rectangle
+					(start -1.27 2.667)
+					(end 0 2.413)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 0.127)
+					(end 0 -0.127)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start -1.27 -2.413)
+					(end 0 -2.667)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 3.81 2.667)
+					(end 2.54 2.413)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 3.81 0.127)
+					(end 2.54 -0.127)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(rectangle
+					(start 3.81 -2.413)
+					(end 2.54 -2.667)
+					(stroke
+						(width 0.1524)
+						(type default)
+					)
+					(fill
+						(type none)
+					)
+				)
+				(pin passive line
+					(at -5.08 2.54 0)
+					(length 3.81)
+					(name "Pin_1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "1"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 2.54 180)
+					(length 3.81)
+					(name "Pin_2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "2"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 0 0)
+					(length 3.81)
+					(name "Pin_3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "3"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 0 180)
+					(length 3.81)
+					(name "Pin_4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "4"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at -5.08 -2.54 0)
+					(length 3.81)
+					(name "Pin_5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "5"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+				(pin passive line
+					(at 7.62 -2.54 180)
+					(length 3.81)
+					(name "Pin_6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+					(number "6"
+						(effects
+							(font
+								(size 1.27 1.27)
+							)
+						)
+					)
+				)
+			)
+			(embedded_fonts no)
+		)
 	)
 	(text "Гребёнки логического анализатора, 1x27 каждая (одинаковые, по левому и правому краю платы,\nподпись каждого вывода - на шелкографии):\nJ806 J_LA_R (цифровой ряд Uno): SCL, SDA, 3V3, GND, D13..D8, D7..D0 (порядок IOH+IOL),\n  GND, SPI2 SCK/MISO/MOSI, W_CS, W_INT, U1_TX, U1_RX, 5V.\nНа обеих гребёнках есть GND, 3V3 и 5V; AREF на гребёнку не выведен (только на J801).\nJ805 J_LA_L (POWER/ANALOG): GND, 3V3, NRST, 5V, GND, VIN, A0..A5, GND, FL_CS, SD_CS, CARD_DET,\n  W_RST, LED0, LED1, BTN, POT, PF0, PF1, SWCLK(МК), SWDIO(МК), GND, GND.\nШина SPI2 общая для W5500, W25Q32 и microSD: SCK/MISO/MOSI выведены один раз (на J_LA_R),\nCS флэш/SD и детект - на J_LA_L. Свободных GPIO у МК в LQFP-48 только два (PF0, PF1);\nоставшиеся места - GND и SWD со стороны МК.\nU1_TX = PA9 (МК -> RXD FT232), U1_RX = PA10 (TXD FT232 -> МК)."
 		(exclude_from_sim no)
@@ -3101,7 +3375,7 @@
 		)
 		(uuid "f995717b-0eba-4e1b-ace0-1c2c3ea3bbec")
 	)
-	(text "JP801 = JP_SWD (как CN2 на NUCLEO / CN3 на Discovery):\nнечётный ряд - ST-LINK (STL_SWCLK, STL_SWDIO, STL_RESET, GND), чётный - МК (PA14, PA13, NRST, GND).\nТри джампера 1-2, 3-4, 5-6 = программатор подключён к своему МК.\nДжамперы сняты -> нечётный ряд + GND (выв. 7) = SWD-выход на внешнюю плату (питание цели\nотдельно, уровни 3.3 В). Выбран 2x4: пара 7-8 (GND-GND) даёт GND рядом с SWD и место для\nхранения снятого джампера."
+	(text "JP801 = JP_SWD (как CN2 на NUCLEO / CN3 на Discovery):\nнечётный ряд - ST-LINK (STL_SWCLK, STL_SWDIO, STL_RESET), чётный - МК (PA14, PA13, NRST).\nТри джампера 1-2, 3-4, 5-6 = программатор подключён к своему МК.\nДжамперы сняты -> нечётный ряд = SWD-выход на внешнюю плату; GND брать с гребёнки ЛА\n(J805/J806) или J202, питание цели отдельно, уровни 3.3 В. Выбран 2x3 без пары GND-GND:\nджамперы после отладки снимаются целиком, GND на перемычке не нужен."
 		(exclude_from_sim no)
 		(at 279.4 91.44 0)
 		(effects
@@ -3944,16 +4218,6 @@
 	)
 	(wire
 		(pts
-			(xy 208.28 182.88) (xy 198.12 182.88)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "8a25bc0a-4771-4562-9d3a-86e1ca38a7fa")
-	)
-	(wire
-		(pts
 			(xy 96.52 83.82) (xy 86.36 83.82)
 		)
 		(stroke
@@ -4141,16 +4405,6 @@
 			(type default)
 		)
 		(uuid "9da2dcdc-d52e-4268-9c23-41e537d9e2e1")
-	)
-	(wire
-		(pts
-			(xy 220.98 182.88) (xy 231.14 182.88)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9f46a131-66d5-4462-98f7-7389326ddf4c")
 	)
 	(wire
 		(pts
@@ -7547,114 +7801,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Connector_Generic:Conn_02x04_Odd_Even")
-		(at 213.36 177.8 0)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "7e65ee74-91d8-438e-85a8-411f033ddc74")
-		(property "Reference" "JP801"
-			(at 214.63 170.18 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "JP_SWD"
-			(at 214.63 187.96 0)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical"
-			(at 213.36 177.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 213.36 177.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Перемычки ST-LINK <-> МК: 1-2 SWCLK, 3-4 SWDIO, 5-6 NRST, 7-8 GND"
-			(at 213.36 177.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C225519"
-			(at 213.36 177.8 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "6509752c-a67a-4b1a-b555-31345c6611d0")
-		)
-		(pin "2"
-			(uuid "ae1be019-bdf6-47f5-9fb2-51d9a68a82a8")
-		)
-		(pin "3"
-			(uuid "579861f6-8b3c-4c88-b2c6-667f99f2ca17")
-		)
-		(pin "4"
-			(uuid "14b3ad51-80e2-49e3-bd38-8854bc871921")
-		)
-		(pin "5"
-			(uuid "c84d630f-df60-467a-9937-17b50601a305")
-		)
-		(pin "6"
-			(uuid "7aa2b727-8075-4fad-a73e-b398a5bc63fb")
-		)
-		(pin "7"
-			(uuid "20de4701-42e3-4242-9121-2bcc3d13e993")
-		)
-		(pin "8"
-			(uuid "7a5084a9-e100-4b55-91ba-54d3d900296c")
-		)
-		(instances
-			(project "g0_dev_board"
-				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/5c8f8cfd-1030-4022-9071-e1993a429931"
-					(reference "JP801")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Connector_Generic:Conn_01x27")
 		(at 254 73.66 0)
 		(unit 1)
@@ -8430,85 +8576,6 @@
 	)
 	(symbol
 		(lib_id "power:GND")
-		(at 231.14 182.88 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "b1a07d03-978d-472e-92d5-fc0ab9742b31")
-		(property "Reference" "#PWR0146"
-			(at 237.49 182.88 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 226.06 182.88 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 231.14 182.88 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 231.14 182.88 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 231.14 182.88 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "7a529612-1efa-4cd1-91d8-58e748ccfc8e")
-		)
-		(instances
-			(project "g0_dev_board"
-				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/5c8f8cfd-1030-4022-9071-e1993a429931"
-					(reference "#PWR0146")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
 		(at 167.64 71.12 270)
 		(unit 1)
 		(body_style 1)
@@ -8928,85 +8995,6 @@
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/5c8f8cfd-1030-4022-9071-e1993a429931"
 					(reference "#PWR0133")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "power:GND")
-		(at 198.12 182.88 270)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp no)
-		(uuid "c6f27a18-adfd-4c0f-9a46-198c73820289")
-		(property "Reference" "#PWR0145"
-			(at 191.77 182.88 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "GND"
-			(at 193.04 182.88 90)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(property "Footprint" ""
-			(at 198.12 182.88 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 198.12 182.88 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "Power symbol creates a global label with name \"GND\" , ground"
-			(at 198.12 182.88 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "3944b8b5-79e9-4937-8730-6295fc793d94")
-		)
-		(instances
-			(project "g0_dev_board"
-				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/5c8f8cfd-1030-4022-9071-e1993a429931"
-					(reference "#PWR0145")
 					(unit 1)
 				)
 			)
@@ -9580,6 +9568,106 @@
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/5c8f8cfd-1030-4022-9071-e1993a429931"
 					(reference "#PWR0131")
+					(unit 1)
+				)
+			)
+		)
+	)
+	(symbol
+		(lib_id "Connector_Generic:Conn_02x03_Odd_Even")
+		(at 213.36 177.8 0)
+		(unit 1)
+		(body_style 1)
+		(exclude_from_sim no)
+		(in_bom yes)
+		(on_board yes)
+		(in_pos_files yes)
+		(dnp no)
+		(uuid "c9839a43-b218-4c92-8a39-0099e163c679")
+		(property "Reference" "JP801"
+			(at 214.63 182.88 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Value" "JP_SWD"
+			(at 214.63 172.72 0)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Footprint" "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical"
+			(at 213.36 177.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Datasheet" ""
+			(at 213.36 177.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "Description" "Перемычки ST-LINK <-> МК: 1-2 SWCLK, 3-4 SWDIO, 5-6 NRST"
+			(at 213.36 177.8 0)
+			(hide yes)
+			(show_name no)
+			(do_not_autoplace no)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+			)
+		)
+		(property "LCSC" ""
+			(at 213.36 177.8 0)
+			(effects
+				(font
+					(size 1.27 1.27)
+				)
+				(hide yes)
+			)
+		)
+		(pin "1"
+			(uuid "3909df81-4868-4ca6-be32-c52441c23b2d")
+		)
+		(pin "2"
+			(uuid "31c6bc7f-1512-4c2c-bbdd-f8f556d5f081")
+		)
+		(pin "3"
+			(uuid "62599937-cdaf-482e-8050-f1487ac3ec24")
+		)
+		(pin "4"
+			(uuid "9cc6dcc5-02d3-4850-a690-58c0389ef3da")
+		)
+		(pin "5"
+			(uuid "4ddb4bf4-25b3-48c2-b4b6-e308a404c70a")
+		)
+		(pin "6"
+			(uuid "a402a86a-2167-4881-b724-97e00eefd970")
+		)
+		(instances
+			(project "g0_dev_board"
+				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/5c8f8cfd-1030-4022-9071-e1993a429931"
+					(reference "JP801")
 					(unit 1)
 				)
 			)
