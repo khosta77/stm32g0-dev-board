@@ -2816,7 +2816,7 @@
 		)
 		(uuid "3ec2bb96-2fbc-4302-a9c4-39e5de8905bf")
 	)
-	(text "Назначение выводов U101 (LQFP-48, GP). Источник: DS13560 Rev 6 табл. 12 (выводы, FT/TT), табл. 13/15/17/18 (AF0-AF7);\nдля STM32G071CBT6 те же AF проверены по DS12232 Rev 4 рис. 5, табл. 13-17."
+	(text "Назначение выводов U101 (LQFP-48, GP). Источник: DS13560 Rev 6 табл. 12 (выводы, FT/TT), табл. 13/15/17/18 (AF0-AF7);\nдля STM32G071CBT6 те же AF проверены по DS12232 Rev 4 рис. 5, табл. 13-17.\nНазначение переставлено под трассировку (порядок контактов J801/J802/J806 и стороны корпуса на плате):\nD13..D4 и I2C1 - верх корпуса подряд, D3 - справа, D2..D0 и A2..A5 - низ. Uno D0/D1 - LPUART1 (PB10/PB11),\nSPI1 на D11-D13 больше не выведен: Arduino-SPI на шилде недоступен (CNC Shield, GSM/WiFi его не используют)."
 		(exclude_from_sim no)
 		(at 269.24 20.32 0)
 		(effects
@@ -3688,7 +3688,7 @@
 				)
 				(uuid "f081d64b-fa71-4fb6-aedb-0a59082fc82d")
 			)
-			(table_cell "D1"
+			(table_cell "A2"
 				(exclude_from_sim no)
 				(at 293.3700 62.2300 0)
 				(size 13.9700 3.8100)
@@ -3703,7 +3703,7 @@
 				)
 				(uuid "d19fb54e-ca79-4330-8c00-c0789b433ca4")
 			)
-			(table_cell "USART2_TX AF1"
+			(table_cell "ADC_IN2"
 				(exclude_from_sim no)
 				(at 307.3400 62.2300 0)
 				(size 38.1000 3.8100)
@@ -3733,7 +3733,7 @@
 				)
 				(uuid "31c8c1fc-6b00-4c62-98a5-d4391b209ebf")
 			)
-			(table_cell "Uno D1/TX"
+			(table_cell "Uno A2"
 				(exclude_from_sim no)
 				(at 355.6000 62.2300 0)
 				(size 105.4100 3.8100)
@@ -3778,7 +3778,7 @@
 				)
 				(uuid "c459e859-bfb6-400e-ad14-cd0c840fe3c4")
 			)
-			(table_cell "D0"
+			(table_cell "A3"
 				(exclude_from_sim no)
 				(at 293.3700 66.0400 0)
 				(size 13.9700 3.8100)
@@ -3793,7 +3793,7 @@
 				)
 				(uuid "46d2c0bf-ff72-4c54-9e57-174c935528cf")
 			)
-			(table_cell "USART2_RX AF1"
+			(table_cell "ADC_IN3"
 				(exclude_from_sim no)
 				(at 307.3400 66.0400 0)
 				(size 38.1000 3.8100)
@@ -3823,7 +3823,7 @@
 				)
 				(uuid "f9eb0324-e39f-4efe-b984-808bbc89c675")
 			)
-			(table_cell "Uno D0/RX"
+			(table_cell "Uno A3"
 				(exclude_from_sim no)
 				(at 355.6000 66.0400 0)
 				(size 105.4100 3.8100)
@@ -3913,7 +3913,7 @@
 				)
 				(uuid "9114b724-3941-4170-94f9-5fe2e5723f6d")
 			)
-			(table_cell "подстроечник RV200 (на плате, не на Uno)"
+			(table_cell "подстроечник RV101 (на плате, не на Uno)"
 				(exclude_from_sim no)
 				(at 355.6000 69.8500 0)
 				(size 105.4100 3.8100)
@@ -4048,7 +4048,7 @@
 				)
 				(uuid "c0bd694f-eed6-4128-90ec-9d4c6b419de6")
 			)
-			(table_cell "A2"
+			(table_cell "A4"
 				(exclude_from_sim no)
 				(at 293.3700 77.4700 0)
 				(size 13.9700 3.8100)
@@ -4093,7 +4093,7 @@
 				)
 				(uuid "cad16fcb-2145-4315-b9db-4695395cf91f")
 			)
-			(table_cell "Uno A2"
+			(table_cell "Uno A4 (SDA - только через R DNP)"
 				(exclude_from_sim no)
 				(at 355.6000 77.4700 0)
 				(size 105.4100 3.8100)
@@ -4138,7 +4138,7 @@
 				)
 				(uuid "90f580eb-5edc-49fc-bf3a-a4a041f348cf")
 			)
-			(table_cell "A3"
+			(table_cell "A5"
 				(exclude_from_sim no)
 				(at 293.3700 81.2800 0)
 				(size 13.9700 3.8100)
@@ -4183,7 +4183,7 @@
 				)
 				(uuid "443511ea-1778-4053-8b8d-b290bf05eccd")
 			)
-			(table_cell "Uno A3"
+			(table_cell "Uno A5 (SCL - только через R DNP)"
 				(exclude_from_sim no)
 				(at 355.6000 81.2800 0)
 				(size 105.4100 3.8100)
@@ -4228,7 +4228,7 @@
 				)
 				(uuid "2a94d815-d132-4fbc-954b-a4ac5722f540")
 			)
-			(table_cell "A4"
+			(table_cell "W_CS"
 				(exclude_from_sim no)
 				(at 293.3700 85.0900 0)
 				(size 13.9700 3.8100)
@@ -4243,7 +4243,7 @@
 				)
 				(uuid "f416aaa7-7af0-4a61-b17b-72e4bf729ae3")
 			)
-			(table_cell "ADC_IN8"
+			(table_cell "GPIO"
 				(exclude_from_sim no)
 				(at 307.3400 85.0900 0)
 				(size 38.1000 3.8100)
@@ -4273,7 +4273,7 @@
 				)
 				(uuid "64974900-c18c-4d7d-85fb-aba8a52ef2c0")
 			)
-			(table_cell "Uno A4 (SDA - только через R202 DNP)"
+			(table_cell "W5500 SCSn"
 				(exclude_from_sim no)
 				(at 355.6000 85.0900 0)
 				(size 105.4100 3.8100)
@@ -4318,7 +4318,7 @@
 				)
 				(uuid "76686573-7525-491e-83c7-d91d56d38317")
 			)
-			(table_cell "A5"
+			(table_cell "FL_CS"
 				(exclude_from_sim no)
 				(at 293.3700 88.9000 0)
 				(size 13.9700 3.8100)
@@ -4333,7 +4333,7 @@
 				)
 				(uuid "b54aa2e4-690a-4663-b4da-0d86b71472db")
 			)
-			(table_cell "ADC_IN9"
+			(table_cell "GPIO"
 				(exclude_from_sim no)
 				(at 307.3400 88.9000 0)
 				(size 38.1000 3.8100)
@@ -4363,7 +4363,7 @@
 				)
 				(uuid "46a0708b-b605-4de5-936e-fa2d54ae95b8")
 			)
-			(table_cell "Uno A5 (SCL - только через R203 DNP)"
+			(table_cell "CS W25Q32 (w32 ~{CS}_memory)"
 				(exclude_from_sim no)
 				(at 355.6000 88.9000 0)
 				(size 105.4100 3.8100)
@@ -4408,7 +4408,7 @@
 				)
 				(uuid "9a8217b5-f25e-4e95-8b5a-2399f8e07074")
 			)
-			(table_cell "FL_CS"
+			(table_cell "CARD_DET"
 				(exclude_from_sim no)
 				(at 293.3700 92.7100 0)
 				(size 13.9700 3.8100)
@@ -4423,7 +4423,7 @@
 				)
 				(uuid "b37aba12-68ac-4525-b07a-fb98ab6d6a8a")
 			)
-			(table_cell "GPIO"
+			(table_cell "GPIO/EXTI2"
 				(exclude_from_sim no)
 				(at 307.3400 92.7100 0)
 				(size 38.1000 3.8100)
@@ -4453,7 +4453,7 @@
 				)
 				(uuid "6638def4-42b9-440d-a9ac-2c7d4078b25b")
 			)
-			(table_cell "CS W25Q32 (w32 ~{CS}_memory)"
+			(table_cell "детект microSD (w32 ~{CARD_DET})"
 				(exclude_from_sim no)
 				(at 355.6000 92.7100 0)
 				(size 105.4100 3.8100)
@@ -4498,7 +4498,7 @@
 				)
 				(uuid "5302dbf9-3737-415a-9b95-9b1854840549")
 			)
-			(table_cell "D3"
+			(table_cell "D0"
 				(exclude_from_sim no)
 				(at 293.3700 96.5200 0)
 				(size 13.9700 3.8100)
@@ -4513,7 +4513,7 @@
 				)
 				(uuid "57509962-bec9-41f3-b79a-d0fe4da8253b")
 			)
-			(table_cell "TIM2_CH3 AF2 / USART3_TX AF4"
+			(table_cell "LPUART1_RX AF1"
 				(exclude_from_sim no)
 				(at 307.3400 96.5200 0)
 				(size 38.1000 3.8100)
@@ -4543,7 +4543,7 @@
 				)
 				(uuid "a30233dd-3d00-4df7-8efe-869ceb1eb4bf")
 			)
-			(table_cell "Uno D3 PWM, EXTI10"
+			(table_cell "Uno D0/RX"
 				(exclude_from_sim no)
 				(at 355.6000 96.5200 0)
 				(size 105.4100 3.8100)
@@ -4588,7 +4588,7 @@
 				)
 				(uuid "191a2c80-3516-4d1a-943d-1c86ccf5d6ca")
 			)
-			(table_cell "D2"
+			(table_cell "D1"
 				(exclude_from_sim no)
 				(at 293.3700 100.3300 0)
 				(size 13.9700 3.8100)
@@ -4603,7 +4603,7 @@
 				)
 				(uuid "b23723b4-1d5b-4b5a-b770-526579871a03")
 			)
-			(table_cell "USART3_RX AF4"
+			(table_cell "LPUART1_TX AF1"
 				(exclude_from_sim no)
 				(at 307.3400 100.3300 0)
 				(size 38.1000 3.8100)
@@ -4633,7 +4633,7 @@
 				)
 				(uuid "23f39a2d-62c6-47d4-8f98-4b55763a0f05")
 			)
-			(table_cell "Uno D2, EXTI11"
+			(table_cell "Uno D1/TX"
 				(exclude_from_sim no)
 				(at 355.6000 100.3300 0)
 				(size 105.4100 3.8100)
@@ -4678,7 +4678,7 @@
 				)
 				(uuid "3e12a77a-a4dc-4012-bdd3-c4f340843a70")
 			)
-			(table_cell "W_CS"
+			(table_cell "D2"
 				(exclude_from_sim no)
 				(at 293.3700 104.1400 0)
 				(size 13.9700 3.8100)
@@ -4693,7 +4693,7 @@
 				)
 				(uuid "67932daa-1922-4ae7-8dfb-75bf012a9f97")
 			)
-			(table_cell "GPIO (SPI2_NSS AF0)"
+			(table_cell "GPIO/EXTI12"
 				(exclude_from_sim no)
 				(at 307.3400 104.1400 0)
 				(size 38.1000 3.8100)
@@ -4723,7 +4723,7 @@
 				)
 				(uuid "25a743dc-746b-476e-870d-09fd5f94320a")
 			)
-			(table_cell "W5500 SCSn"
+			(table_cell "Uno D2"
 				(exclude_from_sim no)
 				(at 355.6000 104.1400 0)
 				(size 105.4100 3.8100)
@@ -5038,7 +5038,7 @@
 				)
 				(uuid "373bd015-4177-4072-91a8-9aa3543c6524")
 			)
-			(table_cell "D9"
+			(table_cell "W_INT"
 				(exclude_from_sim no)
 				(at 293.3700 119.3800 0)
 				(size 13.9700 3.8100)
@@ -5053,7 +5053,7 @@
 				)
 				(uuid "bbf99a75-445b-40f9-98bf-d238bfcc50c4")
 			)
-			(table_cell "TIM1_CH1 AF2"
+			(table_cell "GPIO/EXTI8"
 				(exclude_from_sim no)
 				(at 307.3400 119.3800 0)
 				(size 38.1000 3.8100)
@@ -5083,7 +5083,7 @@
 				)
 				(uuid "ca482ce9-dc45-402f-87fe-698b5e4d0f67")
 			)
-			(table_cell "Uno D9 PWM; UCPD1_CC1 dead-battery Rd (прим.4)"
+			(table_cell "W5500 INTn; UCPD1_CC1 Rd (прим.4) - вход с подтяжкой, до строба читается 0"
 				(exclude_from_sim no)
 				(at 355.6000 119.3800 0)
 				(size 105.4100 3.8100)
@@ -5323,7 +5323,7 @@
 				)
 				(uuid "4a71cff5-fc94-42c5-a5db-25fc375f8d4a")
 			)
-			(table_cell "TIM2_CH4 AF2"
+			(table_cell "TIM3_CH2 AF1"
 				(exclude_from_sim no)
 				(at 307.3400 130.8100 0)
 				(size 38.1000 3.8100)
@@ -5488,7 +5488,7 @@
 				)
 				(uuid "b4d2a0fb-eb81-4dd6-a5e5-1840c7a40d4f")
 			)
-			(table_cell "D5"
+			(table_cell "D3"
 				(exclude_from_sim no)
 				(at 293.3700 138.4300 0)
 				(size 13.9700 3.8100)
@@ -5533,7 +5533,7 @@
 				)
 				(uuid "74fa0388-811e-4b90-9997-c87ee8a84563")
 			)
-			(table_cell "Uno D5 PWM"
+			(table_cell "Uno D3 PWM, EXTI11"
 				(exclude_from_sim no)
 				(at 355.6000 138.4300 0)
 				(size 105.4100 3.8100)
@@ -5848,7 +5848,7 @@
 				)
 				(uuid "3f8a37ec-4f24-410e-9fc2-acea874f2e51")
 			)
-			(table_cell "D10"
+			(table_cell "D4"
 				(exclude_from_sim no)
 				(at 293.3700 153.6700 0)
 				(size 13.9700 3.8100)
@@ -5863,7 +5863,7 @@
 				)
 				(uuid "80528055-178b-4439-9477-b33b8bc2947f")
 			)
-			(table_cell "SPI1_NSS AF0 / TIM2_CH1 AF2"
+			(table_cell "GPIO"
 				(exclude_from_sim no)
 				(at 307.3400 153.6700 0)
 				(size 38.1000 3.8100)
@@ -5893,7 +5893,7 @@
 				)
 				(uuid "c8cdb470-98fd-456a-9fb0-9f9fbe8d2ec4")
 			)
-			(table_cell "Uno D10 CS/PWM"
+			(table_cell "Uno D4"
 				(exclude_from_sim no)
 				(at 355.6000 153.6700 0)
 				(size 105.4100 3.8100)
@@ -5938,7 +5938,7 @@
 				)
 				(uuid "8981ad9c-78f9-4eca-a524-8d0356322226")
 			)
-			(table_cell "D4"
+			(table_cell "D5"
 				(exclude_from_sim no)
 				(at 293.3700 157.4800 0)
 				(size 13.9700 3.8100)
@@ -5953,7 +5953,7 @@
 				)
 				(uuid "22145362-e3ef-42db-8bc3-22194168a166")
 			)
-			(table_cell "GPIO (TIM16_CH1 AF2)"
+			(table_cell "TIM16_CH1 AF2"
 				(exclude_from_sim no)
 				(at 307.3400 157.4800 0)
 				(size 38.1000 3.8100)
@@ -5983,7 +5983,7 @@
 				)
 				(uuid "f0bda291-bc77-49e3-9129-8adee7a3fad8")
 			)
-			(table_cell "Uno D4; UCPD2_CC1 Rd (прим.4)"
+			(table_cell "Uno D5 PWM; UCPD2_CC1 Rd (прим.4)"
 				(exclude_from_sim no)
 				(at 355.6000 157.4800 0)
 				(size 105.4100 3.8100)
@@ -6028,7 +6028,7 @@
 				)
 				(uuid "76864230-c19c-4d0a-9613-8d1775a77100")
 			)
-			(table_cell "W_INT"
+			(table_cell "D6"
 				(exclude_from_sim no)
 				(at 293.3700 161.2900 0)
 				(size 13.9700 3.8100)
@@ -6043,7 +6043,7 @@
 				)
 				(uuid "062cfae4-1c9c-483a-8ad5-2f7ae1f2ad49")
 			)
-			(table_cell "GPIO/EXTI1"
+			(table_cell "TIM17_CH1 AF2"
 				(exclude_from_sim no)
 				(at 307.3400 161.2900 0)
 				(size 38.1000 3.8100)
@@ -6073,7 +6073,7 @@
 				)
 				(uuid "b7fb8531-460d-4e10-ae2e-bfde30cdb0e5")
 			)
-			(table_cell "W5500 INTn"
+			(table_cell "Uno D6 PWM"
 				(exclude_from_sim no)
 				(at 355.6000 161.2900 0)
 				(size 105.4100 3.8100)
@@ -6208,7 +6208,7 @@
 				)
 				(uuid "59370cbc-b1c8-4455-9ba1-f170eb871b84")
 			)
-			(table_cell "CARD_DET"
+			(table_cell "D8"
 				(exclude_from_sim no)
 				(at 293.3700 168.9100 0)
 				(size 13.9700 3.8100)
@@ -6223,7 +6223,7 @@
 				)
 				(uuid "b6d85842-7df2-4f46-800c-39b290fda65d")
 			)
-			(table_cell "GPIO/EXTI3"
+			(table_cell "GPIO"
 				(exclude_from_sim no)
 				(at 307.3400 168.9100 0)
 				(size 38.1000 3.8100)
@@ -6253,7 +6253,7 @@
 				)
 				(uuid "3b92be39-7307-4326-af51-042ea3a325db")
 			)
-			(table_cell "детект microSD (w32 ~{CARD_DET})"
+			(table_cell "Uno D8"
 				(exclude_from_sim no)
 				(at 355.6000 168.9100 0)
 				(size 105.4100 3.8100)
@@ -6298,7 +6298,7 @@
 				)
 				(uuid "6a9637d4-0d94-4bac-8f0a-2a30baf17f6d")
 			)
-			(table_cell "D13"
+			(table_cell "D9"
 				(exclude_from_sim no)
 				(at 293.3700 172.7200 0)
 				(size 13.9700 3.8100)
@@ -6313,7 +6313,7 @@
 				)
 				(uuid "8b2cb290-91f4-404c-85fd-518dc27a6687")
 			)
-			(table_cell "SPI1_SCK AF0"
+			(table_cell "TIM1_CH2 AF1"
 				(exclude_from_sim no)
 				(at 307.3400 172.7200 0)
 				(size 38.1000 3.8100)
@@ -6343,7 +6343,7 @@
 				)
 				(uuid "ec063f5b-c45b-4dd5-b09a-f949855dd3e7")
 			)
-			(table_cell "Uno D13 SCK"
+			(table_cell "Uno D9 PWM"
 				(exclude_from_sim no)
 				(at 355.6000 172.7200 0)
 				(size 105.4100 3.8100)
@@ -6388,7 +6388,7 @@
 				)
 				(uuid "ba4c3b41-a29d-4ead-bb40-0a5544acf018")
 			)
-			(table_cell "D12"
+			(table_cell "D10"
 				(exclude_from_sim no)
 				(at 293.3700 176.5300 0)
 				(size 13.9700 3.8100)
@@ -6403,7 +6403,7 @@
 				)
 				(uuid "7c60ac54-0136-45e9-abe6-23c158be46af")
 			)
-			(table_cell "SPI1_MISO AF0"
+			(table_cell "TIM3_CH1 AF1"
 				(exclude_from_sim no)
 				(at 307.3400 176.5300 0)
 				(size 38.1000 3.8100)
@@ -6433,7 +6433,7 @@
 				)
 				(uuid "5b2ba3ce-4e27-4fad-931e-b2ad6195fbbb")
 			)
-			(table_cell "Uno D12 MISO"
+			(table_cell "Uno D10 PWM"
 				(exclude_from_sim no)
 				(at 355.6000 176.5300 0)
 				(size 105.4100 3.8100)
@@ -6493,7 +6493,7 @@
 				)
 				(uuid "53501b15-e38b-445c-b0b8-1c1532169e1f")
 			)
-			(table_cell "SPI1_MOSI AF0 / TIM3_CH2 AF1"
+			(table_cell "TIM3_CH2 AF1"
 				(exclude_from_sim no)
 				(at 307.3400 180.3400 0)
 				(size 38.1000 3.8100)
@@ -6523,7 +6523,7 @@
 				)
 				(uuid "a168c340-0190-421e-9959-7bd26086177e")
 			)
-			(table_cell "Uno D11 MOSI/PWM"
+			(table_cell "Uno D11 PWM"
 				(exclude_from_sim no)
 				(at 355.6000 180.3400 0)
 				(size 105.4100 3.8100)
@@ -6568,7 +6568,7 @@
 				)
 				(uuid "2d5ad653-af4a-44b9-836f-d13b700f0dc8")
 			)
-			(table_cell "D6"
+			(table_cell "D12"
 				(exclude_from_sim no)
 				(at 293.3700 184.1500 0)
 				(size 13.9700 3.8100)
@@ -6583,7 +6583,7 @@
 				)
 				(uuid "761bd549-e5cf-4ee5-a2d9-2fd3f6832db0")
 			)
-			(table_cell "TIM1_CH3 AF1"
+			(table_cell "GPIO"
 				(exclude_from_sim no)
 				(at 307.3400 184.1500 0)
 				(size 38.1000 3.8100)
@@ -6613,7 +6613,7 @@
 				)
 				(uuid "7c793c60-a4d8-42bf-9e29-da94ea2ef597")
 			)
-			(table_cell "Uno D6 PWM"
+			(table_cell "Uno D12"
 				(exclude_from_sim no)
 				(at 355.6000 184.1500 0)
 				(size 105.4100 3.8100)
@@ -6658,7 +6658,7 @@
 				)
 				(uuid "13949972-1c1c-4e2b-885b-f18ce581b300")
 			)
-			(table_cell "D8"
+			(table_cell "D13"
 				(exclude_from_sim no)
 				(at 293.3700 187.9600 0)
 				(size 13.9700 3.8100)
@@ -6703,7 +6703,7 @@
 				)
 				(uuid "148b1095-9c7f-4ce7-be40-c31f6da0c72a")
 			)
-			(table_cell "Uno D8"
+			(table_cell "Uno D13"
 				(exclude_from_sim no)
 				(at 355.6000 187.9600 0)
 				(size 105.4100 3.8100)
@@ -7261,7 +7261,7 @@
 		)
 	)
 
-	(text "Совместимость с STM32G071CBT6: использованы только USART1/2/3, SPI1/2, I2C1, ADC, TIM1/2/3/14/15/16,\nвсё есть у G071 с теми же AF и выводами (DS12232 табл. 13-17). Не используются: USB, FDCAN, SPI3,\nI2C3, USART5/6, LPUART2, TIM4. Версии ...N (VDDIO2) не ставить - теряются PC6/PC7 (LED0/LED1).\nTT-выводы (не 5 В): только PA4 (POT) и PA5 (W_RST) - оба бортовые; на разъёмах Uno только FT."
+	(text "Совместимость с STM32G071CBT6: использованы только USART1, LPUART1, SPI2, I2C1, ADC, TIM1/3/16/17,\nвсё есть у G071 с теми же AF и выводами (DS12232 табл. 13-17). Не используются: USB, FDCAN, SPI3,\nI2C3, USART5/6, LPUART2, TIM4. Версии ...N (VDDIO2) не ставить - теряются PC6/PC7 (LED0/LED1).\nTT-выводы (не 5 В): только PA4 (POT) и PA5 (W_RST) - оба бортовые; на разъёмах Uno только FT."
 		(exclude_from_sim no)
 		(at 20.32 193.04 0)
 		(effects
@@ -7327,7 +7327,7 @@
 		)
 		(uuid "e5276dc3-6856-4e33-9073-60fda7ac7818")
 	)
-	(text "UCPD dead battery (DS13560 прим. 4 к табл. 12): после сброса на PA8 (D9), PB15 (SPI2_MOSI),\nPD0 (D4), PD2 (D7) может быть включён Rd ~5.1 кОм на GND, если на PA9/PA10/PD1/PD3 высокий уровень\n(PA10 - TXD FT232, PD1 - INTn W5500 с подтяжкой, PD3 - детект SD с подтяжкой). На эти выводы поставлены\nтолько сигналы, которым кратковременная подтяжка к GND безопасна (не CS!). В начале прошивки -\nстробировать UCPD1_STROBE/UCPD2_STROBE в SYSCFG_CFGR1. Справедливо и для STM32G071 (там тоже UCPD)."
+	(text "UCPD dead battery (DS13560 прим. 4 к табл. 12): после сброса на PA8 (W_INT), PB15 (SPI2_MOSI),\nPD0 (D5), PD2 (D7) может быть включён Rd ~5.1 кОм на GND, если на PA9/PA10/PD1/PD3 высокий уровень\n(PA10 - TXD FT232, PD1/PD3 - Uno D6/D8 от шилда). На эти выводы поставлены только сигналы, которым\nкратковременная подтяжка к GND безопасна (не CS!): W_INT до строба читается 0. В начале прошивки -\nстробировать UCPD1_STROBE/UCPD2_STROBE в SYSCFG_CFGR1. Справедливо и для STM32G071 (там тоже UCPD)."
 		(exclude_from_sim no)
 		(at 20.32 177.8 0)
 		(effects
@@ -8224,7 +8224,7 @@
 		)
 		(uuid "fdbc0869-cc13-45f5-964f-125f4c30e40d")
 	)
-	(hierarchical_label "D13"
+	(hierarchical_label "D9"
 		(shape bidirectional)
 		(at 241.3 149.86 0)
 		(effects
@@ -8246,7 +8246,7 @@
 		)
 		(uuid "0167e73a-89a9-4925-908d-c6512d9d2162")
 	)
-	(hierarchical_label "FL_CS"
+	(hierarchical_label "CARD_DET"
 		(shape output)
 		(at 241.3 147.32 0)
 		(effects
@@ -8257,7 +8257,7 @@
 		)
 		(uuid "06ef249e-45da-4262-a4c9-9a254719309d")
 	)
-	(hierarchical_label "D2"
+	(hierarchical_label "D1"
 		(shape bidirectional)
 		(at 241.3 170.18 0)
 		(effects
@@ -8268,7 +8268,7 @@
 		)
 		(uuid "15ce1c43-5823-4a70-abad-02a3ca0c57b6")
 	)
-	(hierarchical_label "D5"
+	(hierarchical_label "D3"
 		(shape bidirectional)
 		(at 241.3 121.92 0)
 		(effects
@@ -8323,7 +8323,7 @@
 		)
 		(uuid "21cd3fa8-d751-4b7c-b875-994c98dc3bf9")
 	)
-	(hierarchical_label "D10"
+	(hierarchical_label "D4"
 		(shape bidirectional)
 		(at 241.3 137.16 0)
 		(effects
@@ -8356,7 +8356,7 @@
 		)
 		(uuid "28ac9211-a828-456b-9c18-81828e824c98")
 	)
-	(hierarchical_label "A4"
+	(hierarchical_label "W_CS"
 		(shape bidirectional)
 		(at 241.3 142.24 0)
 		(effects
@@ -8378,7 +8378,7 @@
 		)
 		(uuid "3dcbd656-d1ea-43a6-a982-26cbde6aa0e3")
 	)
-	(hierarchical_label "D12"
+	(hierarchical_label "D10"
 		(shape bidirectional)
 		(at 241.3 152.4 0)
 		(effects
@@ -8400,7 +8400,7 @@
 		)
 		(uuid "42f2576d-3006-4680-ab2b-4dbd37d734c1")
 	)
-	(hierarchical_label "A5"
+	(hierarchical_label "FL_CS"
 		(shape bidirectional)
 		(at 241.3 144.78 0)
 		(effects
@@ -8411,7 +8411,7 @@
 		)
 		(uuid "4492e9a2-f833-42d4-8756-d58e64742032")
 	)
-	(hierarchical_label "CARD_DET"
+	(hierarchical_label "D8"
 		(shape input)
 		(at 165.1 121.92 180)
 		(effects
@@ -8422,7 +8422,7 @@
 		)
 		(uuid "453e76a8-fc5c-4a70-add5-fb92b86d6add")
 	)
-	(hierarchical_label "D0"
+	(hierarchical_label "A3"
 		(shape bidirectional)
 		(at 241.3 106.68 0)
 		(effects
@@ -8466,7 +8466,7 @@
 		)
 		(uuid "6ac0f8f4-25da-470c-922f-3a9d4910ba6c")
 	)
-	(hierarchical_label "A2"
+	(hierarchical_label "A4"
 		(shape bidirectional)
 		(at 241.3 114.3 0)
 		(effects
@@ -8510,7 +8510,7 @@
 		)
 		(uuid "7e2a61d7-f12f-43d4-8ffe-8eb04496d564")
 	)
-	(hierarchical_label "D3"
+	(hierarchical_label "D0"
 		(shape bidirectional)
 		(at 241.3 167.64 0)
 		(effects
@@ -8532,7 +8532,7 @@
 		)
 		(uuid "926bd9ce-e303-469f-a177-2aee3d9bc222")
 	)
-	(hierarchical_label "D9"
+	(hierarchical_label "W_INT"
 		(shape bidirectional)
 		(at 241.3 119.38 0)
 		(effects
@@ -8554,7 +8554,7 @@
 		)
 		(uuid "a7921060-a577-4127-a99e-0741cd27c86b")
 	)
-	(hierarchical_label "W_CS"
+	(hierarchical_label "D2"
 		(shape output)
 		(at 241.3 172.72 0)
 		(effects
@@ -8620,7 +8620,7 @@
 		)
 		(uuid "c46bd10a-ee18-4f64-bf1b-f9ef0823f1be")
 	)
-	(hierarchical_label "D8"
+	(hierarchical_label "D13"
 		(shape bidirectional)
 		(at 241.3 160.02 0)
 		(effects
@@ -8631,7 +8631,7 @@
 		)
 		(uuid "d92151c9-4839-4d97-9745-df2364011742")
 	)
-	(hierarchical_label "A3"
+	(hierarchical_label "A5"
 		(shape bidirectional)
 		(at 241.3 116.84 0)
 		(effects
@@ -8642,7 +8642,7 @@
 		)
 		(uuid "dbc1b25a-84af-4c2f-8396-bb3962af1736")
 	)
-	(hierarchical_label "D6"
+	(hierarchical_label "D12"
 		(shape bidirectional)
 		(at 241.3 157.48 0)
 		(effects
@@ -8653,7 +8653,7 @@
 		)
 		(uuid "dcd31c75-a2c5-4bbf-9d3e-507b170a9465")
 	)
-	(hierarchical_label "W_INT"
+	(hierarchical_label "D6"
 		(shape input)
 		(at 165.1 116.84 180)
 		(effects
@@ -8664,7 +8664,7 @@
 		)
 		(uuid "df55f4ef-9474-4a60-b37a-15bcd2eea4bc")
 	)
-	(hierarchical_label "D4"
+	(hierarchical_label "D5"
 		(shape bidirectional)
 		(at 165.1 114.3 180)
 		(effects
@@ -8686,7 +8686,7 @@
 		)
 		(uuid "efdece1f-8993-4ca4-ae7b-0de7021e11f0")
 	)
-	(hierarchical_label "D1"
+	(hierarchical_label "A2"
 		(shape bidirectional)
 		(at 241.3 104.14 0)
 		(effects
