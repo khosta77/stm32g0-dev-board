@@ -13087,7 +13087,7 @@
 	(footprint "Connector_RJ:RJ45_Hanrun_HR911105A_Horizontal"
 		(layer "F.Cu")
 		(uuid "5c4b2cb8-4198-41da-a3a1-143b8fa1fd3d")
-		(at 126.56 132.74)
+		(at 129.723 137.417)
 		(descr "1 Port RJ45 8P8C receptacle, shielded, with magnetics, through hole, 2 LEDs, tab down, http://www.hanrun.com/public/upload/down/2020/09-11/cc11be56d66bb63d5f1eeb85492439c0.pdf")
 		(tags "RJ45 Magjack ethernet")
 		(property "Reference" "J401"
@@ -40473,16 +40473,6 @@
 		(layer "Edge.Cuts")
 		(uuid "c69f4677-c3a2-43dd-92b1-41e0de5dc104")
 	)
-	(gr_text "Arduino Uno shield zone 53.34 x 68.58, h <= 8 mm"
-		(at 140 124.59 0)
-		(layer "Dwgs.User")
-		(uuid "30dbd097-b52f-42f8-bdb6-82f08dba83b1")
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-		)
-	)
 	(gr_text "sheet 1xx"
 		(at 200 35 0)
 		(layer "Cmts.User")
@@ -42652,20 +42642,12 @@
 		(uuid "009aa9a8-b5eb-4dd3-957f-0fa37802f318")
 	)
 	(segment
-		(start 139.65 43.2)
-		(end 142.7 46.25)
+		(start 139.65 46.14)
+		(end 142.7 49.19)
 		(width 0.5)
 		(layer "F.Cu")
 		(net "+5V")
-		(uuid "0b50d195-ea89-4f60-be44-17705a866e03")
-	)
-	(segment
-		(start 139.65 42)
-		(end 139.65 43.2)
-		(width 0.5)
-		(layer "F.Cu")
-		(net "+5V")
-		(uuid "1a057860-6c36-4305-a350-d99c25d1b0a3")
+		(uuid "05697b58-10ad-4c83-a24d-4f84d94635e7")
 	)
 	(segment
 		(start 139.65 39.6)
@@ -42700,12 +42682,28 @@
 		(uuid "435dfdfe-2701-4c02-a32d-6cf6d20476af")
 	)
 	(segment
+		(start 139.65 42)
+		(end 139.65 46.14)
+		(width 0.5)
+		(layer "F.Cu")
+		(net "+5V")
+		(uuid "4944b3f8-4f46-4239-aa59-d35ea1503bf6")
+	)
+	(segment
 		(start 137.2 40.6)
 		(end 138.2 39.6)
 		(width 0.5)
 		(layer "F.Cu")
 		(net "+5V")
 		(uuid "4eda18a5-ffed-47c2-ab96-33e15b88e2f1")
+	)
+	(segment
+		(start 142.7 49.19)
+		(end 142.7 50)
+		(width 0.5)
+		(layer "F.Cu")
+		(net "+5V")
+		(uuid "564eda99-db44-440d-91f9-cbd7c4c00b43")
 	)
 	(segment
 		(start 140.9 52.6)
@@ -42722,14 +42720,6 @@
 		(layer "F.Cu")
 		(net "+5V")
 		(uuid "7178f663-05d3-4f0c-91a7-98b0d019a835")
-	)
-	(segment
-		(start 142.7 46.25)
-		(end 142.7 50)
-		(width 0.5)
-		(layer "F.Cu")
-		(net "+5V")
-		(uuid "8a8b59e6-aea8-4633-a7ab-6b49b35bfca1")
 	)
 	(segment
 		(start 142.7 56.2)
