@@ -79,7 +79,7 @@ KiCad **10** (формат `version 20260306`). Корень `g0_dev_board.kicad
   что выбранный завод его допускает.
 - Завод (JLCPCB / PCBWay / российский) ещё не выбран.
 - Производственные выходы (`manufacturing/`: Gerber, сверловка, BOM/CPL в формате JLCPCB;
-  `docs/`: PDF схемы, рендеры) генерирует `python3 scripts/export_manufacturing.py`.
+  `docs/schematic.pdf`) генерирует `python3 scripts/export_manufacturing.py`.
   После правок схемы или платы — перегенерировать и добавить запись в `CHANGES.txt`.
 
 ## Лицензия

@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""Regenerate manufacturing outputs (Gerber, drill, JLCPCB BOM/CPL, schematic PDF, renders).
+"""Regenerate manufacturing outputs (Gerber, drill, JLCPCB BOM/CPL, schematic PDF).
 
 Usage:
-    python3 scripts/export_manufacturing.py [--kicad-cli PATH] [--no-render]
+    python3 scripts/export_manufacturing.py [--kicad-cli PATH]
 """
 
 import argparse
@@ -104,22 +104,15 @@ def export_cpl(cli: str, tmp: Path, placed: set[str]) -> None:
               ["Designator", "Val", "Package", "Mid X", "Mid Y", "Layer", "Rotation"], rows)
 
 
-def export_docs(cli: str, render: bool) -> None:
-    (DOCS / "images").mkdir(parents=True, exist_ok=True)
+def export_docs(cli: str) -> None:
+    DOCS.mkdir(exist_ok=True)
     run(cli, "sch", "export", "pdf", "-o", str(DOCS / "schematic.pdf"), str(SCH))
-    if not render:
-        return
-    for side in ("top", "bottom"):
-        run(cli, "pcb", "render", "--side", side, "--quality", "high", "--background", "opaque",
-            "--width", "1600", "--height", "2200", "-o", str(DOCS / "images" / f"pcb-{side}.png"),
-            str(PCB))
 
 
 def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__,
                                      formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("--kicad-cli", default=DEFAULT_CLI, help="path to kicad-cli")
-    parser.add_argument("--no-render", action="store_true", help="skip 3D PNG renders")
     args = parser.parse_args()
     MFG.mkdir(exist_ok=True)
     with tempfile.TemporaryDirectory() as tmpdir:
@@ -127,7 +120,7 @@ def main() -> None:
         export_gerbers(args.kicad_cli)
         placed = export_bom(args.kicad_cli, tmp)
         export_cpl(args.kicad_cli, tmp, placed)
-    export_docs(args.kicad_cli, not args.no_render)
+    export_docs(args.kicad_cli)
     print(f"outputs written to {MFG.relative_to(ROOT)}/ and {DOCS.relative_to(ROOT)}/")
 
 

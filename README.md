@@ -58,7 +58,7 @@
   дополнительные правила DRC
 - `g0_dev_board.kicad_sym`, `g0_dev_board.pretty/` — проектные библиотеки
 - [`manufacturing/`](manufacturing/) — Gerber, сверловка, BOM и CPL в формате JLCPCB
-- [`docs/`](docs/) — [PDF схемы](docs/schematic.pdf) и рендеры платы
+- [`docs/`](docs/) — [PDF схемы](docs/schematic.pdf) и изображение платы
 - [`scripts/export_manufacturing.py`](scripts/export_manufacturing.py) —
   генерация всех выгрузок одной командой
 - [`RULES.md`](RULES.md) — правила расстановки и трассировки платы

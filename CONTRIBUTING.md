@@ -37,8 +37,7 @@ python3 scripts/export_manufacturing.py
 ```
 
 Скрипт обновляет `manufacturing/` (Gerber, сверловка, BOM и CPL в формате
-JLCPCB) и `docs/` (PDF схемы, рендеры платы). Ключ `--no-render` пропускает
-3D-рендеры (они самые долгие).
+JLCPCB) и `docs/schematic.pdf` (PDF схемы).
 
 ## Перед pull request
 
