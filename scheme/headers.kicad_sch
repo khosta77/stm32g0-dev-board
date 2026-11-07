@@ -3320,7 +3320,7 @@
 		)
 		(uuid "1517bbde-7594-4e10-9eff-d7ff3ef3af28")
 	)
-	(text "Arduino Uno R3 (без ICSP). Нумерация выводов разъёмов - как в шаблоне KiCad Arduino_Uno\n(IOH 1..10 = SCL, SDA, AREF, GND, D13..D8; IOL 1..8 = D7..D0; POWER 1..8 = NC, IOREF, RESET, 3V3, 5V,\nGND, GND, VIN; ANALOG 1..6 = A0..A5). Все сигналы Uno - напрямую на выводы МК класса FT (5 В-толерантны\nпри наличии VDD, DS13560 табл. 12). IOREF = +3.3V: шилд видит логику 3.3 В.\nSCL/SDA = I2C1 (PB8/PB9, общая шина с TMP100, подтяжки 4.7k на листе tmp10x).\nA4/A5 - каналы АЦП (PB0/PB1); перемычки R802/R803 0R DNP соединяют их с SDA/SCL для старых шилдов\n(тогда PB0/PB1 держать входами без подтяжек)."
+	(text "Arduino Uno R3 (без ICSP). Нумерация выводов разъёмов - как в шаблоне KiCad Arduino_Uno\n(IOH 1..10 = SCL, SDA, AREF, GND, D13..D8; IOL 1..8 = D7..D0; POWER 1..8 = NC, IOREF, RESET, 3V3, 5V,\nGND, GND, VIN; ANALOG 1..6 = A0..A5). Все сигналы Uno - напрямую на выводы МК класса FT (5 В-толерантны\nпри наличии VDD, DS13560 табл. 12). IOREF = +3.3V: шилд видит логику 3.3 В.\nSCL/SDA = I2C1 (PB8/PB9, общая шина с TMP100, подтяжки 4.7k на листе tmp10x).\nA4/A5 - каналы АЦП (PA6/PA7); перемычки R802/R803 0R DNP соединяют их с SDA/SCL для старых шилдов\n(тогда PA6/PA7 держать входами без подтяжек)."
 		(exclude_from_sim no)
 		(at 279.4 20.32 0)
 		(effects
