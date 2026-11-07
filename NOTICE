@@ -1,0 +1,20 @@
+g0_dev_board — STM32G0 development board
+Copyright (c) 2026 Stepan Filimonov
+
+This source describes Open Hardware and is licensed under the CERN-OHL-P v2.
+
+You may redistribute and modify this source and make products using it under
+the terms of the CERN-OHL-P v2 (https://cern.ch/cern-ohl). The complete licence
+text is in LICENSE.
+
+This source is distributed WITHOUT ANY EXPRESS OR IMPLIED WARRANTY, INCLUDING
+OF MERCHANTABILITY, SATISFACTORY QUALITY AND FITNESS FOR A PARTICULAR PURPOSE.
+Please see the CERN-OHL-P v2 for applicable conditions.
+
+Source location: https://github.com/khosta77/stm32g0-dev-board
+
+Except for the separately licensed library material identified in
+THIRD-PARTY-NOTICES.md, the original design source in this repository
+(schematics, PCB layout, design rules, documentation and generated
+manufacturing outputs) is covered by this notice. Changes to the design are
+recorded in CHANGES.txt, as required by CERN-OHL-P v2 section 3.3(b).
