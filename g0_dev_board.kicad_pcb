@@ -46486,6 +46486,14 @@
 		(uuid "08e997b3-1e09-4ce0-811a-b3e6ca6b0a2a")
 	)
 	(segment
+		(start 179.2 37.6)
+		(end 179.2 124.3)
+		(width 0.4)
+		(layer "F.Cu")
+		(net "+5V")
+		(uuid "13c52cd9-7ec7-4993-b97d-cd26037ea03a")
+	)
+	(segment
 		(start 108 94.89)
 		(end 108 73.63)
 		(width 0.5)
@@ -46508,6 +46516,14 @@
 		(layer "F.Cu")
 		(net "+5V")
 		(uuid "30182074-7aa0-422b-afda-7fe387a0709e")
+	)
+	(segment
+		(start 178.9 37.3)
+		(end 179.2 37.6)
+		(width 0.4)
+		(layer "F.Cu")
+		(net "+5V")
+		(uuid "322a3dee-c511-40ea-b76f-2370dc3db34d")
 	)
 	(segment
 		(start 139.65 40.8)
@@ -46556,6 +46572,14 @@
 		(layer "F.Cu")
 		(net "+5V")
 		(uuid "4944b3f8-4f46-4239-aa59-d35ea1503bf6")
+	)
+	(segment
+		(start 178.9 124.6)
+		(end 177.46 124.6)
+		(width 0.4)
+		(layer "F.Cu")
+		(net "+5V")
+		(uuid "49bd37a2-3ec6-4b1c-a555-318138e3f614")
 	)
 	(segment
 		(start 108.5 95.39)
@@ -46614,12 +46638,28 @@
 		(uuid "7178f663-05d3-4f0c-91a7-98b0d019a835")
 	)
 	(segment
+		(start 179.2 124.3)
+		(end 178.9 124.6)
+		(width 0.4)
+		(layer "F.Cu")
+		(net "+5V")
+		(uuid "7c0a65b9-02be-4e3a-ad90-53379f78eda0")
+	)
+	(segment
 		(start 112 97.2)
 		(end 110.19 95.39)
 		(width 0.5)
 		(layer "F.Cu")
 		(net "+5V")
 		(uuid "837f2a53-ce85-4ce3-8b4c-9ba7ecf61329")
+	)
+	(segment
+		(start 139.95 37.3)
+		(end 178.9 37.3)
+		(width 0.4)
+		(layer "F.Cu")
+		(net "+5V")
+		(uuid "8eedb535-9196-40c2-afc8-3146fab31db0")
 	)
 	(segment
 		(start 142.7 56.2)
@@ -46654,6 +46694,14 @@
 		(uuid "a82c2bc7-37b2-4933-bcf8-340f32ce7c5d")
 	)
 	(segment
+		(start 139.65 39.6)
+		(end 139.65 37.6)
+		(width 0.4)
+		(layer "F.Cu")
+		(net "+5V")
+		(uuid "bb97e80f-d527-47df-93a0-6c88c8d02991")
+	)
+	(segment
 		(start 149.85 56.5)
 		(end 147.85 58.5)
 		(width 0.5)
@@ -46668,6 +46716,14 @@
 		(layer "F.Cu")
 		(net "+5V")
 		(uuid "c3030942-9b3e-4e0b-b259-851c13d26b10")
+	)
+	(segment
+		(start 139.65 37.6)
+		(end 139.95 37.3)
+		(width 0.4)
+		(layer "F.Cu")
+		(net "+5V")
+		(uuid "db7152f5-4321-410a-8848-ab11c6a4f7c5")
 	)
 	(segment
 		(start 105.65 71.28)
