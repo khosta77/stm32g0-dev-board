@@ -808,7 +808,7 @@
         },
         {
           "group_by": false,
-          "label": "\u041e\u043f\u0438\u0441\u0430\u043d\u0438\u0435",
+          "label": "Описание",
           "name": "Description",
           "show": false
         },

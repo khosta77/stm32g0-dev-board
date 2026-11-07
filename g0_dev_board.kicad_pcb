@@ -44575,14 +44575,6 @@
 		(uuid "e24e45e4-219e-4a40-817e-7deab5c97216")
 	)
 	(via
-		(at 165.6 70.91)
-		(size 0.4)
-		(drill 0.3)
-		(layers "F.Cu" "B.Cu")
-		(net "GND")
-		(uuid "e4fac39a-54c7-496c-a619-dc0174ffa049")
-	)
-	(via
 		(at 133.4 113.2)
 		(size 0.4)
 		(drill 0.3)
