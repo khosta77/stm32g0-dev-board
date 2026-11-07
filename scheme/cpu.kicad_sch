@@ -2816,7 +2816,7 @@
 		)
 		(uuid "3ec2bb96-2fbc-4302-a9c4-39e5de8905bf")
 	)
-	(text "Назначение выводов U101 (LQFP-48, GP). Источник: DS13560 Rev 6 табл. 12 (выводы, FT/TT), табл. 13/15/17/18 (AF0-AF7);\nдля STM32G071CBT6 те же AF проверены по DS12232 Rev 4 рис. 5, табл. 13-17.\nНазначение переставлено под трассировку (порядок контактов J801/J802/J806 и стороны корпуса на плате):\nD13..D4 и I2C1 - верх корпуса подряд, D3 - справа, D2..D0 и A2..A5 - низ. Uno D0/D1 - LPUART1 (PB10/PB11),\nSPI1 на D11-D13 больше не выведен: Arduino-SPI на шилде недоступен (CNC Shield, GSM/WiFi его не используют)."
+	(text "Назначение выводов U101 (LQFP-48, GP). Источник: DS13560 Rev 6 табл. 12 (выводы, FT/TT), табл. 13/15/17/18 (AF0-AF7);\nдля STM32G071CBT6 те же AF проверены по DS12232 Rev 4 рис. 5, табл. 13-17.\nНазначение переставлено под трассировку (порядок контактов J801/J802/J806 и стороны корпуса на плате):\nD13..D4 и I2C1 - верх корпуса подряд, D3 - справа, D2..D0 и A2..A5 - низ. Uno D0/D1 - LPUART1 (PB10/PB11),\nArduino-SPI как на Uno R3: D13 = SPI1_SCK (PB3), D12 = SPI1_MISO (PB4), D11 = SPI1_MOSI (PB5), D10 = SS (GPIO);\nAF0, одинаково у G0B1 и G071 (DS13560 табл. 15, DS12232 табл. 14). ICSP на плате нет."
 		(exclude_from_sim no)
 		(at 269.24 20.32 0)
 		(effects
@@ -4093,7 +4093,7 @@
 				)
 				(uuid "cad16fcb-2145-4315-b9db-4695395cf91f")
 			)
-			(table_cell "Uno A4 (SDA - только через R DNP)"
+			(table_cell "Uno A4 (I2C2_SDA AF8 - только G0B1)"
 				(exclude_from_sim no)
 				(at 355.6000 77.4700 0)
 				(size 105.4100 3.8100)
@@ -4183,7 +4183,7 @@
 				)
 				(uuid "443511ea-1778-4053-8b8d-b290bf05eccd")
 			)
-			(table_cell "Uno A5 (SCL - только через R DNP)"
+			(table_cell "Uno A5 (I2C2_SCL AF8 - только G0B1)"
 				(exclude_from_sim no)
 				(at 355.6000 81.2800 0)
 				(size 105.4100 3.8100)
@@ -6298,7 +6298,7 @@
 				)
 				(uuid "6a9637d4-0d94-4bac-8f0a-2a30baf17f6d")
 			)
-			(table_cell "D9"
+			(table_cell "D13"
 				(exclude_from_sim no)
 				(at 293.3700 172.7200 0)
 				(size 13.9700 3.8100)
@@ -6313,7 +6313,7 @@
 				)
 				(uuid "8b2cb290-91f4-404c-85fd-518dc27a6687")
 			)
-			(table_cell "TIM1_CH2 AF1"
+			(table_cell "SPI1_SCK AF0"
 				(exclude_from_sim no)
 				(at 307.3400 172.7200 0)
 				(size 38.1000 3.8100)
@@ -6343,7 +6343,7 @@
 				)
 				(uuid "ec063f5b-c45b-4dd5-b09a-f949855dd3e7")
 			)
-			(table_cell "Uno D9 PWM"
+			(table_cell "Uno D13 / SPI SCK (TIM1_CH2 AF1)"
 				(exclude_from_sim no)
 				(at 355.6000 172.7200 0)
 				(size 105.4100 3.8100)
@@ -6388,7 +6388,7 @@
 				)
 				(uuid "ba4c3b41-a29d-4ead-bb40-0a5544acf018")
 			)
-			(table_cell "D10"
+			(table_cell "D12"
 				(exclude_from_sim no)
 				(at 293.3700 176.5300 0)
 				(size 13.9700 3.8100)
@@ -6403,7 +6403,7 @@
 				)
 				(uuid "7c60ac54-0136-45e9-abe6-23c158be46af")
 			)
-			(table_cell "TIM3_CH1 AF1"
+			(table_cell "SPI1_MISO AF0"
 				(exclude_from_sim no)
 				(at 307.3400 176.5300 0)
 				(size 38.1000 3.8100)
@@ -6433,7 +6433,7 @@
 				)
 				(uuid "5b2ba3ce-4e27-4fad-931e-b2ad6195fbbb")
 			)
-			(table_cell "Uno D10 PWM"
+			(table_cell "Uno D12 / SPI MISO"
 				(exclude_from_sim no)
 				(at 355.6000 176.5300 0)
 				(size 105.4100 3.8100)
@@ -6493,7 +6493,7 @@
 				)
 				(uuid "53501b15-e38b-445c-b0b8-1c1532169e1f")
 			)
-			(table_cell "TIM3_CH2 AF1"
+			(table_cell "SPI1_MOSI AF0, TIM3_CH2 AF1"
 				(exclude_from_sim no)
 				(at 307.3400 180.3400 0)
 				(size 38.1000 3.8100)
@@ -6523,7 +6523,7 @@
 				)
 				(uuid "a168c340-0190-421e-9959-7bd26086177e")
 			)
-			(table_cell "Uno D11 PWM"
+			(table_cell "Uno D11 PWM / SPI MOSI"
 				(exclude_from_sim no)
 				(at 355.6000 180.3400 0)
 				(size 105.4100 3.8100)
@@ -6568,7 +6568,7 @@
 				)
 				(uuid "2d5ad653-af4a-44b9-836f-d13b700f0dc8")
 			)
-			(table_cell "D12"
+			(table_cell "D10"
 				(exclude_from_sim no)
 				(at 293.3700 184.1500 0)
 				(size 13.9700 3.8100)
@@ -6583,7 +6583,7 @@
 				)
 				(uuid "761bd549-e5cf-4ee5-a2d9-2fd3f6832db0")
 			)
-			(table_cell "GPIO"
+			(table_cell "TIM1_CH3 AF1"
 				(exclude_from_sim no)
 				(at 307.3400 184.1500 0)
 				(size 38.1000 3.8100)
@@ -6613,7 +6613,7 @@
 				)
 				(uuid "7c793c60-a4d8-42bf-9e29-da94ea2ef597")
 			)
-			(table_cell "Uno D12"
+			(table_cell "Uno D10 PWM / SPI SS (GPIO)"
 				(exclude_from_sim no)
 				(at 355.6000 184.1500 0)
 				(size 105.4100 3.8100)
@@ -6658,7 +6658,7 @@
 				)
 				(uuid "13949972-1c1c-4e2b-885b-f18ce581b300")
 			)
-			(table_cell "D13"
+			(table_cell "D9"
 				(exclude_from_sim no)
 				(at 293.3700 187.9600 0)
 				(size 13.9700 3.8100)
@@ -6673,7 +6673,7 @@
 				)
 				(uuid "51e94eae-43e4-4a33-8153-c7fbc3a1e33e")
 			)
-			(table_cell "GPIO"
+			(table_cell "TIM17_CH1N AF2"
 				(exclude_from_sim no)
 				(at 307.3400 187.9600 0)
 				(size 38.1000 3.8100)
@@ -6703,7 +6703,7 @@
 				)
 				(uuid "148b1095-9c7f-4ce7-be40-c31f6da0c72a")
 			)
-			(table_cell "Uno D13"
+			(table_cell "Uno D9 PWM"
 				(exclude_from_sim no)
 				(at 355.6000 187.9600 0)
 				(size 105.4100 3.8100)
@@ -8224,7 +8224,7 @@
 		)
 		(uuid "fdbc0869-cc13-45f5-964f-125f4c30e40d")
 	)
-	(hierarchical_label "D9"
+	(hierarchical_label "D13"
 		(shape bidirectional)
 		(at 241.3 149.86 0)
 		(effects
@@ -8378,7 +8378,7 @@
 		)
 		(uuid "3dcbd656-d1ea-43a6-a982-26cbde6aa0e3")
 	)
-	(hierarchical_label "D10"
+	(hierarchical_label "D12"
 		(shape bidirectional)
 		(at 241.3 152.4 0)
 		(effects
@@ -8620,7 +8620,7 @@
 		)
 		(uuid "c46bd10a-ee18-4f64-bf1b-f9ef0823f1be")
 	)
-	(hierarchical_label "D13"
+	(hierarchical_label "D9"
 		(shape bidirectional)
 		(at 241.3 160.02 0)
 		(effects
@@ -8642,7 +8642,7 @@
 		)
 		(uuid "dbc1b25a-84af-4c2f-8396-bb3962af1736")
 	)
-	(hierarchical_label "D12"
+	(hierarchical_label "D10"
 		(shape bidirectional)
 		(at 241.3 157.48 0)
 		(effects
