@@ -40231,17 +40231,6 @@
 			)
 		)
 	)
-	(gr_rect
-		(start 113.33 57.29)
-		(end 166.67 125.87)
-		(stroke
-			(width 0.15)
-			(type default)
-		)
-		(fill no)
-		(layer "Dwgs.User")
-		(uuid "cc4bccf0-db0a-4a29-b017-0b3c4a368b68")
-	)
 	(gr_line
 		(start 100 37)
 		(end 100 149)
