@@ -542,16 +542,6 @@
 	)
 	(wire
 		(pts
-			(xy 142.24 132.08) (xy 134.62 132.08)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7f065b65-0866-4cc5-a0c8-4a5bd01d99cd")
-	)
-	(wire
-		(pts
 			(xy 142.24 111.76) (xy 134.62 111.76)
 		)
 		(stroke
@@ -749,16 +739,6 @@
 			(type default)
 		)
 		(uuid "9e74f67b-4969-4a62-b3f6-00e5625c088e")
-	)
-	(wire
-		(pts
-			(xy 254 30.48) (xy 246.38 30.48)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9e813e88-fb8b-4a08-b743-3dfb63de5e60")
 	)
 	(wire
 		(pts
@@ -1400,16 +1380,6 @@
 		)
 		(uuid "409d4a82-cbff-4dc2-81f4-79e6a40713c5")
 	)
-	(label "VREF+"
-		(at 134.62 132.08 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "41738d72-d32c-4844-9576-cea94f4dce3d")
-	)
 	(label "NRST"
 		(at 246.38 33.02 180)
 		(effects
@@ -1859,16 +1829,6 @@
 			(justify left bottom)
 		)
 		(uuid "9842d73a-616f-491b-9887-b5d04dc39355")
-	)
-	(label "VREF+"
-		(at 246.38 30.48 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "989e0c05-22db-4a93-b0a5-b9eac732c9a9")
 	)
 	(label "SPI2_SCK"
 		(at 134.62 99.06 180)
@@ -2446,16 +2406,6 @@
 		(pin "I2C1_SDA" bidirectional
 			(at 254 27.94 180)
 			(uuid "6c430b81-2701-459f-9435-edb00e0d543a")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "VREF+" passive
-			(at 254 30.48 180)
-			(uuid "e59a68d8-c962-42ac-99b7-cfe1f29ae3d1")
 			(effects
 				(font
 					(size 1.27 1.27)
@@ -3353,16 +3303,6 @@
 		(pin "NRST" bidirectional
 			(at 142.24 129.54 180)
 			(uuid "001b4b91-449b-4f05-a39f-e73ae10fc033")
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-				(justify left)
-			)
-		)
-		(pin "VREF+" passive
-			(at 142.24 132.08 180)
-			(uuid "5edaf288-697a-4c36-8644-1ba8c944cd6d")
 			(effects
 				(font
 					(size 1.27 1.27)
