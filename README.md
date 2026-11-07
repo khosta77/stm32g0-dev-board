@@ -17,8 +17,7 @@
 > выбранного завода (см. раздел «Производство»).
 
 <p align="center">
-  <img src="docs/images/pcb-top.png" alt="g0_dev_board, верхняя сторона" width="49%" />
-  <img src="docs/images/pcb-bottom.png" alt="g0_dev_board, нижняя сторона" width="49%" />
+  <img src="docs/images/board.png" alt="g0_dev_board, 3D-вид верхней стороны" width="100%" />
 </p>
 
 ## Назначение
