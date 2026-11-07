@@ -11758,7 +11758,7 @@
 		(descr "module CMS SOT223 4 pins")
 		(tags "CMS SOT")
 		(property "Reference" "U202"
-			(at 5.22625 -1.2 0)
+			(at 5.109 -1.887 0)
 			(layer "F.SilkS")
 			(uuid "72bb4881-41ad-47ca-8c09-174d4e950325")
 			(effects
@@ -43877,14 +43877,6 @@
 		(layers "F.Cu" "B.Cu")
 		(net "GND")
 		(uuid "6e4039e1-4859-4f5f-ab4a-983fe54671fe")
-	)
-	(via
-		(at 158.95 107.19)
-		(size 0.4)
-		(drill 0.3)
-		(layers "F.Cu" "B.Cu")
-		(net "GND")
-		(uuid "712a08ff-facf-488c-b190-cdade470de2e")
 	)
 	(via
 		(at 176.92 141.19)
