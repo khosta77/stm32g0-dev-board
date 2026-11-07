@@ -3342,7 +3342,7 @@
 		)
 		(uuid "b2779b82-f8ea-4891-af5a-4edc93da4103")
 	)
-	(text "AREF: R801 0R DNP на VREF+. VREF+ допустимо от 2 В до VDDA = 3.3 В (DS13560 §3.7.1);\nперед установкой R801 выпаять FB101 (лист cpu), иначе AREF шилда закорачивается на +3V3_MCU."
+	(text "AREF (J801.3) не подключён: внешняя опора АЦП с шилда не поддерживается (такие шилды не планируются).\nОпора АЦП STM32 - VREF+ от +3V3_MCU через FB101 (лист cpu)."
 		(exclude_from_sim no)
 		(at 279.4 81.28 0)
 		(effects
@@ -3391,6 +3391,10 @@
 		(diameter 0)
 		(color 0 0 0 0)
 		(uuid "e1e9a88f-fc7a-4808-941f-83fb05d83521")
+	)
+	(no_connect
+		(at 96.52 35.56)
+		(uuid "d6845cc9-cedd-4730-bc51-fed662a2cc08")
 	)
 	(no_connect
 		(at 96.52 99.06)
@@ -3848,16 +3852,6 @@
 	)
 	(wire
 		(pts
-			(xy 96.52 35.56) (xy 86.36 35.56)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "57acdb43-92bb-4c83-9845-3b5776bc32f9")
-	)
-	(wire
-		(pts
 			(xy 248.92 53.34) (xy 238.76 53.34)
 		)
 		(stroke
@@ -4088,16 +4082,6 @@
 	)
 	(wire
 		(pts
-			(xy 25.4 30.48) (xy 38.1 30.48)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7b133f0d-ef5d-4f4d-b69b-7fdc10264a69")
-	)
-	(wire
-		(pts
 			(xy 248.92 48.26) (xy 238.76 48.26)
 		)
 		(stroke
@@ -4105,16 +4089,6 @@
 			(type default)
 		)
 		(uuid "7bf5f7f2-0b00-4900-b6dd-5600cf99b190")
-	)
-	(wire
-		(pts
-			(xy 147.32 190.5) (xy 153.67 190.5)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "7f68ea87-cda0-42a4-a1b5-c89b898158c9")
 	)
 	(wire
 		(pts
@@ -4545,16 +4519,6 @@
 			(type default)
 		)
 		(uuid "bb74b528-d56d-42ad-b98b-98d136548520")
-	)
-	(wire
-		(pts
-			(xy 161.29 190.5) (xy 167.64 190.5)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "bf0169a7-808e-46f9-ae31-553d91d8cd49")
 	)
 	(wire
 		(pts
@@ -5116,16 +5080,6 @@
 		)
 		(uuid "343bd676-f62b-41da-802d-4491d1afa470")
 	)
-	(label "AREF"
-		(at 86.36 35.56 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "34cc123e-d641-441d-8a94-40614f382473")
-	)
 	(label "D10"
 		(at 38.1 60.96 0)
 		(effects
@@ -5425,16 +5379,6 @@
 			(justify left bottom)
 		)
 		(uuid "745eb185-b311-48e7-bcd2-89cabd475b30")
-	)
-	(label "AREF"
-		(at 147.32 190.5 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "75810cb4-2573-4c39-8f64-cbd562c82c75")
 	)
 	(label "D6"
 		(at 38.1 50.8 0)
@@ -5794,16 +5738,6 @@
 		)
 		(uuid "ad0b7d12-5efe-487e-96c8-55b00f9b4bd2")
 	)
-	(label "VREF+"
-		(at 167.64 190.5 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "ada00c83-426a-4859-86da-a9b36ebf78c3")
-	)
 	(label "D11"
 		(at 86.36 45.72 180)
 		(effects
@@ -5933,16 +5867,6 @@
 			(justify right bottom)
 		)
 		(uuid "c88157f7-f9a3-46b0-86b5-05e027e334ee")
-	)
-	(label "VREF+"
-		(at 38.1 30.48 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "cd73749f-1b57-4a6d-9958-d54d242280fb")
 	)
 	(label "GPIO_PF0"
 		(at 167.64 76.2 180)
@@ -6360,17 +6284,6 @@
 			(justify right)
 		)
 		(uuid "509435c1-6a2b-420f-8571-e6dfb92bfd81")
-	)
-	(hierarchical_label "VREF+"
-		(shape passive)
-		(at 25.4 30.48 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right)
-		)
-		(uuid "53ddeace-ec82-4d1e-98e4-ec85fc5bc8bf")
 	)
 	(hierarchical_label "STL_SWDIO"
 		(shape bidirectional)
@@ -8825,96 +8738,6 @@
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/5c8f8cfd-1030-4022-9071-e1993a429931"
 					(reference "#PWR0133")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 157.48 190.5 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp yes)
-		(uuid "d424a869-6b6c-433c-a27f-9e649f28ada2")
-		(property "Reference" "R801"
-			(at 157.48 187.96 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "0"
-			(at 157.48 193.04 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 157.48 190.5 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 157.48 190.5 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "0R DNP: AREF шилда -> VREF+ МК"
-			(at 157.48 190.5 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C17477"
-			(at 157.48 190.5 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "82cec157-28a3-48d5-8b75-69ff0a4595de")
-		)
-		(pin "2"
-			(uuid "dbfc5392-6cdc-4af2-9369-f37c89fb5dc8")
-		)
-		(instances
-			(project "g0_dev_board"
-				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/5c8f8cfd-1030-4022-9071-e1993a429931"
-					(reference "R801")
 					(unit 1)
 				)
 			)
