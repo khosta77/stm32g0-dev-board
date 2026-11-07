@@ -3320,7 +3320,7 @@
 		)
 		(uuid "1517bbde-7594-4e10-9eff-d7ff3ef3af28")
 	)
-	(text "Arduino Uno R3 (без ICSP). Нумерация выводов разъёмов - как в шаблоне KiCad Arduino_Uno\n(IOH 1..10 = SCL, SDA, AREF, GND, D13..D8; IOL 1..8 = D7..D0; POWER 1..8 = NC, IOREF, RESET, 3V3, 5V,\nGND, GND, VIN; ANALOG 1..6 = A0..A5). Все сигналы Uno - напрямую на выводы МК класса FT (5 В-толерантны\nпри наличии VDD, DS13560 табл. 12). IOREF = +3.3V: шилд видит логику 3.3 В.\nSCL/SDA = I2C1 (PB8/PB9, общая шина с TMP100, подтяжки 4.7k на листе tmp10x).\nA4/A5 - каналы АЦП (PA6/PA7); перемычки R802/R803 0R DNP соединяют их с SDA/SCL для старых шилдов\n(тогда PA6/PA7 держать входами без подтяжек)."
+	(text "Arduino Uno R3 (без ICSP). Нумерация выводов разъёмов - как в шаблоне KiCad Arduino_Uno\n(IOH 1..10 = SCL, SDA, AREF, GND, D13..D8; IOL 1..8 = D7..D0; POWER 1..8 = NC, IOREF, RESET, 3V3, 5V,\nGND, GND, VIN; ANALOG 1..6 = A0..A5). Все сигналы Uno - напрямую на выводы МК класса FT (5 В-толерантны\nпри наличии VDD, DS13560 табл. 12). IOREF = +3.3V: шилд видит логику 3.3 В.\nSCL/SDA = I2C1 (PB8/PB9, общая шина с TMP100, подтяжки 4.7k на листе tmp10x).\nA4/A5 - каналы АЦП (PA6/PA7); для старых шилдов с I2C на A4/A5 они же I2C2_SDA/SCL\n(AF8, только STM32G0B1: DS13560 табл. 14; у G071 на PA6/PA7 I2C нет, DS12232 табл. 13)."
 		(exclude_from_sim no)
 		(at 279.4 20.32 0)
 		(effects
@@ -3558,16 +3558,6 @@
 	)
 	(wire
 		(pts
-			(xy 147.32 210.82) (xy 153.67 210.82)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "1616cd3c-7bdb-42a5-871c-7e3fcb182add")
-	)
-	(wire
-		(pts
 			(xy 25.4 38.1) (xy 38.1 38.1)
 		)
 		(stroke
@@ -3665,16 +3655,6 @@
 			(type default)
 		)
 		(uuid "2e8fb6fa-e046-4ee5-bf42-a9faea113f99")
-	)
-	(wire
-		(pts
-			(xy 147.32 200.66) (xy 153.67 200.66)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "2ee29705-268e-4f0a-be84-101058e7f884")
 	)
 	(wire
 		(pts
@@ -3905,16 +3885,6 @@
 			(type default)
 		)
 		(uuid "58ed47fb-81bc-449f-a02d-2c374999077c")
-	)
-	(wire
-		(pts
-			(xy 161.29 210.82) (xy 167.64 210.82)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "5a020667-58d5-4216-b441-ccfe4f133869")
 	)
 	(wire
 		(pts
@@ -4385,16 +4355,6 @@
 			(type default)
 		)
 		(uuid "9bb8a65a-f718-4e3d-b49a-dc519648954e")
-	)
-	(wire
-		(pts
-			(xy 161.29 200.66) (xy 167.64 200.66)
-		)
-		(stroke
-			(width 0)
-			(type default)
-		)
-		(uuid "9c960b58-9132-4eb1-ad2d-0f6b924f1480")
 	)
 	(wire
 		(pts
@@ -4936,16 +4896,6 @@
 		)
 		(uuid "0bcc2bd7-66c5-49bc-8b23-c60ca751b634")
 	)
-	(label "I2C1_SDA"
-		(at 167.64 200.66 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "0c250470-f0f6-48c4-aba8-6a85607fce19")
-	)
 	(label "STL_RESET"
 		(at 38.1 134.62 0)
 		(effects
@@ -5216,16 +5166,6 @@
 		)
 		(uuid "47370fd7-4bd0-42ed-8831-7fa94dee5101")
 	)
-	(label "A4"
-		(at 147.32 200.66 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "476db2c6-1ac0-421e-83ec-885dbf9a2f9c")
-	)
 	(label "W_INT"
 		(at 38.1 96.52 0)
 		(effects
@@ -5405,16 +5345,6 @@
 			(justify right bottom)
 		)
 		(uuid "614639ba-458b-45bf-9779-d98ff42e2281")
-	)
-	(label "I2C1_SCL"
-		(at 167.64 210.82 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "6215d7a6-78fb-4acd-8998-259a68161c8c")
 	)
 	(label "MCU_SWDIO"
 		(at 231.14 177.8 0)
@@ -5625,16 +5555,6 @@
 			(justify right bottom)
 		)
 		(uuid "8e0ef7af-dc62-411b-af9c-e7357e5c5f06")
-	)
-	(label "A5"
-		(at 147.32 210.82 180)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify right bottom)
-		)
-		(uuid "8e201d62-6f02-4624-91f6-3b24a7db7fe2")
 	)
 	(label "SPI2_MISO"
 		(at 238.76 91.44 180)
@@ -8654,96 +8574,6 @@
 		)
 	)
 	(symbol
-		(lib_id "Device:R")
-		(at 157.48 200.66 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp yes)
-		(uuid "bec19c75-d5ce-4444-90e4-8506a62fc530")
-		(property "Reference" "R802"
-			(at 157.48 198.12 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "0"
-			(at 157.48 203.2 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 157.48 200.66 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 157.48 200.66 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "0R DNP: A4 <-> SDA (совместимость со старыми шилдами Uno)"
-			(at 157.48 200.66 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C17477"
-			(at 157.48 200.66 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "354b1f4f-aece-430a-bab0-c235a8aa3df0")
-		)
-		(pin "2"
-			(uuid "f3ba7dbc-7dcc-4758-852f-3fdf3434e119")
-		)
-		(instances
-			(project "g0_dev_board"
-				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/5c8f8cfd-1030-4022-9071-e1993a429931"
-					(reference "R802")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
 		(lib_id "Device:D_Schottky")
 		(at 157.48 165.1 180)
 		(unit 1)
@@ -9322,96 +9152,6 @@
 			(project "g0_dev_board"
 				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/5c8f8cfd-1030-4022-9071-e1993a429931"
 					(reference "#PWR0147")
-					(unit 1)
-				)
-			)
-		)
-	)
-	(symbol
-		(lib_id "Device:R")
-		(at 157.48 210.82 90)
-		(unit 1)
-		(body_style 1)
-		(exclude_from_sim no)
-		(in_bom yes)
-		(on_board yes)
-		(in_pos_files yes)
-		(dnp yes)
-		(uuid "eedd69b7-da8f-4359-9446-f54ff134c2e0")
-		(property "Reference" "R803"
-			(at 157.48 208.28 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Value" "0"
-			(at 157.48 213.36 90)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Footprint" "Resistor_SMD:R_0805_2012Metric"
-			(at 157.48 210.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Datasheet" ""
-			(at 157.48 210.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "Description" "0R DNP: A5 <-> SCL (совместимость со старыми шилдами Uno)"
-			(at 157.48 210.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(property "LCSC" "C17477"
-			(at 157.48 210.82 0)
-			(hide yes)
-			(show_name no)
-			(do_not_autoplace no)
-			(effects
-				(font
-					(size 1.27 1.27)
-				)
-			)
-		)
-		(pin "1"
-			(uuid "81272169-491e-480b-a99e-4442b20f94c9")
-		)
-		(pin "2"
-			(uuid "6c8a3a4d-f234-405b-87fc-057e35841cf0")
-		)
-		(instances
-			(project "g0_dev_board"
-				(path "/997acf0a-b54e-4c77-ad84-80f8d6e2dc27/5c8f8cfd-1030-4022-9071-e1993a429931"
-					(reference "R803")
 					(unit 1)
 				)
 			)
